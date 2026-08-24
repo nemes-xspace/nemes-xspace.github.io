@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEMES-X — The Sovereign Brain</title>
+<meta name="description" content="NEMES-X: a decentralized network where idle computers mine the world's knowledge and earn. 109M+ documents. Zero servers. The network IS the infrastructure.">
+<meta property="og:title" content="NEMES-X — The Sovereign Brain">
+<meta property="og:description" content="Your idle GPU joins thousands of others to mine the world's knowledge — and earns for every verified contribution.">
+<meta property="og:url" content="https://nemes-x.space">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--bg2:#101018;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--blue:#2a4a7f;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:var(--gold2);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:9}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-size:1.3rem;font-weight:700;letter-spacing:2px;color:var(--gold)}
+.logo span{color:var(--txt)}
+nav ul{display:flex;gap:26px;list-style:none}
+nav ul a{color:var(--mut);font-size:.9rem}
+nav ul a:hover{color:var(--gold2)}
+.hero{padding:150px 0 90px;text-align:center;background:radial-gradient(ellipse at 50% -20%,rgba(42,74,127,.25),transparent 60%)}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:6px;font-weight:800}
+.hero h1 em{color:var(--gold);font-style:normal}
+.tag{color:var(--mut);font-size:1.15rem;margin:18px 0 34px}
+.btn{display:inline-block;padding:14px 30px;margin:6px;border-radius:8px;font-weight:600;transition:.2s}
+.btn.gold{background:var(--gold);color:#0a0a0f}
+.btn.gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn.ghost{border:1px solid var(--gold);color:var(--gold2)}
+.btn.ghost:hover{background:rgba(212,175,55,.1)}
+.strip{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.strip div{text-align:center}
+.strip b{display:block;font-size:1.7rem;color:var(--gold)}
+.strip small{color:var(--mut)}
+section{padding:80px 0}
+h2{font-size:2rem;margin-bottom:40px;text-align:center}
+h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);margin:14px auto 0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.card .n{font-size:2rem;color:var(--gold);font-weight:800}
+.card h3{margin:10px 0 8px;font-size:1.05rem}
+.card p{color:var(--mut);font-size:.92rem}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;max-width:960px;margin:0 auto}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px;text-align:center;position:relative}
+.tier.hot{border-color:var(--gold)}
+.tier .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0a0a0f;font-size:.72rem;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:1px}
+.tier h3{color:var(--gold2);font-size:1.1rem;letter-spacing:1px}
+.tier .price{font-size:2.4rem;font-weight:800;margin:12px 0}
+.tier .price small{font-size:.9rem;color:var(--mut);font-weight:400}
+.tier ul{list-style:none;color:var(--mut);font-size:.9rem;margin:16px 0}
+.tier ul li{padding:6px 0;border-bottom:1px solid var(--line)}
+.soon{display:inline-block;margin-top:10px;padding:10px 26px;border-radius:8px;border:1px solid var(--line);color:var(--mut);font-size:.9rem}
+.road{max-width:720px;margin:0 auto}
+.road .step{display:flex;gap:18px;padding:14px 0;border-left:2px solid var(--line);padding-left:22px;position:relative}
+.road .step::before{content:"";position:absolute;left:-7px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.road .step.done::before{background:#3fae5a}
+.road b{display:block}
+.road small{color:var(--mut)}
+.donate{background:var(--bg2);border:1px solid var(--line);border-radius:16px;max-width:680px;margin:0 auto;padding:40px;text-align:center}
+.donate img{border-radius:10px;background:#fff;padding:8px;margin:20px 0}
+.addr{font-family:monospace;font-size:.82rem;word-break:break-all;background:#0a0a0f;border:1px solid var(--line);padding:12px 16px;border-radius:8px;color:var(--gold2)}
+.copy{margin-top:12px;padding:10px 22px;border-radius:8px;border:1px solid var(--gold);background:none;color:var(--gold2);cursor:pointer}
+.copy:hover{background:rgba(212,175,55,.12)}
+form{max-width:460px;margin:0 auto;display:flex;gap:10px}
+form input{flex:1;padding:14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:.95rem}
+form button{padding:14px 26px;border-radius:8px;border:none;background:var(--gold);color:#0a0a0f;font-weight:700;cursor:pointer}
+.note{text-align:center;color:var(--mut);font-size:.8rem;margin-top:14px}
+footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--mut);font-size:.82rem}
+footer .disc{max-width:640px;margin:10px auto 0;font-size:.74rem;color:#5f5d68}
+@media(max-width:640px){nav ul{display:none}form{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="logo">NEMES<span>-X</span></div>
+  <ul><li><a href="#mining">Mining</a></li><li><a href="#premium">Premium</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#donate">Donate ₿</a></li></ul>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>NEMES<em>-X</em></h1>
+  <p class="tag">The Sovereign Brain — your idle computer becomes part of the<br>world's collective intelligence. And it earns.</p>
+  <a class="btn gold" href="#mining">Become a Miner</a>
+  <a class="btn ghost" href="#donate">Donate ₿</a>
+</div></header>
+
+<div class="strip"><div class="wrap" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:30px">
+  <div><b>109M+</b><small>documents processed</small></div>
+  <div><b>22+</b><small>knowledge corpora</small></div>
+  <div><b>0</b><small>central servers — the network IS the infrastructure</small></div>
+  <div><b>100%</b><small>local-first &amp; private</small></div>
+</div></div>
+
+<section id="mining"><div class="wrap">
+  <h2>How Mining Works</h2>
+  <div class="cards">
+    <div class="card"><div class="n">01</div><h3>Install</h3><p>One-click client for Windows, Linux &amp; macOS. Auto-detects your GPU/CPU and picks your role.</p></div>
+    <div class="card"><div class="n">02</div><h3>Connect</h3><p>Your node joins the peer network via libp2p. No sign-up server, no central point of failure.</p></div>
+    <div class="card"><div class="n">03</div><h3>Mine Knowledge</h3><p>Your hardware processes public data corpora into verified vector embeddings — useful work, not wasted hashes.</p></div>
+    <div class="card"><div class="n">04</div><h3>Earn</h3><p>Every verified contribution earns shares. Weekly settlements, paid in USDT. Premium access included.</p></div>
+  </div>
+</div></section>
+
+<section id="premium" style="background:var(--bg2)"><div class="wrap">
+  <h2>Premium Tiers</h2>
+  <div class="tiers">
+    <div class="tier"><h3>TEMPLE</h3><div class="price">$5<small>/mo</small></div>
+      <ul><li>Hosted search</li><li>100 AI answers / day</li><li>Community support</li></ul>
+      <span class="soon">Coming Soon</span></div>
+    <div class="tier hot"><span class="badge">MOST POPULAR</span><h3>PRO</h3><div class="price">$15<small>/mo</small></div>
+      <ul><li>Unlimited queries</li><li>Priority mining queue</li><li>API key included</li><li>Early feature access</li></ul>
+      <span class="soon">Coming Soon</span></div>
+    <div class="tier"><h3>ULTRA</h3><div class="price">$40<small>/mo</small></div>
+      <ul><li>High-limit API</li><li>SLA &amp; priority support</li><li>Custom corpus access</li></ul>
+      <span class="soon">Coming Soon</span></div>
+  </div>
+  <p class="note" style="margin-top:26px">Miners earn free premium access proportional to contribution.</p>
+</div></section>
+
+<section id="roadmap"><div class="wrap">
+  <h2>Roadmap</h2>
+  <div class="road">
+    <div class="step done"><span><b>Core Pipeline</b><small>109M documents · 22 corpora · int8 + faiss PQ32 — running</small></span></div>
+    <div class="step done"><span><b>Full Corpus Expansion</b><small>newscrawl · gutenberg · wet · paracrawl · caselaw</small></span></div>
+    <div class="step"><span><b>Faiss Index Layer + Unified Search</b><small>one query across every corpus</small></span></div>
+    <div class="step"><span><b>Sovereign Ledger</b><small>signed epoch chain — anonymous central authority, P2P gossip</small></span></div>
+    <div class="step"><span><b>Miner Client v1</b><small>one-click install · auto role detection · tray dashboard</small></span></div>
+    <div class="step"><span><b>Closed Beta</b><small>invited miners · credit system live</small></span></div>
+    <div class="step"><span><b>Public Launch</b><small>premium tiers · USDT settlements · referral program</small></span></div>
+  </div>
+</div></section>
+
+<section id="donate" style="background:var(--bg2)"><div class="wrap">
+  <h2>Support the Network ₿</h2>
+  <div class="donate">
+    <p style="color:var(--mut)">Donations fund GPU time, bandwidth and development.<br>100% on-chain, fully transparent.</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=190x190&amp;data=bitcoin%3Abc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g" alt="BTC QR" width="190" height="190">
+    <div class="addr" id="btc">bc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g</div>
+    <button class="copy" onclick="navigator.clipboard.writeText(document.getElementById('btc').innerText);this.innerText='COPIED ✓'">COPY ADDRESS</button>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Join the Closed Beta</h2>
+  <!-- TODO: Formspree'de form olustur, action linkini kendi ID'nle degistir -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="email" name="email" placeholder="your@email.com" required>
+    <button type="submit">REQUEST INVITE</button>
+  </form>
+  <p class="note">Beta miners get founder badge + boosted commission rate for life.</p>
+</div></section>
+
+<footer><div class="wrap">
+  <div>© 2026 NEMES-X · Governed by the Brain Constitution v1.0</div>
+  <div class="disc">Disclosure: the NEMES-X network is governed by its founding authority. Network operations may be scheduled, throttled or paused via signed governance epochs, as accepted in the Terms of Service. Participation is voluntary. Nothing here is financial advice.</div>
+</div></footer>
+
+</body>
+</html>
