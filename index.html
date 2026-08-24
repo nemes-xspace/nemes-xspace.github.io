@@ -217,8 +217,8 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
 </div></section>
 
 <section id="economics"><div class="wrap">
-  <h2>Mining Economics</h2>
-  <p class="sub">How contribution converts to earnings — before you commit a single watt.</p>
+  <h2>Mining Economics — From Compute to USDT</h2>
+  <p class="sub">Understand exactly how your contribution translates into earnings before you commit a single watt. Here is the full breakdown — including the variables we can define today, and the ones that depend on network activity.</p>
   <div class="two">
     <div class="panel">
       <h3>Relative Contribution Power</h3>
@@ -230,21 +230,31 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
         <tr><td>RTX 4070</td><td>High</td><td>~9×</td></tr>
         <tr><td>RTX 4090</td><td>Very High</td><td>~20×</td></tr>
       </table></div>
-      <p class="note" style="text-align:left;margin-top:12px">Multipliers are relative embedding throughput, measured on our own 1080 Ti reference rig.</p>
+      <p class="note" style="text-align:left;margin-top:12px">Multipliers reflect relative embedding throughput, benchmarked on our own 1080 Ti reference rig. Higher multiplier = faster accumulation of work shares.</p>
     </div>
     <div class="panel">
       <h3>How Shares Become USDT</h3>
       <div class="tblwrap"><table class="tbl">
-        <tr><th>Step</th><th>Formula</th></tr>
-        <tr><td>1. Verified work</td><td>S_i = V_i × K_tier</td></tr>
-        <tr><td>2. Weekly pool</td><td>H = premium revenue × 50%</td></tr>
-        <tr><td>3. Unit share value</td><td>P = H / ΣS</td></tr>
-        <tr><td>4. Your payout</td><td>S_you × P − network fee</td></tr>
+        <tr><th>Step</th><th>Formula</th><th>What it means</th></tr>
+        <tr><td>1. Verified work</td><td>S_i = V_i × K_tier</td><td>Your verified vectors, weighted by your hardware tier.</td></tr>
+        <tr><td>2. Weekly pool</td><td>H = Premium revenue × 50%</td><td>Half of all premium API revenue goes to miners.</td></tr>
+        <tr><td>3. Unit share value</td><td>P = H / ΣS</td><td>Total pool divided by all miners' shares that week.</td></tr>
+        <tr><td>4. Your payout</td><td>S_you × P − network fee</td><td>Your share of the pool, minus a 2% operational fee.</td></tr>
       </table></div>
-      <p class="note" style="text-align:left;margin-top:12px">Share value floats with network revenue and miner participation — like pool difficulty, but tied to real service income.</p>
     </div>
   </div>
-  <div class="disc">⚠️ <b>Estimates only.</b> USDT settlements begin at network launch (see roadmap). Actual rewards depend on verified workload, verification pass-rate, premium revenue and total miner participation. Electricity costs are yours. Nothing on this page is financial advice.</div>
+  <div class="panel" style="margin-top:22px">
+    <h3>Settlement Details — Defined at Launch</h3>
+    <div class="tblwrap"><table class="tbl">
+      <tr><td>Minimum payout</td><td style="color:var(--gold2)">$5.00 USDT</td></tr>
+      <tr><td>Network</td><td>TRC20</td></tr>
+      <tr><td>Network fee</td><td>2% (covers verification + transfer gas)</td></tr>
+      <tr><td>Payout cadence</td><td>Weekly</td></tr>
+      <tr><td>Begins</td><td>At mainnet launch (see <a href="#roadmap">Roadmap</a>)</td></tr>
+    </table></div>
+  </div>
+  <p style="color:var(--mut);font-size:.85rem;max-width:780px;margin:20px auto 0"><i>A quick break-even reference, not a promise:</i> if your rig draws 300W total and your electricity costs $0.10/kWh, your daily cost is $0.72. Your share multiplier tells you how fast you accumulate work shares. Watch your real-time verified output in the miner client and decide for yourself whether the projected network growth justifies that cost.</p>
+  <div class="disc">⚠️ <b>Estimates only.</b> USDT settlements begin at mainnet launch (see Roadmap). Actual rewards depend on verified workload, verification pass-rate, premium revenue, and total miner participation. Minimum payout is $5.00 USDT on TRC20, with a 2% network fee applied at settlement. Electricity costs are yours. Nothing on this page is financial advice.</div>
 </div></section>
 
 <section id="poc" style="background:var(--bg2)"><div class="wrap">
