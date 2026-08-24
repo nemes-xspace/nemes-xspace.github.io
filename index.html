@@ -8,6 +8,11 @@
 <meta property="og:title" content="NEMES-X — The Sovereign Brain">
 <meta property="og:description" content="Your idle GPU joins thousands of others to mine the world's knowledge — and earns for every verified contribution.">
 <meta property="og:url" content="https://nemes-x.space">
+<meta property="og:image" content="https://nemes-x.space/og-image.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://nemes-x.space/og-image.png">
+<meta name="twitter:title" content="NEMES-X — The Sovereign Brain">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -70,14 +75,19 @@ form button{padding:14px 26px;border-radius:8px;border:none;background:var(--gol
 .note{text-align:center;color:var(--mut);font-size:.8rem;margin-top:14px}
 footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--mut);font-size:.82rem}
 footer .disc{max-width:640px;margin:10px auto 0;font-size:.74rem;color:#5f5d68}
-@media(max-width:640px){nav ul{display:none}form{flex-direction:column}}
+@media(max-width:640px){nav ul{display:none;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:var(--bg2);padding:16px 0;border-bottom:1px solid var(--line)}nav ul.open{display:flex}.menu-btn{display:block!important;background:none;border:none;color:var(--gold);font-size:1.7rem;cursor:pointer}form{flex-direction:column}}
+.menu-btn{display:none}
 </style>
+<script>
+function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
+</script>
 </head>
 <body>
 
 <nav><div class="wrap">
   <div class="logo">NEMES<span>-X</span></div>
-  <ul><li><a href="#mining">Mining</a></li><li><a href="#premium">Premium</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#donate">Donate ₿</a></li></ul>
+  <button class="menu-btn" onclick="toggleMenu()" aria-label="menu">☰</button>
+  <ul><li><a href="#mining" onclick="toggleMenu()">Mining</a></li><li><a href="#premium" onclick="toggleMenu()">Premium</a></li><li><a href="#roadmap" onclick="toggleMenu()">Roadmap</a></li><li><a href="#donate" onclick="toggleMenu()">Donate ₿</a></li></ul>
 </div></nav>
 
 <header class="hero"><div class="wrap">
@@ -145,12 +155,10 @@ footer .disc{max-width:640px;margin:10px auto 0;font-size:.74rem;color:#5f5d68}
 
 <section><div class="wrap">
   <h2>Join the Closed Beta</h2>
-  <!-- TODO: Formspree'de form olustur, action linkini kendi ID'nle degistir -->
-  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-    <input type="email" name="email" placeholder="your@email.com" required>
-    <button type="submit">REQUEST INVITE</button>
-  </form>
-  <p class="note">Beta miners get founder badge + boosted commission rate for life.</p>
+  <div style="text-align:center">
+    <a class="btn gold" href="https://x.com/NemesXSpace" target="_blank" rel="noopener">FOLLOW @NemesXSpace → DM "BETA"</a>
+    <p class="note">Beta invitations go out via X direct message, in follow order.<br>Email sign-up form arrives with the mail infrastructure update.</p>
+  </div>
 </div></section>
 
 <footer><div class="wrap">
