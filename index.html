@@ -258,17 +258,17 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
 </div></section>
 
 <section id="poc" style="background:var(--bg2)"><div class="wrap">
-  <h2>Proof of Contribution</h2>
-  <p class="sub">The core technical question: <i>did your computer actually do the work?</i> Here's how the network knows.</p>
+  <h2>Proof of Contribution — Verified Work, Not Just Claims</h2>
+  <p class="sub">Proof of Contribution (PoC) is the mechanism that proves your computer genuinely performed the embedding work it reports — no trust required.</p>
   <div class="two">
     <div class="panel">
       <h3>Verification Design</h3>
       <ul>
-        <li><b>10% random recompute</b> — every job has a 1-in-10 chance of being fully re-embedded by an independent verifier node</li>
-        <li><b>Cosine threshold</b> — verifier vectors must match ≥ 0.99 cosine similarity against the worker's output</li>
-        <li><b>Deterministic input</b> — job manifests are content-hashed; same input, same output, same machine-independent result</li>
-        <li><b>Reputation decay</b> — failed verifications burn shares and reduce future job priority</li>
-        <li><b>No trust required</b> — verifiers are economically indifferent peers, not friends of the network</li>
+        <li><b>1 · Random re-check</b> — 10% of all submitted work is independently re-embedded by a random verifier node. If your work is selected, it gets checked.</li>
+        <li><b>2 · Match requirement</b> — The verifier's output must match yours almost exactly (≥ 99% vector similarity). Same input, same output, same result — no matter the hardware.</li>
+        <li><b>3 · Tamper-evident assignments</b> — Every job is locked with a digital fingerprint (content hash). You can't alter the task or forge the result.</li>
+        <li><b>4 · Failed verification</b> — A rejected job burns the worker's shares and the work is re-assigned to another node. Repeated failures lower future job priority.</li>
+        <li><b>5 · Verifiers are peers</b> — Verifier nodes are ordinary network participants, not privileged insiders. They earn a small fee for verification, and they lose if they lie.</li>
       </ul>
     </div>
     <div class="panel">
@@ -277,8 +277,8 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
         <tr><td>Job</td><td>#A82F91</td></tr>
         <tr><td>Assigned</td><td>10,000 documents</td></tr>
         <tr><td>Completed</td><td>10,000</td></tr>
-        <tr><td>Verified</td><td style="color:var(--green)">9,984</td></tr>
-        <tr><td>Rejected</td><td style="color:#c05050">16</td></tr>
+        <tr><td>Verified</td><td style="color:var(--green)">9,984 🟢</td></tr>
+        <tr><td>Rejected</td><td style="color:#c05050">16 🔴</td></tr>
         <tr><td>Worker</td><td>node_7F3A</td></tr>
         <tr><td>Epoch</td><td>184</td></tr>
         <tr><td>Reward</td><td style="color:var(--gold2)">shares → ledger</td></tr>
@@ -286,6 +286,7 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
       <p class="note" style="text-align:left;margin-top:12px">Example structure — verification engine ships with the ledger phase.</p>
     </div>
   </div>
+  <p class="note" style="max-width:680px;margin:26px auto 0;font-size:.95rem;color:var(--txt)">Every verified job becomes a signed record that your work was real, measured, and rewarded. <b style="color:var(--gold2)">That is the proof.</b></p>
 </div></section>
 
 <section id="transparency"><div class="wrap">
