@@ -352,29 +352,30 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
 </div></section>
 
 <section id="security" style="background:var(--bg2)"><div class="wrap">
-  <h2>Security Model</h2>
-  <p class="sub">"Will this software hijack my computer?" — Fair question. Here's the answer, current state included.</p>
+  <h2>Security Model — What Protects You Today, What Ships Next</h2>
+  <p class="sub">"Will this software hijack my computer?" — Fair question. Here is the answer, current state included, with no hand-waving.</p>
   <div class="two">
     <div class="panel">
-      <h3>🟢 True today</h3>
+      <h3>🟢 TRUE TODAY</h3>
       <ul>
-        <li><b>No root / admin required</b> — the pipeline runs as a normal user process</li>
-        <li><b>Hard resource caps</b> — memory and CPU limits enforced at the process level (systemd MemoryMax)</li>
-        <li><b>Open pipeline</b> — parse, embed, quantization and merge logic are inspectable scripts, not black boxes</li>
-        <li><b>Governance disclosure</b> — signed epochs can pause or throttle the network; this power is documented, not hidden (see Governance)</li>
+        <li><b>No root / admin required</b> — The pipeline runs as a normal user process. It cannot touch system files or other users' data.</li>
+        <li><b>Hard resource caps</b> — Memory limited to 16GB via systemd MemoryMax, CPU capped at 4 threads, and disk writes bounded by the working directory. If it exceeds any limit, it is killed by the kernel.</li>
+        <li><b>Open pipeline</b> — The entire parse → embed → quantize → merge logic lives in the public repo: <code>parse_documents.py</code>, <code>embed_chunks.py</code>, <code>quantize_vectors.py</code>, <code>merge_indices.py</code>. Inspect them yourself. No black boxes.</li>
+        <li><b>Governance disclosure</b> — Signed epochs can pause or throttle the network. This power is documented openly in the governance section, not hidden in a EULA. You can verify every governance action.</li>
       </ul>
     </div>
     <div class="panel">
-      <h3>⚪ Shipping with client v1</h3>
+      <h3>⚪ SHIPPING WITH CLIENT V1</h3>
       <ul>
-        <li><b>Sandboxed worker</b> — containerized execution, filesystem isolation</li>
-        <li><b>Signed binaries</b> — every release cryptographically signed; unsigned clients refuse to run</li>
-        <li><b>Signed job manifests</b> — tasks are only accepted from the founding authority key</li>
-        <li><b>Reproducible builds</b> — release artifacts verifiable from source</li>
-        <li><b>Automatic updates</b> — signed, rollback-capable</li>
+        <li><b>Sandboxed worker</b> — Containerized execution with filesystem isolation; the miner sees only its working directory and the corpus chunks it is assigned.</li>
+        <li><b>Signed binaries</b> — Every release is cryptographically signed by the founding authority key. Unsigned or tampered clients refuse to run.</li>
+        <li><b>Signed job manifests</b> — Tasks are only accepted from the founding authority key. A forged manifest is rejected before any work begins.</li>
+        <li><b>Reproducible builds</b> — Release artifacts can be rebuilt from source and verified byte-for-byte. Trust, but verify.</li>
+        <li><b>Automatic updates</b> — Signed, rollback-capable. If an update fails verification, the client stays on the last known-good version and alerts the user.</li>
       </ul>
     </div>
   </div>
+  <div class="disc" style="margin-top:22px">If you are running custom scripts or modified clients, you assume responsibility for your own security posture. The official client is the only verified path. And as always: do not run untrusted code as root.</div>
 </div></section>
 
 <section id="governance"><div class="wrap">
