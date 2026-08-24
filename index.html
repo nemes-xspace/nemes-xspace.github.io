@@ -65,7 +65,7 @@ h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);
 .card .n{font-size:1.9rem;color:var(--gold);font-weight:800}
 .card h3{margin:10px 0 8px;font-size:1.02rem}
 .card p{color:var(--mut);font-size:.9rem}
-.flow{display:flex;flex-direction:column;align-items:center;gap:0;max-width:560px;margin:0 auto;font-size:.9rem}
+.flow{display:flex;flex-direction:column;align-items:center;gap:0;max-width:560px;margin:0 auto;font-size:.9rem;width:100%}
 .flow .fstep{width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 18px}
 .flow .fstep b{display:block;color:var(--txt);margin-bottom:4px;font-size:.92rem}
 .flow .fstep small{color:var(--mut);font-size:.82rem}
@@ -73,8 +73,8 @@ h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);
 .flow .fstep.hot b{color:var(--gold2)}
 .flow .arr{color:var(--dim);padding:4px 0}
 .tbl{width:100%;border-collapse:collapse;font-size:.9rem}
-.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:1px;position:sticky;top:64px;background:var(--card);z-index:2}
-@media print{nav,.hero .mock,.strip,form,#backtop{display:none}body{background:#fff;color:#000}a{color:#000}section{padding:24px 0}}
+.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:1px}
+@media print{nav,.hero .mock,.strip,form,#backtop,.menu-btn{display:none}body{background:#fff;color:#000}a{color:#000}section{padding:24px 0}h2{text-align:left}.sub{text-align:left}.note{text-align:left}}
 .tbl td{padding:11px 14px;border-bottom:1px solid var(--line)}
 .tbl tr:last-child td{border-bottom:none}
 .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;overflow-x:auto}
@@ -124,6 +124,7 @@ footer .disc{max-width:660px;margin:12px auto 0;font-size:.72rem;color:var(--dim
 #backtop.show{display:flex}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
 @media(max-width:640px){
+.sub{max-width:100%;padding:0 4px}.tag{font-size:1.05rem}.hero h1{font-size:2rem}.hero-grid{gap:24px}
 nav ul{display:none;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:var(--bg2);padding:16px 0;border-bottom:1px solid var(--line)}
 nav ul.open{display:flex}
 .menu-btn{display:block!important;background:none;border:none;color:var(--gold);font-size:1.7rem;cursor:pointer}
