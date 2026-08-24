@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEMES-X — The Sovereign Brain</title>
-<meta name="description" content="NEMES-X: a decentralized network where idle computers mine the world's knowledge and earn. 109M+ documents. Zero servers. The network IS the infrastructure.">
+<meta name="description" content="NEMES-X: a decentralized knowledge mining network. 109,279,716 documents in the core corpus. Transparent contribution verification, public corpus manifest, signed governance.">
 <meta property="og:title" content="NEMES-X — The Sovereign Brain">
-<meta property="og:description" content="Your idle GPU joins thousands of others to mine the world's knowledge — and earns for every verified contribution.">
+<meta property="og:description" content="A decentralized knowledge mining network. Transparent, verifiable, governed by constitution.">
 <meta property="og:url" content="https://nemes-x.space">
 <meta property="og:image" content="https://nemes-x.space/og-image.png">
 <meta property="og:type" content="website">
@@ -16,7 +16,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--bg2:#101018;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--blue:#2a4a7f;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
+:root{--bg:#0a0a0f;--bg2:#101018;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--blue:#2a4a7f;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f;--green:#3fae5a;--amber:#d4a017;--dim:#5f5d68}
 body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
 a{color:var(--gold2);text-decoration:none}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
@@ -24,58 +24,102 @@ nav{position:fixed;top:0;width:100%;background:rgba(10,10,15,.92);backdrop-filte
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
 .logo{font-size:1.3rem;font-weight:700;letter-spacing:2px;color:var(--gold)}
 .logo span{color:var(--txt)}
-nav ul{display:flex;gap:26px;list-style:none}
-nav ul a{color:var(--mut);font-size:.9rem}
+nav ul{display:flex;gap:22px;list-style:none}
+nav ul a{color:var(--mut);font-size:.88rem}
 nav ul a:hover{color:var(--gold2)}
-.hero{padding:150px 0 90px;text-align:center;background:radial-gradient(ellipse at 50% -20%,rgba(42,74,127,.25),transparent 60%)}
+.hero{padding:150px 0 70px;text-align:center;background:radial-gradient(ellipse at 50% -20%,rgba(42,74,127,.25),transparent 60%)}
 .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);letter-spacing:6px;font-weight:800}
 .hero h1 em{color:var(--gold);font-style:normal}
-.tag{color:var(--mut);font-size:1.15rem;margin:18px 0 34px}
+.tag{color:var(--mut);font-size:1.12rem;margin:18px auto 34px;max-width:720px}
 .btn{display:inline-block;padding:14px 30px;margin:6px;border-radius:8px;font-weight:600;transition:.2s}
 .btn.gold{background:var(--gold);color:#0a0a0f}
 .btn.gold:hover{background:var(--gold2);transform:translateY(-2px)}
 .btn.ghost{border:1px solid var(--gold);color:var(--gold2)}
 .btn.ghost:hover{background:rgba(212,175,55,.1)}
-.strip{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;padding:34px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;text-align:left;max-width:1080px;margin:0 auto}
+.hero-grid .tag{text-align:left;margin-left:0}
+.hero-cta{text-align:left}
+.mock{background:#0d0d15;border:1px solid var(--line);border-radius:12px;overflow:hidden;font-family:ui-monospace,'Cascadia Code',Menlo,monospace;font-size:.78rem;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.mock .bar{background:#16161f;padding:9px 14px;color:var(--dim);border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+.mock .bar .dot{color:var(--green)}
+.mock .row{display:flex;justify-content:space-between;padding:7px 16px;border-bottom:1px solid #16161f}
+.mock .row span:first-child{color:var(--mut)}
+.mock .row .g{color:var(--green)}
+.mock .row .gd{color:var(--gold2)}
+.mock .foot{padding:10px 16px;color:var(--dim);font-size:.7rem}
+.mocklabel{text-align:center;color:var(--dim);font-size:.72rem;letter-spacing:2px;margin-top:10px;text-transform:uppercase}
+.strip{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;padding:30px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg2)}
 .strip div{text-align:center}
-.strip b{display:block;font-size:1.7rem;color:var(--gold)}
+.strip b{display:block;font-size:1.55rem;color:var(--gold);font-variant-numeric:tabular-nums}
 .strip small{color:var(--mut)}
-section{padding:80px 0}
-h2{font-size:2rem;margin-bottom:40px;text-align:center}
+.asof{text-align:center;color:var(--dim);font-size:.72rem;padding:8px 0 0}
+section{padding:76px 0}
+h2{font-size:1.9rem;margin-bottom:14px;text-align:center}
+.sub{color:var(--mut);text-align:center;max-width:700px;margin:0 auto 42px;font-size:.95rem}
 h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);margin:14px auto 0}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
-.card .n{font-size:2rem;color:var(--gold);font-weight:800}
-.card h3{margin:10px 0 8px;font-size:1.05rem}
-.card p{color:var(--mut);font-size:.92rem}
-.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;max-width:960px;margin:0 auto}
-.tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px;text-align:center;position:relative}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px}
+.card .n{font-size:1.9rem;color:var(--gold);font-weight:800}
+.card h3{margin:10px 0 8px;font-size:1.02rem}
+.card p{color:var(--mut);font-size:.9rem}
+.flow{display:flex;flex-direction:column;align-items:center;gap:0;max-width:520px;margin:0 auto;font-family:ui-monospace,Menlo,monospace;font-size:.85rem}
+.flow .fstep{width:100%;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;letter-spacing:1px}
+.flow .fstep.hot{border-color:var(--gold);color:var(--gold2)}
+.flow .arr{color:var(--dim);padding:4px 0}
+.tbl{width:100%;border-collapse:collapse;font-size:.9rem}
+.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:1px}
+.tbl td{padding:11px 14px;border-bottom:1px solid var(--line)}
+.tbl tr:last-child td{border-bottom:none}
+.tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;overflow-x:auto}
+.st{font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:20px;letter-spacing:.5px;white-space:nowrap}
+.st.live{background:rgba(63,174,90,.15);color:var(--green)}
+.st.beta{background:rgba(212,160,23,.15);color:var(--amber)}
+.st.soon{background:rgba(42,74,127,.3);color:#7fa3d7}
+.st.plan{background:rgba(138,136,148,.12);color:var(--dim)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px}
+.panel h3{color:var(--gold2);margin-bottom:14px;font-size:1.05rem}
+.panel ul{list-style:none}
+.panel ul li{padding:7px 0;border-bottom:1px solid var(--line);color:var(--mut);font-size:.9rem}
+.panel ul li:last-child{border:none}
+.panel ul li b{color:var(--txt);font-weight:600}
+.disc{background:rgba(212,175,55,.06);border:1px solid rgba(212,175,55,.25);border-radius:10px;padding:14px 18px;color:var(--amber);font-size:.8rem;margin-top:18px}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;max-width:960px;margin:0 auto}
+.tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:30px;text-align:center;position:relative}
 .tier.hot{border-color:var(--gold)}
 .tier .badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--gold);color:#0a0a0f;font-size:.72rem;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:1px}
-.tier h3{color:var(--gold2);font-size:1.1rem;letter-spacing:1px}
-.tier .price{font-size:2.4rem;font-weight:800;margin:12px 0}
-.tier .price small{font-size:.9rem;color:var(--mut);font-weight:400}
-.tier ul{list-style:none;color:var(--mut);font-size:.9rem;margin:16px 0}
+.tier h3{color:var(--gold2);font-size:1.05rem;letter-spacing:1px}
+.tier .price{font-size:2.3rem;font-weight:800;margin:10px 0}
+.tier .price small{font-size:.85rem;color:var(--mut);font-weight:400}
+.tier ul{list-style:none;color:var(--mut);font-size:.88rem;margin:14px 0}
 .tier ul li{padding:6px 0;border-bottom:1px solid var(--line)}
-.soon{display:inline-block;margin-top:10px;padding:10px 26px;border-radius:8px;border:1px solid var(--line);color:var(--mut);font-size:.9rem}
+.soon{display:inline-block;margin-top:8px;padding:9px 24px;border-radius:8px;border:1px solid var(--line);color:var(--mut);font-size:.88rem}
 .road{max-width:720px;margin:0 auto}
-.road .step{display:flex;gap:18px;padding:14px 0;border-left:2px solid var(--line);padding-left:22px;position:relative}
-.road .step::before{content:"";position:absolute;left:-7px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
-.road .step.done::before{background:#3fae5a}
+.road .step{display:flex;gap:18px;padding:13px 0;border-left:2px solid var(--line);padding-left:22px;position:relative}
+.road .step::before{content:"";position:absolute;left:-7px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--dim)}
+.road .step.done::before{background:var(--green)}
+.road .step.now::before{background:var(--gold);box-shadow:0 0 10px var(--gold)}
 .road b{display:block}
 .road small{color:var(--mut)}
-.donate{background:var(--bg2);border:1px solid var(--line);border-radius:16px;max-width:680px;margin:0 auto;padding:40px;text-align:center}
-.donate img{border-radius:10px;background:#fff;padding:8px;margin:20px 0}
-.addr{font-family:monospace;font-size:.82rem;word-break:break-all;background:#0a0a0f;border:1px solid var(--line);padding:12px 16px;border-radius:8px;color:var(--gold2)}
+.donate{background:var(--bg2);border:1px solid var(--line);border-radius:16px;max-width:680px;margin:0 auto;padding:34px;text-align:center}
+.donate img{border-radius:10px;background:#fff;padding:8px;margin:18px 0}
+.addr{font-family:ui-monospace,Menlo,monospace;font-size:.8rem;word-break:break-all;background:#0a0a0f;border:1px solid var(--line);padding:12px 16px;border-radius:8px;color:var(--gold2)}
 .copy{margin-top:12px;padding:10px 22px;border-radius:8px;border:1px solid var(--gold);background:none;color:var(--gold2);cursor:pointer}
 .copy:hover{background:rgba(212,175,55,.12)}
-form{max-width:460px;margin:0 auto;display:flex;gap:10px}
-form input{flex:1;padding:14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:.95rem}
-form button{padding:14px 26px;border-radius:8px;border:none;background:var(--gold);color:#0a0a0f;font-weight:700;cursor:pointer}
+.beta{max-width:560px;margin:0 auto;text-align:center}
+.beta .btn{margin:10px 4px}
 .note{text-align:center;color:var(--mut);font-size:.8rem;margin-top:14px}
-footer{border-top:1px solid var(--line);padding:36px 0;text-align:center;color:var(--mut);font-size:.82rem}
-footer .disc{max-width:640px;margin:10px auto 0;font-size:.74rem;color:#5f5d68}
-@media(max-width:640px){nav ul{display:none;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:var(--bg2);padding:16px 0;border-bottom:1px solid var(--line)}nav ul.open{display:flex}.menu-btn{display:block!important;background:none;border:none;color:var(--gold);font-size:1.7rem;cursor:pointer}form{flex-direction:column}}
+footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:var(--mut);font-size:.82rem}
+footer .flinks{margin-bottom:14px}
+footer .flinks a{margin:0 14px;font-size:.88rem}
+footer .disc{max-width:660px;margin:12px auto 0;font-size:.72rem;color:var(--dim);text-align:left}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
+@media(max-width:640px){
+nav ul{display:none;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:var(--bg2);padding:16px 0;border-bottom:1px solid var(--line)}
+nav ul.open{display:flex}
+.menu-btn{display:block!important;background:none;border:none;color:var(--gold);font-size:1.7rem;cursor:pointer}
+form{flex-direction:column}.hero{padding-top:120px}
+}
 .menu-btn{display:none}
 </style>
 <script>
@@ -87,35 +131,243 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
 <nav><div class="wrap">
   <div class="logo">NEMES<span>-X</span></div>
   <button class="menu-btn" onclick="toggleMenu()" aria-label="menu">☰</button>
-  <ul><li><a href="#mining" onclick="toggleMenu()">Mining</a></li><li><a href="#premium" onclick="toggleMenu()">Premium</a></li><li><a href="#roadmap" onclick="toggleMenu()">Roadmap</a></li><li><a href="#donate" onclick="toggleMenu()">Donate ₿</a></li></ul>
+  <ul>
+    <li><a href="#status" onclick="toggleMenu()">Status</a></li>
+    <li><a href="#mining" onclick="toggleMenu()">Mining</a></li>
+    <li><a href="#economics" onclick="toggleMenu()">Economics</a></li>
+    <li><a href="#transparency" onclick="toggleMenu()">Transparency</a></li>
+    <li><a href="#roadmap" onclick="toggleMenu()">Roadmap</a></li>
+    <li><a href="#donate" onclick="toggleMenu()">Donate ₿</a></li>
+  </ul>
 </div></nav>
 
 <header class="hero"><div class="wrap">
-  <h1>NEMES<em>-X</em></h1>
-  <p class="tag">The Sovereign Brain — your idle computer becomes part of the<br>world's collective intelligence. And it earns.</p>
-  <a class="btn gold" href="#mining">Become a Miner</a>
-  <a class="btn ghost" href="#donate">Donate ₿</a>
+  <div class="hero-grid">
+    <div>
+      <h1 style="text-align:left">NEMES<em>-X</em></h1>
+      <p class="tag">The Sovereign Brain. A decentralized network where idle computers mine the world's public knowledge into a single, verifiable intelligence index — and earn for every verified contribution.</p>
+      <div class="hero-cta">
+        <a class="btn gold" href="#mining">Run a Miner →</a>
+        <a class="btn ghost" href="#status">Explore the Network →</a>
+      </div>
+    </div>
+    <div>
+      <div class="mock">
+        <div class="bar"><span>NEMES-X MINER</span><span class="dot">● PLANNED CLIENT UI</span></div>
+        <div class="row"><span>GPU</span><span>RTX 4070</span></div>
+        <div class="row"><span>Role</span><span>Embedding Worker</span></div>
+        <div class="row"><span>Status</span><span class="g">● Mining</span></div>
+        <div class="row"><span>Documents</span><span>18,492</span></div>
+        <div class="row"><span>Verified</span><span class="g">18,103</span></div>
+        <div class="row"><span>Current load</span><span>72%</span></div>
+        <div class="row"><span>Temperature</span><span>61°C</span></div>
+        <div class="row"><span>Contribution</span><span class="gd">842 shares</span></div>
+        <div class="row"><span>Est. epoch reward</span><span class="gd">12.42 USDT</span></div>
+        <div class="foot">illustrative interface — client v1 in development</div>
+      </div>
+      <div class="mocklabel">planned client ui · v1</div>
+    </div>
+  </div>
 </div></header>
 
-<div class="strip"><div class="wrap" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:30px">
-  <div><b>109M+</b><small>documents processed</small></div>
-  <div><b>22+</b><small>knowledge corpora</small></div>
-  <div><b>0</b><small>central servers — the network IS the infrastructure</small></div>
-  <div><b>100%</b><small>local-first &amp; private</small></div>
+<div class="strip"><div class="wrap" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:28px">
+  <div><b>109,279,716</b><small>documents · core corpus</small></div>
+  <div><b>40M+</b><small>vectors embedded to date</small></div>
+  <div><b>13</b><small>faiss indices built</small></div>
+  <div><b>22+</b><small>corpora · growing</small></div>
 </div></div>
+<p class="asof">figures as of Aug 24 2026 · full corpus manifest below</p>
 
-<section id="mining"><div class="wrap">
-  <h2>How Mining Works</h2>
-  <div class="cards">
-    <div class="card"><div class="n">01</div><h3>Install</h3><p>One-click client for Windows, Linux &amp; macOS. Auto-detects your GPU/CPU and picks your role.</p></div>
-    <div class="card"><div class="n">02</div><h3>Connect</h3><p>Your node joins the peer network via libp2p. No sign-up server, no central point of failure.</p></div>
-    <div class="card"><div class="n">03</div><h3>Mine Knowledge</h3><p>Your hardware processes public data corpora into verified vector embeddings — useful work, not wasted hashes.</p></div>
-    <div class="card"><div class="n">04</div><h3>Earn</h3><p>Every verified contribution earns shares. Weekly settlements, paid in USDT. Premium access included.</p></div>
+<section id="status"><div class="wrap">
+  <h2>Network Status — What Works Today</h2>
+  <p class="sub">No vague promises. Every component carries its real status. This page is the contract.</p>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Component</th><th>What it does</th><th>Status</th></tr>
+    <tr><td>Core pipeline</td><td>parse → embed (nomic v1.5) → int8 quantization → SQLite vector DB</td><td><span class="st live">🟢 LIVE</span></td></tr>
+    <tr><td>Wikipedia network</td><td>11 languages + 6 sibling projects, embedded &amp; merged</td><td><span class="st live">🟢 LIVE</span></td></tr>
+    <tr><td>arXiv corpus</td><td>3.1M scientific abstracts embedded</td><td><span class="st live">🟢 LIVE</span></td></tr>
+    <tr><td>faiss index layer</td><td>13/22 indices built (IVF-PQ, nprobe 128, rerank)</td><td><span class="st beta">🟡 PARTIAL</span></td></tr>
+    <tr><td>cc100-tr mega corpus</td><td>109.3M documents · embedding in progress</td><td><span class="st beta">🟡 RUNNING</span></td></tr>
+    <tr><td>Unified search (sorgu_hepsi)</td><td>one query across every corpus, reranked</td><td><span class="st soon">🔵 SOON</span></td></tr>
+    <tr><td>Corpus expansion</td><td>newscrawl · gutenberg · wet · paracrawl · caselaw</td><td><span class="st soon">🔵 QUEUED</span></td></tr>
+    <tr><td>Sovereign ledger</td><td>signed epoch chain · anonymous authority</td><td><span class="st plan">⚪ PLANNED</span></td></tr>
+    <tr><td>Miner client v1</td><td>one-click install · auto role detection</td><td><span class="st plan">⚪ PLANNED</span></td></tr>
+    <tr><td>Premium tiers &amp; USDT settlements</td><td>hosted API · weekly miner payouts</td><td><span class="st plan">⚪ PLANNED</span></td></tr>
+  </table></div>
+</div></section>
+
+<section id="mining" style="background:var(--bg2)"><div class="wrap">
+  <h2>What Exactly Am I Mining?</h2>
+  <p class="sub">Not hashes. Your GPU performs <b style="color:var(--gold2)">embedding work</b> — converting public knowledge into searchable mathematical form. Every step is verifiable.</p>
+  <div class="flow">
+    <div class="fstep">PUBLIC DATA CORPUS</div><div class="arr">↓</div>
+    <div class="fstep">DOCUMENT PARSING</div><div class="arr">↓</div>
+    <div class="fstep">CHUNKING (4000c / 200 overlap)</div><div class="arr">↓</div>
+    <div class="fstep hot">GPU EMBEDDING — nomic v1.5</div><div class="arr">↓</div>
+    <div class="fstep">INT8 QUANTIZATION</div><div class="arr">↓</div>
+    <div class="fstep">VERIFICATION (10% recompute)</div><div class="arr">↓</div>
+    <div class="fstep hot">KNOWLEDGE INDEX + SHARES</div>
+  </div>
+  <p class="note">Your GPU does embedding work, not proof-of-work hashing. The output is a permanent, searchable knowledge index.</p>
+</div></section>
+
+<section id="economics"><div class="wrap">
+  <h2>Mining Economics</h2>
+  <p class="sub">How contribution converts to earnings — before you commit a single watt.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>Relative Contribution Power</h3>
+      <div class="tblwrap"><table class="tbl">
+        <tr><th>Hardware</th><th>Work rate</th><th>Share multiplier</th></tr>
+        <tr><td>CPU (8 cores)</td><td>Low</td><td>1×</td></tr>
+        <tr><td>GTX 1080 Ti</td><td>Medium</td><td>~4×</td></tr>
+        <tr><td>RTX 3060</td><td>Medium-High</td><td>~5×</td></tr>
+        <tr><td>RTX 4070</td><td>High</td><td>~9×</td></tr>
+        <tr><td>RTX 4090</td><td>Very High</td><td>~20×</td></tr>
+      </table></div>
+      <p class="note" style="text-align:left;margin-top:12px">Multipliers are relative embedding throughput, measured on our own 1080 Ti reference rig.</p>
+    </div>
+    <div class="panel">
+      <h3>How Shares Become USDT</h3>
+      <div class="tblwrap"><table class="tbl">
+        <tr><th>Step</th><th>Formula</th></tr>
+        <tr><td>1. Verified work</td><td>S_i = V_i × K_tier</td></tr>
+        <tr><td>2. Weekly pool</td><td>H = premium revenue × 50%</td></tr>
+        <tr><td>3. Unit share value</td><td>P = H / ΣS</td></tr>
+        <tr><td>4. Your payout</td><td>S_you × P − network fee</td></tr>
+      </table></div>
+      <p class="note" style="text-align:left;margin-top:12px">Share value floats with network revenue and miner participation — like pool difficulty, but tied to real service income.</p>
+    </div>
+  </div>
+  <div class="disc">⚠️ <b>Estimates only.</b> USDT settlements begin at network launch (see roadmap). Actual rewards depend on verified workload, verification pass-rate, premium revenue and total miner participation. Electricity costs are yours. Nothing on this page is financial advice.</div>
+</div></section>
+
+<section id="poc" style="background:var(--bg2)"><div class="wrap">
+  <h2>Proof of Contribution</h2>
+  <p class="sub">The core technical question: <i>did your computer actually do the work?</i> Here's how the network knows.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>Verification Design</h3>
+      <ul>
+        <li><b>10% random recompute</b> — every job has a 1-in-10 chance of being fully re-embedded by an independent verifier node</li>
+        <li><b>Cosine threshold</b> — verifier vectors must match ≥ 0.99 cosine similarity against the worker's output</li>
+        <li><b>Deterministic input</b> — job manifests are content-hashed; same input, same output, same machine-independent result</li>
+        <li><b>Reputation decay</b> — failed verifications burn shares and reduce future job priority</li>
+        <li><b>No trust required</b> — verifiers are economically indifferent peers, not friends of the network</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Illustrative Job Record</h3>
+      <div class="tblwrap"><table class="tbl">
+        <tr><td>Job</td><td>#A82F91</td></tr>
+        <tr><td>Assigned</td><td>10,000 documents</td></tr>
+        <tr><td>Completed</td><td>10,000</td></tr>
+        <tr><td>Verified</td><td style="color:var(--green)">9,984</td></tr>
+        <tr><td>Rejected</td><td style="color:#c05050">16</td></tr>
+        <tr><td>Worker</td><td>node_7F3A</td></tr>
+        <tr><td>Epoch</td><td>184</td></tr>
+        <tr><td>Reward</td><td style="color:var(--gold2)">shares → ledger</td></tr>
+      </table></div>
+      <p class="note" style="text-align:left;margin-top:12px">Example structure — verification engine ships with the ledger phase.</p>
+    </div>
   </div>
 </div></section>
 
+<section id="transparency"><div class="wrap">
+  <h2>Corpus Manifest &amp; Data Licenses</h2>
+  <p class="sub">What we mine, where it comes from, and what we're allowed to do with it. Full stop.</p>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th>Corpus</th><th>Scale</th><th>License</th><th>Commercial tier</th><th>Status</th></tr>
+    <tr><td>Wikipedia (11 languages)</td><td>~25M vectors</td><td>CC BY-SA 4.0</td><td>✅ Allowed (attribution + share-alike)</td><td><span class="st live">🟢</span></td></tr>
+    <tr><td>Wiktionary / Wikiquote / Wikisource (TR+EN)</td><td>~700K vectors</td><td>CC BY-SA 4.0</td><td>✅ Allowed</td><td><span class="st live">🟢</span></td></tr>
+    <tr><td>arXiv abstracts</td><td>3.13M vectors</td><td>arXiv perpetual non-exclusive</td><td>✅ Allowed (search &amp; snippet)</td><td><span class="st live">🟢</span></td></tr>
+    <tr><td>Tatoeba TR/EN</td><td>19K vectors</td><td>CC BY 2.0 FR</td><td>✅ Allowed (attribution)</td><td><span class="st live">🟢</span></td></tr>
+    <tr><td>cc100-tr</td><td>109.3M docs</td><td>Common Crawl terms</td><td>✅ Allowed</td><td><span class="st beta">🟡 embedding</span></td></tr>
+    <tr><td>Gutenberg</td><td>79K books (queued)</td><td>Public domain (per-book check)</td><td>✅ Allowed</td><td><span class="st soon">🔵 queued</span></td></tr>
+    <tr><td>ParaCrawl tr-en</td><td>~30M pairs (queued)</td><td>CC0 / release license</td><td>✅ Allowed</td><td><span class="st soon">🔵 queued</span></td></tr>
+    <tr><td>Caselaw (CAP)</td><td>per-state review</td><td>varies by state</td><td>⚠️ per-state review</td><td><span class="st soon">🔵 queued</span></td></tr>
+    <tr><td>WikiHow</td><td>214K vectors</td><td><b style="color:#c05050">CC BY-NC-SA — non-commercial</b></td><td>❌ <b>open network only — excluded from paid tiers</b></td><td><span class="st live">🟢</span></td></tr>
+  </table></div>
+  <div class="disc">License positions are tracked per corpus and enforced at the product layer: non-commercial corpora are physically excluded from premium/hosted indexes. Full license texts ship with the corpus manifest repository.</div>
+</div></section>
+
+<section id="privacy"><div class="wrap">
+  <h2>Privacy Architecture</h2>
+  <p class="sub">What touches the internet, what never does — stated precisely, because vague privacy claims are worthless.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>What NEVER happens</h3>
+      <ul>
+        <li><b>Your personal files</b> — never scanned, processed, uploaded or stored. The network has no access to your documents.</li>
+        <li><b>Your local queries</b> — local-mode search runs entirely on your machine. Nothing leaves.</li>
+        <li><b>Raw public corpus text</b> — miners exchange verified vectors, not source documents, in peer sync.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>What DOES cross the network</h3>
+      <ul>
+        <li><b>Public corpus text</b> — pulled from public sources by miner nodes (same data anyone can download)</li>
+        <li><b>Vector deltas</b> — int8 embeddings + scale metadata, content-hashed</li>
+        <li><b>Verification proofs</b> — job manifests and similarity attestations</li>
+        <li><b>Hosted tier (opt-in)</b> — premium queries are processed on our infrastructure; local mode stays local, always</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="security" style="background:var(--bg2)"><div class="wrap">
+  <h2>Security Model</h2>
+  <p class="sub">"Will this software hijack my computer?" — Fair question. Here's the answer, current state included.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>🟢 True today</h3>
+      <ul>
+        <li><b>No root / admin required</b> — the pipeline runs as a normal user process</li>
+        <li><b>Hard resource caps</b> — memory and CPU limits enforced at the process level (systemd MemoryMax)</li>
+        <li><b>Open pipeline</b> — parse, embed, quantization and merge logic are inspectable scripts, not black boxes</li>
+        <li><b>Governance disclosure</b> — signed epochs can pause or throttle the network; this power is documented, not hidden (see Governance)</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>⚪ Shipping with client v1</h3>
+      <ul>
+        <li><b>Sandboxed worker</b> — containerized execution, filesystem isolation</li>
+        <li><b>Signed binaries</b> — every release cryptographically signed; unsigned clients refuse to run</li>
+        <li><b>Signed job manifests</b> — tasks are only accepted from the founding authority key</li>
+        <li><b>Reproducible builds</b> — release artifacts verifiable from source</li>
+        <li><b>Automatic updates</b> — signed, rollback-capable</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section id="governance"><div class="wrap">
+  <h2>Governance — Stated Plainly</h2>
+  <p class="sub">We won't pretend this is fully decentralized when it isn't. Here's the honest split:</p>
+  <div class="two">
+    <div class="panel">
+      <h3>Peer-to-peer layer</h3>
+      <ul>
+        <li>Miner nodes discover each other directly (libp2p DHT)</li>
+        <li>Work results propagate peer-to-peer</li>
+        <li>No single server hosts the index</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>Founding authority layer</h3>
+      <ul>
+        <li>Task manifests are signed by the founding key — unsigned work is rejected by design</li>
+        <li>The authority can <b>schedule epochs, throttle workloads, and pause network operations</b></li>
+        <li>Epoch validity is capped at 24h — no signed renewal means the network halts by design, not by accident</li>
+        <li>This power is exercised under the <a href="#">Brain Constitution v1.0</a> — 12 articles, versioned, changeable only by explicit founder decision</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">We call this model <b style="color:var(--gold2)">Sovereign Network</b>: P2P at the data layer, constitutional monarchy at the governance layer. If that's not for you, the open pipeline means you can fork the brain.</p>
+</div></section>
+
 <section id="premium" style="background:var(--bg2)"><div class="wrap">
-  <h2>Premium Tiers</h2>
+  <h2>Premium Tiers <span class="st plan">⚪ PLANNED</span></h2>
   <div class="tiers">
     <div class="tier"><h3>TEMPLE</h3><div class="price">$5<small>/mo</small></div>
       <ul><li>Hosted search</li><li>100 AI answers / day</li><li>Community support</li></ul>
@@ -127,19 +379,43 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
       <ul><li>High-limit API</li><li>SLA &amp; priority support</li><li>Custom corpus access</li></ul>
       <span class="soon">Coming Soon</span></div>
   </div>
-  <p class="note" style="margin-top:26px">Miners earn free premium access proportional to contribution.</p>
+  <p class="note" style="margin-top:24px">50% of premium revenue funds the miner settlement pool. Miners earn free premium access proportional to contribution.</p>
+</div></section>
+
+<section id="trust"><div class="wrap">
+  <h2>Don't Trust Us. Verify Us.</h2>
+  <p class="sub">Every claim on this page maps to something checkable.</p>
+  <div class="cards">
+    <div class="card"><h3>📄 Public corpus manifest</h3><p>Real document counts, real licenses, per-corpus — table on this page, machine-readable manifest shipping with the ledger.</p></div>
+    <div class="card"><h3>🔐 Signed epochs</h3><p>Every network instruction carries the founding signature. No signature, no work. History is hash-chained.</p></div>
+    <div class="card"><h3>🔍 10% verification</h3><p>Contribution proofs are re-computed by independent nodes. Fakes burn shares.</p></div>
+    <div class="card"><h3>📜 Settlement history</h3><p>Every payout: amount, epoch, miner count, transaction ID. Published. <span class="st plan">⚪ at network launch</span></p></div>
+    <div class="card"><h3>⚖️ Constitution</h3><p>12-article governance document, versioned. The system cannot amend it — only the founder can, publicly.</p></div>
+    <div class="card"><h3>🧾 Open pipeline</h3><p>Parse → embed → quantize → index: every stage is an inspectable script. <a href="https://github.com/nemes-xspace">GitHub →</a></p></div>
+  </div>
 </div></section>
 
 <section id="roadmap"><div class="wrap">
   <h2>Roadmap</h2>
   <div class="road">
-    <div class="step done"><span><b>Core Pipeline</b><small>109M documents · 22 corpora · int8 + faiss PQ32 — running</small></span></div>
-    <div class="step done"><span><b>Full Corpus Expansion</b><small>newscrawl · gutenberg · wet · paracrawl · caselaw</small></span></div>
-    <div class="step"><span><b>Faiss Index Layer + Unified Search</b><small>one query across every corpus</small></span></div>
-    <div class="step"><span><b>Sovereign Ledger</b><small>signed epoch chain — anonymous central authority, P2P gossip</small></span></div>
-    <div class="step"><span><b>Miner Client v1</b><small>one-click install · auto role detection · tray dashboard</small></span></div>
-    <div class="step"><span><b>Closed Beta</b><small>invited miners · credit system live</small></span></div>
-    <div class="step"><span><b>Public Launch</b><small>premium tiers · USDT settlements · referral program</small></span></div>
+    <div class="step done"><span><b>🟢 Core Pipeline — LIVE</b><small>109M docs parsed · 40M+ vectors · int8 + faiss PQ32 · 13 indices</small></span></div>
+    <div class="step done"><span><b>🟢 Corpus Expansion — QUEUED</b><small>newscrawl · gutenberg · wet · paracrawl · caselaw</small></span></div>
+    <div class="step now"><span><b>🔵 Faiss Completion + Unified Search</b><small>9 indices remaining · sorgu_hepsi single-query layer</small></span></div>
+    <div class="step"><span><b>⚪ Sovereign Ledger</b><small>signed epoch chain · anonymous authority · Tor-seeded</small></span></div>
+    <div class="step"><span><b>⚪ Miner Client v1</b><small>one-click · auto role detection · tray dashboard · sandboxed</small></span></div>
+    <div class="step"><span><b>⚪ Closed Beta</b><small>invited miners · credit ledger live · verification engine</small></span></div>
+    <div class="step"><span><b>⚪ Premium + USDT Settlements</b><small>weekly payouts · payment history page · status.nemes-x</small></span></div>
+    <div class="step"><span><b>⚪ Public Launch</b><small>campaign · referral program · full docs site</small></span></div>
+  </div>
+</div></section>
+
+<section id="docs"><div class="wrap">
+  <h2>Docs &amp; Community</h2>
+  <div class="cards">
+    <div class="card"><h3>GitHub</h3><p>Pipeline code, corpus manifest, governance documents. <a href="https://github.com/nemes-xspace">github.com/nemes-xspace →</a></p></div>
+    <div class="card"><h3>Architecture &amp; Protocol</h3><p>How the network actually works — protocol spec, ledger format, verification engine. <span class="st plan">⚪ in progress</span></p></div>
+    <div class="card"><h3>Status Page</h3><p>Per-component network status + incident history. <span class="st plan">⚪ planned</span></p></div>
+    <div class="card"><h3>Contact</h3><p>Miner issues, corpus licensing, press. <a href="https://x.com/NemesXSpace">X @NemesXSpace</a> · email infrastructure shipping with mail update.</p></div>
   </div>
 </div></section>
 
@@ -157,16 +433,19 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
   <h2>Join the Closed Beta</h2>
   <div style="text-align:center">
     <a class="btn gold" href="https://x.com/NemesXSpace" target="_blank" rel="noopener">FOLLOW @NemesXSpace → DM "BETA"</a>
-    <p class="note">Beta invitations go out via X direct message, in follow order.<br>Email sign-up form arrives with the mail infrastructure update.</p>
+    <p class="note">Beta invitations go out via X direct message, in follow order.<br>Founders keep the founder badge and boosted commission rate for life.</p>
   </div>
 </div></section>
 
 <footer><div class="wrap">
-  <div style="margin-bottom:12px">
-    <a href="https://x.com/NemesXSpace" target="_blank" rel="noopener" style="margin:0 14px;font-size:.9rem">𝕏 @NemesXSpace</a>
+  <div class="flinks">
+    <a href="https://x.com/NemesXSpace" target="_blank" rel="noopener">𝕏 @NemesXSpace</a>
+    <a href="https://github.com/nemes-xspace">GitHub</a>
+    <a href="#transparency">Corpus Manifest</a>
+    <a href="#governance">Governance</a>
   </div>
   <div>© 2026 NEMES-X · Governed by the Brain Constitution v1.0</div>
-  <div class="disc">Disclosure: the NEMES-X network is governed by its founding authority. Network operations may be scheduled, throttled or paused via signed governance epochs, as accepted in the Terms of Service. Participation is voluntary. Nothing here is financial advice.</div>
+  <div class="disc"><b>Governance disclosure:</b> the NEMES-X network is P2P at the data layer and governed by its founding authority at the protocol layer. Network operations may be scheduled, throttled or paused via signed governance epochs, as accepted in the Terms of Service. Participation is voluntary. Mining rewards are estimates until first settlement. Nothing on this site is financial advice. WikiHow content is excluded from commercial tiers due to its non-commercial license.</div>
 </div></footer>
 
 </body>
