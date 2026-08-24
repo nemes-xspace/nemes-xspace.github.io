@@ -62,9 +62,12 @@ h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);
 .card .n{font-size:1.9rem;color:var(--gold);font-weight:800}
 .card h3{margin:10px 0 8px;font-size:1.02rem}
 .card p{color:var(--mut);font-size:.9rem}
-.flow{display:flex;flex-direction:column;align-items:center;gap:0;max-width:520px;margin:0 auto;font-family:ui-monospace,Menlo,monospace;font-size:.85rem}
-.flow .fstep{width:100%;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px;letter-spacing:1px}
-.flow .fstep.hot{border-color:var(--gold);color:var(--gold2)}
+.flow{display:flex;flex-direction:column;align-items:center;gap:0;max-width:560px;margin:0 auto;font-size:.9rem}
+.flow .fstep{width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:14px 18px}
+.flow .fstep b{display:block;color:var(--txt);margin-bottom:4px;font-size:.92rem}
+.flow .fstep small{color:var(--mut);font-size:.82rem}
+.flow .fstep.hot{border-color:var(--gold)}
+.flow .fstep.hot b{color:var(--gold2)}
 .flow .arr{color:var(--dim);padding:4px 0}
 .tbl{width:100%;border-collapse:collapse;font-size:.9rem}
 .tbl th{text-align:left;color:var(--mut);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:1px}
@@ -197,18 +200,20 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
 </div></section>
 
 <section id="mining" style="background:var(--bg2)"><div class="wrap">
-  <h2>What Exactly Am I Mining?</h2>
-  <p class="sub">Not hashes. Your GPU performs <b style="color:var(--gold2)">embedding work</b> — converting public knowledge into searchable mathematical form. Every step is verifiable.</p>
+  <h2>You're Not Mining Hashes. You're Mining Knowledge.</h2>
+  <p class="sub">Your GPU turns public text into searchable mathematical form — the permanent building blocks of an open, collective knowledge index. Every step is verifiable, and every contribution earns.</p>
   <div class="flow">
-    <div class="fstep">PUBLIC DATA CORPUS</div><div class="arr">↓</div>
-    <div class="fstep">DOCUMENT PARSING</div><div class="arr">↓</div>
-    <div class="fstep">CHUNKING (4000c / 200 overlap)</div><div class="arr">↓</div>
-    <div class="fstep hot">GPU EMBEDDING — nomic v1.5</div><div class="arr">↓</div>
-    <div class="fstep">INT8 QUANTIZATION</div><div class="arr">↓</div>
-    <div class="fstep">VERIFICATION (10% recompute)</div><div class="arr">↓</div>
-    <div class="fstep hot">KNOWLEDGE INDEX + SHARES</div>
+    <div class="fstep"><b>1 · Public Data Corpus</b><small>Curated, open-access documents enter the pipeline.</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep"><b>2 · Document Parsing</b><small>Text is cleaned and split into meaningful, context-aware passages.</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep hot"><b>3 · GPU Embedding</b><small>Your GPU maps each passage to a vector that captures its meaning.</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep"><b>4 · Verification</b><small>A random 10% of embeddings are recomputed to prove the work is genuine.</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep"><b>5 · Knowledge Index + Shares</b><small>Verified vectors join the global index, and your contribution is recorded.</small></div>
   </div>
-  <p class="note">Your GPU does embedding work, not proof-of-work hashing. The output is a permanent, searchable knowledge index.</p>
+  <p class="note">No hash puzzles. No wasted energy. Just permanent, searchable knowledge — and you earn for every verified vector you produce.</p>
 </div></section>
 
 <section id="economics"><div class="wrap">
