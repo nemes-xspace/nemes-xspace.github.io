@@ -148,6 +148,7 @@ window.addEventListener('scroll',()=>{document.getElementById('backtop').classLi
     <li><a href="#economics" onclick="toggleMenu()">Economics</a></li>
     <li><a href="#transparency" onclick="toggleMenu()">Transparency</a></li>
     <li><a href="#roadmap" onclick="toggleMenu()">Roadmap</a></li>
+    <li><a href="#download" onclick="toggleMenu()">Download</a></li>
     <li><a href="#donate" onclick="toggleMenu()">Donate ₿</a></li>
   </ul>
 </div></nav>
@@ -158,7 +159,7 @@ window.addEventListener('scroll',()=>{document.getElementById('backtop').classLi
       <h1 style="text-align:left">NEMES<em>-X</em></h1>
       <p class="tag">The Sovereign Brain. Put your compute to work building the world's open collective intelligence — every contribution is measured, verifiable, and earns.</p>
       <div class="hero-cta">
-        <a class="btn gold" href="#mining">Start Mining →</a>
+        <a class="btn gold" href="#download">Start Mining →</a>
         <a class="btn ghost" href="#status">Explore Live Network →</a>
       </div>
     </div>
@@ -205,6 +206,43 @@ window.addEventListener('scroll',()=>{document.getElementById('backtop').classLi
     <tr><td>Miner client v1</td><td>One-click desktop miner that detects your hardware and starts you earning.</td><td><span class="st plan">⚪ PLANNED</span></td></tr>
     <tr><td>Premium tiers &amp; USDT settlements</td><td>Hosted API access and weekly USDT payouts for active miners.</td><td><span class="st plan">⚪ PLANNED</span></td></tr>
   </table></div>
+</div></section>
+
+<section id="download" style="background:var(--bg2)"><div class="wrap">
+  <h2>Download the Miner — Coming Soon</h2>
+  <p class="sub">The client doesn't exist yet — this is what "Start Mining" will actually do when it does. No surprises, no dead buttons.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>What Happens When You Click "Start Mining"</h3>
+      <ul>
+        <li><b>Today (pre-launch):</b> you join the beta waitlist. We'll email you the download link the day client v1 ships.</li>
+        <li><b>At launch:</b> you download a single installer (~2.5GB), run it once, and the client auto-detects your GPU/CPU.</li>
+        <li><b>Then:</b> it asks for your TRC20 wallet address (where USDT payouts go) and starts. No account creation required.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>System Requirements</h3>
+      <div class="tblwrap"><table class="tbl">
+        <tr><th></th><th>Minimum</th><th>Recommended</th></tr>
+        <tr><td>OS</td><td>Windows 10 / Ubuntu 20.04 / macOS Intel</td><td>Windows 11 / Ubuntu 24.04 / macOS Apple Silicon</td></tr>
+        <tr><td>RAM</td><td>8 GB</td><td>16 GB+</td></tr>
+        <tr><td>GPU</td><td>GTX 1060 6GB (CPU also works)</td><td>RTX 3060+ (8GB+ VRAM)</td></tr>
+        <tr><td>Disk</td><td>50 GB free SSD</td><td>100 GB free SSD</td></tr>
+        <tr><td>Network</td><td>5 Mbps</td><td>20 Mbps+</td></tr>
+        <tr><td>Install time</td><td colspan="2" style="text-align:center">Under 5 minutes, one click. Uninstall is a single command and removes everything.</td></tr>
+      </table></div>
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:28px">
+    <div style="max-width:460px;margin:0 auto">
+      <form onsubmit="window.location.href='mailto:beta@nemes-x.space?subject=Beta%20waitlist%20request&body=Add%20me%20to%20the%20NEMES-X%20beta%20waitlist.%20My%20GPU:%20'+encodeURIComponent(document.getElementById('gpu').value||'not specified')+'%0AEmail:%20'+encodeURIComponent(document.getElementById('bemail').value); return false;">
+        <input id="bemail" type="email" placeholder="your@email.com" required>
+        <input id="gpu" type="text" placeholder="Your GPU (e.g., RTX 4070) — optional" style="flex:1;padding:14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--txt);font-size:.9rem">
+        <button type="submit" style="padding:14px 26px;border-radius:8px;border:none;background:var(--gold);color:#0a0a0f;font-weight:700;cursor:pointer">JOIN BETA WAITLIST</button>
+      </form>
+      <p class="note">Opens your mail app addressed to <b style="color:var(--gold2)">beta@nemes-x.space</b>. Or <a href="https://x.com/NemesXSpace" target="_blank" rel="noopener">DM @NemesXSpace on X</a>.</p>
+    </div>
+  </div>
 </div></section>
 
 <section id="mining" style="background:var(--bg2)"><div class="wrap">
