@@ -14,5 +14,5 @@ What to do now:
 
 System requirements: 8GB RAM, GTX 1060 6GB+, 50GB free SSD, 5 Mbps.
 
-Questions? hello@nemes-x.space
+Questions? nemes-x.space@zohomail.eu
 https://nemes-x.space — The Sovereign Brain
