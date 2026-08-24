@@ -119,6 +119,8 @@ footer{border-top:1px solid var(--line);padding:40px 0;text-align:center;color:v
 footer .flinks{margin-bottom:14px}
 footer .flinks a{margin:0 14px;font-size:.88rem}
 footer .disc{max-width:660px;margin:12px auto 0;font-size:.72rem;color:var(--dim);text-align:left}
+#backtop{position:fixed;bottom:24px;right:24px;width:44px;height:44px;border-radius:50%;background:var(--gold);color:#0a0a0f;border:none;font-size:1.3rem;cursor:pointer;display:none;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,0,0,.4);z-index:8}
+#backtop.show{display:flex}
 @media(max-width:860px){.hero-grid{grid-template-columns:1fr}.two{grid-template-columns:1fr}}
 @media(max-width:640px){
 nav ul{display:none;flex-direction:column;position:absolute;top:64px;left:0;width:100%;background:var(--bg2);padding:16px 0;border-bottom:1px solid var(--line)}
@@ -130,7 +132,9 @@ form{flex-direction:column}.hero{padding-top:120px}
 </style>
 <script>
 function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
+window.addEventListener('scroll',()=>{document.getElementById('backtop').classList.toggle('show',scrollY>600)});
 </script>
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"NEMES-X","url":"https://nemes-x.space","logo":"https://nemes-x.space/logo.png","sameAs":["https://x.com/NemesXSpace","https://github.com/nemes-xspace"]}</script>
 </head>
 <body>
