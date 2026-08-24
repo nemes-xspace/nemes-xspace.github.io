@@ -73,7 +73,8 @@ h2::after{content:"";display:block;width:60px;height:3px;background:var(--gold);
 .flow .fstep.hot b{color:var(--gold2)}
 .flow .arr{color:var(--dim);padding:4px 0}
 .tbl{width:100%;border-collapse:collapse;font-size:.9rem}
-.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:1px}
+.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:10px 14px;border-bottom:1px solid var(--line);font-size:.78rem;text-transform:uppercase;letter-spacing:1px;position:sticky;top:64px;background:var(--card);z-index:2}
+@media print{nav,.hero .mock,.strip,form,#backtop{display:none}body{background:#fff;color:#000}a{color:#000}section{padding:24px 0}}
 .tbl td{padding:11px 14px;border-bottom:1px solid var(--line)}
 .tbl tr:last-child td{border-bottom:none}
 .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;overflow-x:auto}
@@ -199,7 +200,7 @@ window.addEventListener('scroll',()=>{document.getElementById('backtop').classLi
     <tr><td>Core pipeline</td><td>Turns raw text into searchable knowledge — parses, embeds, compresses, and stores it.</td><td><span class="st live">🟢 LIVE</span></td></tr>
     <tr><td>Wikipedia network</td><td>Wikipedia in 11 languages plus 6 sister projects, embedded and searchable as one.</td><td><span class="st live">🟢 LIVE</span></td></tr>
     <tr><td>arXiv corpus</td><td>3.1 million scientific abstracts embedded and ready for search.</td><td><span class="st live">🟢 LIVE</span></td></tr>
-    <tr><td>FAISS index layer</td><td>Fast similarity-search indexes — 13 of 22 built, with ranking refinement.</td><td><span class="st beta">🟡 PARTIAL</span></td></tr>
+    <tr><td><abbr title="Facebook AI Similarity Search — fast vector search">FAISS</abbr> index layer</td><td>Fast similarity-search indexes — 13 of 22 built, with ranking refinement.</td><td><span class="st beta">🟡 PARTIAL</span></td></tr>
     <tr><td>cc100-tr mega corpus</td><td>109.3 million Turkish web documents — embedding in progress.</td><td><span class="st beta">🟡 RUNNING</span></td></tr>
     <tr><td>Unified search</td><td>One query box that searches every corpus at once and reranks the best matches.</td><td><span class="st soon">🔵 SOON</span></td></tr>
     <tr><td>Corpus expansion</td><td>Next datasets queued: news, books, web crawls, translations, case law.</td><td><span class="st soon">🔵 QUEUED</span></td></tr>
@@ -293,7 +294,7 @@ window.addEventListener('scroll',()=>{document.getElementById('backtop').classLi
   <div class="panel" style="margin-top:22px">
     <h3>Settlement Details — Defined at Launch</h3>
     <div class="tblwrap"><table class="tbl">
-      <tr><td>Network</td><td>TRC20</td></tr>
+      <tr><td>Network</td><td><abbr title="TRON network token standard">TRC20</abbr></td></tr>
       <tr><td>Network fee</td><td>2% (covers verification + transfer gas)</td></tr>
       <tr><td>Payout cadence</td><td>Weekly</td></tr>
       <tr><td>Minimum</td><td style="color:var(--gold2)">No minimum — you earn per verified vector, dust simply accumulates until economical to send</td></tr>
@@ -538,7 +539,7 @@ window.addEventListener('scroll',()=>{document.getElementById('backtop').classLi
     <a href="/privacy.html">Privacy</a>
     <a href="/dmca.html">DMCA</a>
   </div>
-  <div>© 2026 NEMES-X · Governed by the Brain Constitution v1.0 — <a href="/ANAYASA.md" style="color:var(--gold2)">Read the Constitution</a> · <a href="/verify.html" style="color:var(--gold2)">Verify Everything</a></div>
+  <div>© 2026 NEMES-X · Governed by the Brain Constitution v1.0 — <a href="https://github.com/nemes-xspace/nemes-xspace.github.io/blob/main/ANAYASA.md" style="color:var(--gold2)">Read the Constitution</a> · <a href="/verify.html" style="color:var(--gold2)">Verify Everything</a></div>
   <div class="disc">Disclosure: The NEMES-X network is peer-to-peer; participation is voluntary. Mining rewards are estimates based on verified workload and network revenue. Rewards are proportional to verified vectors — no minimum; dust accumulates until economical to send on TRC20 (2% fee). Electricity costs and local tax obligations are the sole responsibility of the user. Nothing on this site constitutes financial advice. WikiHow content is excluded from paid tiers due to its non-commercial license. Prices for premium tiers do not include VAT. Users must be 18+. All statuses are updated as we ship.</div>
   <div class="disc" style="margin-top:14px">Contact: <a href="https://x.com/NemesXSpace">X @NemesXSpace</a> · <a href="https://github.com/nemes-xspace">GitHub nemes-xspace</a> · <a href="mailto:hello@nemes-x.space">hello@nemes-x.space</a> · <a href="mailto:security@nemes-x.space">security@nemes-x.space</a> · <a href="/press.html">Press Kit</a></div>
 </div></footer>
