@@ -311,26 +311,43 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
 </div></section>
 
 <section id="privacy"><div class="wrap">
-  <h2>Privacy Architecture</h2>
+  <h2>Privacy Architecture — Precise Boundaries, Not Vague Promises</h2>
   <p class="sub">What touches the internet, what never does — stated precisely, because vague privacy claims are worthless.</p>
+  <div class="flow" style="margin-bottom:34px">
+    <div class="fstep"><b>YOUR COMPUTER</b><small>downloads public corpus chunks</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep"><b>PROCESSES LOCALLY</b><small>GPU embedding on your hardware</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep"><b>PRODUCES INT8 VECTORS</b><small>the mathematical output</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep"><b>SUBMITS VERIFICATION PROOFS</b><small>content-hashed attestations</small></div>
+    <div class="arr">↓</div>
+    <div class="fstep hot"><b>NETWORK STORES VECTORS + PROOFS</b><small>permanent knowledge index</small></div>
+  </div>
+  <p class="note" style="max-width:640px;margin:0 auto 34px">(All processing happens locally. Only the mathematical output — never your files, never raw text — crosses the network.)</p>
   <div class="two">
     <div class="panel">
-      <h3>What NEVER happens</h3>
+      <h3>What NEVER Happens</h3>
       <ul>
-        <li><b>Your personal files</b> — never scanned, processed, uploaded or stored. The network has no access to your documents.</li>
+        <li><b>Your personal files</b> — never scanned, processed, uploaded, or stored. The network has no access to your documents.</li>
         <li><b>Your local queries</b> — local-mode search runs entirely on your machine. Nothing leaves.</li>
         <li><b>Raw public corpus text</b> — miners exchange verified vectors, not source documents, in peer sync.</li>
+        <li><b>Your identity</b> — mining does not require a real name, email, or KYC. You are a node ID, nothing more.</li>
       </ul>
     </div>
     <div class="panel">
-      <h3>What DOES cross the network</h3>
+      <h3>What DOES Cross the Network</h3>
       <ul>
-        <li><b>Public corpus text</b> — pulled from public sources by miner nodes (same data anyone can download)</li>
-        <li><b>Vector deltas</b> — int8 embeddings + scale metadata, content-hashed</li>
-        <li><b>Verification proofs</b> — job manifests and similarity attestations</li>
-        <li><b>Hosted tier (opt-in)</b> — premium queries are processed on our infrastructure; local mode stays local, always</li>
+        <li><b>Public corpus text</b> — pulled from public sources by miner nodes (the same data anyone can download).</li>
+        <li><b>Vector deltas</b> — int8 embeddings plus scale metadata, content-hashed for integrity.</li>
+        <li><b>Verification proofs</b> — job manifests and similarity attestations, signed by the verifier node.</li>
+        <li><b>Hosted tier (opt-in)</b> — premium queries are processed on our infrastructure; local mode stays local, always. If you do not use the hosted API, your queries never leave your machine.</li>
       </ul>
     </div>
+  </div>
+  <div class="panel" style="margin-top:22px">
+    <h3>Data Retention</h3>
+    <p style="color:var(--mut);font-size:.9rem">Vectors are retained as part of the permanent knowledge index. When a miner leaves, their completed and verified work remains (it is corpus data, not personal data), but their node identity and any pending jobs are released. No personal metadata is stored, and no profiling is performed on miner nodes.</p>
   </div>
 </div></section>
 
