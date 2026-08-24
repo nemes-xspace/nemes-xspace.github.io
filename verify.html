@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verify — NEMES-X</title>
+<meta name="description" content="Verify every claim NEMES-X makes — corpus counts, licenses, code, and governance.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0a0a0f;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.75;max-width:760px;margin:0 auto;padding:40px 24px}
+a{color:var(--gold2)}
+h1{font-size:1.9rem;color:var(--gold);margin-bottom:6px}
+.meta{color:var(--mut);font-size:.85rem;margin-bottom:32px}
+h2{font-size:1.2rem;color:var(--gold2);margin:32px 0 12px}
+p,li{color:var(--mut);font-size:.93rem}
+ul{margin:8px 0 0 20px}
+li{margin:6px 0}
+code{background:var(--card);border:1px solid var(--line);padding:2px 6px;border-radius:6px;font-size:.85rem;color:var(--txt)}
+.tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;overflow-x:auto;margin:12px 0}
+.tbl{width:100%;border-collapse:collapse;font-size:.85rem}
+.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:8px 12px;border-bottom:1px solid var(--line);font-size:.72rem;text-transform:uppercase;letter-spacing:1px}
+.tbl td{padding:8px 12px;border-bottom:1px solid var(--line)}
+nav{margin-bottom:32px;font-size:.9rem}
+nav a{margin-right:14px}
+footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.82rem}
+.proof{font-size:.78rem;color:#5f5d68;margin-top:6px}
+</style>
+</head>
+<body>
+<nav><a href="/">← Back to NEMES-X</a></nav>
+<h1>Verify Everything</h1>
+<p class="meta">Every number, every license, every claim. Source included. Last updated: 24 Aug 2026 · Next settlement: at network launch (see Roadmap).</p>
+
+<h2>1. Corpus Proof — 109,279,716 documents</h2>
+<p>Core corpus size is taken from the parser log on the build machine. Verify the source line:</p>
+<p><code>grep &quot;DB var&quot; /srv/beyin/kaynaklar/sira.log → [adapter] cc100_tr: DB var (109279716 madde) - ATLANDI</code></p>
+<p>Comparable proof commands for sister corpora are documented in <a href="https://github.com/nemes-xspace">the pipeline repo</a> (README → corpus manifest).</p>
+
+<h2>2. Built Indices — 13/22 FAISS</h2>
+<div class="tblwrap"><table class="tbl">
+<tr><th>Status</th><th>Corpus</th><th>Proof</th></tr>
+<tr><td>🟢 built</td><td>wikipedia (EN + 10 langs), wiktionary/wikiquote/wikisource (TR+EN), arxiv, tatoeba TR/EN</td><td><code>ls /srv/beyin/wiki/*.faiss</code></td></tr>
+<tr><td>🟡 running</td><td>cc100-tr (109.3M docs, embedding in progress)</td><td>live embed log</td></tr>
+<tr><td>🔵 queued</td><td>faiss indices for newscrawl, gutenberg, wet, paracrawl, caselaw</td><td>roadmap table</td></tr>
+</table></div>
+<p>Index build config: IVF-PQ (PQ32), nprobe 128, k*64 candidates → full-vector rerank. Config lives in <code>faiss_kur.py</code> in the repo.</p>
+
+<h2>3. Licenses</h2>
+<p>Full license texts ship with the corpus manifest repository. Commercial use excludes non-commercial corpora (WikiHow) at the product layer — physically separate indexes. See <a href="/#transparency">Corpus Manifest table</a> for per-corpus positions.</p>
+
+<h2>4. Bitcoin Donation Address</h2>
+<p>On-chain verifiable. Address and QR on the <a href="/#donate">Donate section</a> are identical. Verify on any block explorer:</p>
+<p><code><a href="https://mempool.space/address/bc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g">mempool.space/address/bc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g</a></code></p>
+
+<h2>5. Code &amp; Governance</h2>
+<ul>
+<li>Pipeline source: <a href="https://github.com/nemes-xspace">github.com/nemes-xspace</a> (public, commit history visible)</li>
+<li>Brain Constitution v1.0: <a href="/ANAYASA.md">ANAYASA.md</a> in the same repo (12 articles, versioned)</li>
+<li>License of the software itself: MIT/Apache-compatible — <code>LICENSE</code> in repo (fork allowed)</li>
+</ul>
+
+<h2>6. Settlement History</h2>
+<p>No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. <span style="color:#8a8894">⚪ at network launch</span></p>
+
+<h2>7. Status &amp; Incident History</h2>
+<p>Status page is planned at <code>status.nemes-x.space</code>. Until then, component health is visible in the <a href="/#status">Network Status table</a> (updated as we ship) and in <a href="https://github.com/nemes-xspace">GitHub commit activity</a>.</p>
+
+<h2>8. Contact &amp; Reports</h2>
+<ul>
+<li>General: <a href="mailto:hello@nemes-x.space">hello@nemes-x.space</a></li>
+<li>Security reports: <a href="mailto:security@nemes-x.space">security@nemes-x.space</a> — also see <a href="/.well-known/security.txt">security.txt</a></li>
+<li>Copyright: <a href="mailto:dmca@nemes-x.space">dmca@nemes-x.space</a></li>
+<li>GitHub Issues: <a href="https://github.com/nemes-xspace/nemes-xspace.github.io/issues">issue tracker</a> (also handles bug reports — item 138)</li>
+</ul>
+
+<p class="proof">Found a discrepancy between what we say and what the code does? Open an issue. The burden of proof is on us.</p>
+
+<footer><a href="/">← Back to NEMES-X</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a> · <a href="/press.html">Press Kit</a></footer>
+</body>
+</html>
