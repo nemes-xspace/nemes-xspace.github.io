@@ -291,20 +291,23 @@ function toggleMenu(){document.querySelector('nav ul').classList.toggle('open')}
 
 <section id="transparency"><div class="wrap">
   <h2>Corpus Manifest &amp; Data Licenses</h2>
-  <p class="sub">What we mine, where it comes from, and what we're allowed to do with it. Full stop.</p>
+  <p class="sub">What we mine, where it comes from, what we can legally do with it, and when it was last processed. No blurry lines.</p>
   <div class="tblwrap"><table class="tbl">
-    <tr><th>Corpus</th><th>Scale</th><th>License</th><th>Commercial tier</th><th>Status</th></tr>
-    <tr><td>Wikipedia (11 languages)</td><td>~25M vectors</td><td>CC BY-SA 4.0</td><td>✅ Allowed (attribution + share-alike)</td><td><span class="st live">🟢</span></td></tr>
-    <tr><td>Wiktionary / Wikiquote / Wikisource (TR+EN)</td><td>~700K vectors</td><td>CC BY-SA 4.0</td><td>✅ Allowed</td><td><span class="st live">🟢</span></td></tr>
-    <tr><td>arXiv abstracts</td><td>3.13M vectors</td><td>arXiv perpetual non-exclusive</td><td>✅ Allowed (search &amp; snippet)</td><td><span class="st live">🟢</span></td></tr>
-    <tr><td>Tatoeba TR/EN</td><td>19K vectors</td><td>CC BY 2.0 FR</td><td>✅ Allowed (attribution)</td><td><span class="st live">🟢</span></td></tr>
-    <tr><td>cc100-tr</td><td>109.3M docs</td><td>Common Crawl terms</td><td>✅ Allowed</td><td><span class="st beta">🟡 embedding</span></td></tr>
-    <tr><td>Gutenberg</td><td>79K books (queued)</td><td>Public domain (per-book check)</td><td>✅ Allowed</td><td><span class="st soon">🔵 queued</span></td></tr>
-    <tr><td>ParaCrawl tr-en</td><td>~30M pairs (queued)</td><td>CC0 / release license</td><td>✅ Allowed</td><td><span class="st soon">🔵 queued</span></td></tr>
-    <tr><td>Caselaw (CAP)</td><td>per-state review</td><td>varies by state</td><td>⚠️ per-state review</td><td><span class="st soon">🔵 queued</span></td></tr>
-    <tr><td>WikiHow</td><td>214K vectors</td><td><b style="color:#c05050">CC BY-NC-SA — non-commercial</b></td><td>❌ <b>open network only — excluded from paid tiers</b></td><td><span class="st live">🟢</span></td></tr>
+    <tr><th>Corpus</th><th>Scale (vectors)</th><th>License</th><th>Source</th><th>Commercial use</th><th>Status</th></tr>
+    <tr><td>Wikipedia (EN)</td><td>12,178,923</td><td>CC BY-SA 4.0</td><td>dumps.wikimedia.org</td><td>✅ Allowed (attribution + share-alike)</td><td><span class="st live">🟢 Live</span></td></tr>
+    <tr><td>Wikipedia (10 other langs)</td><td>~13M combined</td><td>CC BY-SA 4.0</td><td>dumps.wikimedia.org</td><td>✅ Allowed</td><td><span class="st live">🟢 Live</span></td></tr>
+    <tr><td>Wiktionary / Wikiquote / Wikisource (TR+EN)</td><td>~700K</td><td>CC BY-SA 4.0</td><td>dumps.wikimedia.org</td><td>✅ Allowed</td><td><span class="st live">🟢 Live</span></td></tr>
+    <tr><td>arXiv abstracts</td><td>3,127,777</td><td>arXiv perpetual non-exclusive</td><td>arxiv.org</td><td>✅ Allowed (search &amp; snippet)</td><td><span class="st live">🟢 Live</span></td></tr>
+    <tr><td>Tatoeba TR/EN</td><td>19,000</td><td>CC BY 2.0 FR</td><td>tatoeba.org</td><td>✅ Allowed (attribution)</td><td><span class="st live">🟢 Live</span></td></tr>
+    <tr><td>cc100-tr</td><td>109.3M docs</td><td>Common Crawl terms — underlying web content varies</td><td>commoncrawl.org</td><td>✅ Allowed (derived embeddings &amp; search snippets only)</td><td><span class="st beta">🟡 Embedding</span></td></tr>
+    <tr><td>Gutenberg</td><td>79K books (queued)</td><td>Public domain (per-book verified)</td><td>gutenberg.org</td><td>✅ Allowed</td><td><span class="st soon">🔵 Queued</span></td></tr>
+    <tr><td>ParaCrawl tr-en</td><td>~30M pairs (queued)</td><td>CC0 / release license</td><td>paracrawl.eu</td><td>✅ Allowed</td><td><span class="st soon">🔵 Queued</span></td></tr>
+    <tr><td>Caselaw (CAP)</td><td>per-state review</td><td>varies by state</td><td>case.law</td><td>⚠️ Per-state review</td><td><span class="st soon">🔵 Queued</span></td></tr>
+    <tr><td>Newscrawl</td><td>~5M articles (queued)</td><td>Common Crawl terms — underlying article copyrights vary</td><td>commoncrawl.org</td><td>⚠️ Derived embeddings &amp; snippets only</td><td><span class="st soon">🔵 Queued</span></td></tr>
+    <tr><td>CC WET (web extracted text)</td><td>TBD</td><td>Common Crawl terms — underlying web content varies</td><td>commoncrawl.org</td><td>⚠️ Derived embeddings &amp; snippets only</td><td><span class="st soon">🔵 Queued</span></td></tr>
+    <tr><td>WikiHow</td><td>214,000</td><td>CC BY-NC-SA — non-commercial</td><td>wikihow.com</td><td>❌ Open network only — excluded from paid tiers</td><td><span class="st live">🟢 Live</span></td></tr>
   </table></div>
-  <div class="disc">License positions are tracked per corpus and enforced at the product layer: non-commercial corpora are physically excluded from premium/hosted indexes. Full license texts ship with the corpus manifest repository.</div>
+  <div class="disc">License positions are tracked per corpus and enforced at the product layer: non-commercial corpora are physically excluded from premium/hosted indexes. Full license texts ship with the corpus manifest repository. Scale figures are updated as processing completes; statuses reflect real-time state.</div>
 </div></section>
 
 <section id="privacy"><div class="wrap">
