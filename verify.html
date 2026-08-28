@@ -35,13 +35,13 @@ footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);text-al
 
 <h2>1. Corpus Proof — 109,279,716 documents</h2>
 <p>Core corpus size is taken from the parser log on the build machine. Verify the source line:</p>
-<p><code>grep &quot;DB var&quot; /srv/beyin/kaynaklar/sira.log → [adapter] cc100_tr: DB var (109279716 madde) - ATLANDI</code></p>
+<p><code>grep &quot;DB var&quot; parser.log → [adapter] cc100_tr: DB var (109279716 madde) - ATLANDI</code></p>
 <p>Comparable proof commands for sister corpora are documented in <a href="https://github.com/nemes-xspace">the pipeline repo</a> (README → corpus manifest).</p>
 
 <h2>2. Built Indices — 13/22 FAISS</h2>
 <div class="tblwrap"><table class="tbl">
 <tr><th>Status</th><th>Corpus</th><th>Proof</th></tr>
-<tr><td>🟢 built</td><td>wikipedia (EN + 10 langs), wiktionary/wikiquote/wikisource (TR+EN), arxiv, tatoeba TR/EN</td><td><code>ls /srv/beyin/wiki/*.faiss</code></td></tr>
+<tr><td>🟢 built</td><td>wikipedia (EN + 10 langs), wiktionary/wikiquote/wikisource (TR+EN), arxiv, tatoeba TR/EN</td><td><code>ls corpus-indexes/*.faiss</code></td></tr>
 <tr><td>🟡 running</td><td>cc100-tr (109.3M docs, embedding in progress)</td><td>live embed log</td></tr>
 <tr><td>🔵 queued</td><td>faiss indices for newscrawl, gutenberg, wet, paracrawl, caselaw</td><td>roadmap table</td></tr>
 </table></div>
@@ -57,7 +57,7 @@ footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);text-al
 <h2>5. Code &amp; Governance</h2>
 <ul>
 <li>Pipeline source: <a href="https://github.com/nemes-xspace">github.com/nemes-xspace</a> (public, commit history visible)</li>
-<li>Brain Constitution v1.0: <a href="/ANAYASA.md">ANAYASA.md</a> in the same repo (12 articles, versioned)</li>
+<li>Brain Constitution: versioned and held by the operator; its public summary is on this site.</li>
 <li>License of the software itself: MIT/Apache-compatible — <code>LICENSE</code> in repo (fork allowed)</li>
 </ul>
 
