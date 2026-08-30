@@ -615,7 +615,7 @@
     "h3": "3. Minage et récompenses",
     "p3": "Exploiter un nœud mineur signifie effectuer un travail d'intégration vérifiable. Les récompenses de minage ne sont ni des investissements, ni des valeurs mobilières, ni un revenu garanti. Elles sont calculées sur la base de la charge de travail vérifiable, des revenus du réseau et de la participation totale. Les paiements réels peuvent être nuls si ces conditions ne sont pas remplies. Les règlements USDT sont traités sur le réseau TRC20 avec 2 % de frais opérationnels. Il n'y a pas de paiement minimum — tu gagnes par vecteur vérifié, la poussière s'accumule jusqu'à ce que l'envoi soit économique.",
     "h4": "4. Niveaux premium (prévus)",
-    "p4": "Les niveaux premium (DISCOVER, CREATOR, SOUL) devraient être lancés au mainnet. Les fonctionnalités, prix et disponibilités peuvent changer sans préavis. Les abonnements peuvent être annulés à tout moment ; les portions non utilisées du cycle de facturation ne sont pas remboursées sauf si la loi applicable l'exige.",
+    "p4": "Le réseau propose deux niveaux : NEMES-FREE (Apache 2.0, hors ligne, illimité — gratuit pour toujours) et NEMES-ENTERPRISE (100% Cerveau Souverain, payant — API Cloud ou On-Premise pour les équipes >20 personnes ou >1M tokens/mois).",
     "h5": "5. Responsabilités de l'utilisateur",
     "p5_1": "Tu es seul responsable de tes coûts d'électricité, de ton matériel et de tes obligations fiscales locales.",
     "p5_2": "Tu ne dois pas exécuter de clients modifiés, de bots ou de nœuds sybil tentant de tromper le système de vérification.",

@@ -24,7 +24,7 @@
   --txt:#e8e6e3; --mut:#8a8894; --line:#23232f; --dim:#5f5d68;
   --gold:#d4af37; --gold2:#f0c75e; --gold-text:#d4af37;
   --blue:#2a4a7f; --green:#3fae5a; --green-text:#3fae5a;
-  --amber:#d4a017; --amber-text:#d4a017;
+  --amber:#d4a017; --amber-text:#d4a017; --red:#c05050; --red-text:#c05050;
   --nav-bg:rgba(10,10,15,.92); --mock-bg:#0d0d15; --mock-bar:#16161f; --mock-line:#16161f;
   --on-gold:#0a0a0f;
   --shadow:0 20px 60px rgba(0,0,0,.5);
@@ -40,7 +40,7 @@
   --txt:#101016; --mut:#5f5f70; --line:#e4e4ec; --dim:#8a8a98;
   --gold:#d4af37; --gold2:#f0c75e; --gold-text:#9a771f;
   --blue:#2a4a7f; --green:#3fae5a; --green-text:#2e8447;
-  --amber:#d4a017; --amber-text:#8a6a10;
+  --amber:#d4a017; --amber-text:#8a6a10; --red:#c05050; --red-text:#b03a3a;
   --nav-bg:rgba(255,255,255,.94); --mock-bg:#f6f6f9; --mock-bar:#ececf1; --mock-line:#e4e4ec;
   --on-gold:#0a0a0f;
   --shadow:0 16px 40px rgba(16,16,22,.08);

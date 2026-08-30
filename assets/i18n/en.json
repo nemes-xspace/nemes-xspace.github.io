@@ -719,7 +719,7 @@
     "h3": "3. Mining & Rewards",
     "p3": "Running a miner node means performing verifiable embedding work. Mining rewards are not investments, securities, or guaranteed income. They are calculated based on verifiable workload, network revenue, and total participation. Actual payouts may be zero if these conditions are not met. USDT settlements are processed on the TRC20 network with a 2% operational fee. There is no minimum payout — you earn per verified vector, dust simply accumulates until economical to send.",
     "h4": "4. Premium Tiers (Planned)",
-    "p4": "Premium tiers (DISCOVER, CREATOR, SOUL) are expected to launch at mainnet. Features, prices, and availability are subject to change without notice. Subscriptions can be cancelled at any time; unused portions of the billing cycle are not refunded unless required by applicable law.",
+    "p4": "The network offers two tiers: NEMES-FREE (Apache 2.0, offline, unlimited — free forever) and NEMES-ENTERPRISE (100% Sovereign Brain, paid — Cloud API or On-Premise for teams >20 people or >1M tokens/month). Enterprise features, pricing and availability are subject to change. Enterprise subscriptions can be cancelled at any time; unused portions are not refunded unless required by applicable law.",
     "h5": "5. User Responsibilities",
     "p5_1": "You are solely responsible for your electricity costs, hardware, and local tax obligations.",
     "p5_2": "You must not run modified clients, bots, or sybil nodes that attempt to game the verification system.",

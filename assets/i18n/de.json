@@ -615,7 +615,7 @@
     "h3": "3. Mining & Belohnungen",
     "p3": "Einen Miner-Knoten zu betreiben bedeutet, verifizierbare Einbettungsarbeit zu leisten. Mining-Belohnungen sind keine Investitionen, Wertpapiere oder garantiertes Einkommen. Sie werden anhand verifizierbarer Arbeitslast, Netzwerkeinnahmen und Gesamtbeteiligung berechnet. Tatsächliche Auszahlungen können null sein, wenn diese Bedingungen nicht erfüllt sind. USDT-Abrechnungen werden im TRC20-Netzwerk mit 2 % Betriebsgebühr verarbeitet. Es gibt keine Mindestauszahlung — du verdienst pro verifiziertem Vektor, Staub sammelt sich an, bis der Versand wirtschaftlich ist.",
     "h4": "4. Premium-Stufen (geplant)",
-    "p4": "Die Premium-Stufen (DISCOVER, CREATOR, SOUL) sollen zum Mainnet starten. Funktionen, Preise und Verfügbarkeit können sich ohne Ankündigung ändern. Abonnements sind jederzeit kündbar; ungenutzte Teile des Abrechnungszeitraums werden nur erstattet, wenn gesetzlich vorgeschrieben.",
+    "p4": "Das Netzwerk bietet zwei Stufen: NEMES-FREE (Apache 2.0, offline, unbegrenzt — für immer kostenlos) und NEMES-ENTERPRISE (100% Souveränes Gehirn, kostenpflichtig — Cloud-API oder On-Premise für Teams >20 Personen oder >1M Tokens/Monat).",
     "h5": "5. Nutzerpflichten",
     "p5_1": "Du trägst die alleinige Verantwortung für deine Stromkosten, Hardware und lokalen Steuerpflichten.",
     "p5_2": "Du darfst keine modifizierten Clients, Bots oder Sybil-Knoten betreiben, die versuchen, das Verifikationssystem auszutricksen.",

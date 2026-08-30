@@ -615,7 +615,7 @@
     "h3": "3. Madencilik ve Ödüller",
     "p3": "Madenci düğümü çalıştırmak doğrulanabilir gömme işi yapmak demektir. Madencilik ödülleri yatırım, menkul kıymet veya garantili gelir değildir. Doğrulanabilir iş yüküne, ağ gelirine ve toplam katılıma göre hesaplanır. Koşullar karşılanmazsa fiili ödemeler sıfır olabilir. USDT ödemeleri TRC20 ağında %2 operasyonel ücretle işlenir. Asgari ödeme yoktur — doğrulanan her vektör için kazanırsın, toz gönderilmesi ekonomik olana dek birikir.",
     "h4": "4. Premium Katmanlar (Planlı)",
-    "p4": "Premium katmanların (DISCOVER, CREATOR, SOUL) mainnet'te açılması bekleniyor. Özellikler, fiyatlar ve erişilebilirlik önceden bildirilmeksizin değişebilir. Abonelikler her zaman iptal edilebilir; fatura döneminin kullanılmayan kısımları yürürlükteki yasa gerekmedikçe iade edilmez.",
+    "p4": "Ağ iki kademe sunar: NEMES-FREE (Apache 2.0, çevrimdışı, sınırsız — sonsuza dek ücretsiz) ve NEMES-ENTERPRISE (%100 Egemen Beyin, ücretli — >20 kişilik ekipler veya ayda >1M token için Bulut API veya Şirket İçi).",
     "h5": "5. Kullanıcı Sorumlulukları",
     "p5_1": "Elektrik maliyetlerinden, donanımından ve yerel vergi yükümlülüklerinden yalnızca sen sorumlusun.",
     "p5_2": "Doğrulama sistemini kandırmaya çalışan değiştirilmiş istemciler, botlar veya sybil düğümleri çalıştırmamalısın.",

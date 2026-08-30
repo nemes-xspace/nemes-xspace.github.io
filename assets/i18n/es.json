@@ -615,7 +615,7 @@
     "h3": "3. Minería y Recompensas",
     "p3": "Operar un nodo minero significa realizar trabajo de incrustación verificable. Las recompensas de minería no son inversiones, valores ni ingresos garantizados. Se calculan con base en la carga de trabajo verificable, los ingresos de la red y la participación total. Los pagos reales pueden ser cero si no se cumplen estas condiciones. Las liquidaciones USDT se procesan en la red TRC20 con una comisión operativa del 2 %. No hay pago mínimo — ganas por vector verificado, el polvo se acumula hasta que el envío sea económico.",
     "h4": "4. Niveles Premium (Planificados)",
-    "p4": "Se espera que los niveles premium (DISCOVER, CREATOR, SOUL) se lancen con el mainnet. Las características, precios y disponibilidad pueden cambiar sin previo aviso. Las suscripciones pueden cancelarse en cualquier momento; las porciones no utilizadas del ciclo de facturación no se reembolsan salvo que la ley aplicable lo exija.",
+    "p4": "La red ofrece dos niveles: NEMES-FREE (Apache 2.0, offline, ilimitado — gratis para siempre) y NEMES-ENTERPRISE (100% Cerebro Soberano, de pago — API en la nube u On-Premise para equipos >20 personas o >1M tokens/mes).",
     "h5": "5. Responsabilidades del Usuario",
     "p5_1": "Eres el único responsable de tus costos de electricidad, hardware y obligaciones fiscales locales.",
     "p5_2": "No debes ejecutar clientes modificados, bots o nodos sybil que intenten engañar al sistema de verificación.",
