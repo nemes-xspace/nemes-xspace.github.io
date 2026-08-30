@@ -3,104 +3,108 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why NEMES-X — The Sovereign Brain</title>
-<meta name="description" content="Why we're building NEMES-X: to make humanity's collective knowledge permanent, searchable, and censorship-resistant — powered by idle computers.">
-<meta property="og:title" content="Why NEMES-X">
-<meta property="og:description" content="Information access is controlled by a few companies. We're building the alternative.">
-<meta property="og:image" content="https://nemes-x.space/og-image.png">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--bg2:#101018;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
-body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.8;max-width:720px;margin:0 auto;padding:60px 24px}
-a{color:var(--gold2)}
-h1{font-size:2.2rem;color:var(--gold);margin-bottom:8px;letter-spacing:2px}
-h1 span{color:var(--txt)}
-.sub{color:var(--mut);font-size:1rem;margin-bottom:48px}
-h2{font-size:1.3rem;color:var(--gold2);margin:48px 0 16px;border-bottom:1px solid var(--line);padding-bottom:8px}
-p{color:var(--mut);font-size:.98rem;margin:14px 0}
-p b{color:var(--txt)}
-p em{color:var(--gold2);font-style:normal}
-blockquote{border-left:3px solid var(--gold);margin:20px 0;padding:14px 20px;background:var(--card);border-radius:0 8px 8px 0;color:var(--txt);font-size:1.02rem}
-nav{margin-bottom:48px;font-size:.9rem}
-footer{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.82rem}
-</style>
+<title>Why NEMES-X — A Founder's Letter</title>
+<meta name="description" content="Why NEMES-X exists — a founder's letter on gated information, wasted GPU power, and the Sovereign Network.">
+<link rel="canonical" href="https://nemes-x.space/why.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/theme.js"></script>
 </head>
 <body>
-<nav><a href="/">← Back to NEMES-X</a> · <a href="/verify.html">Verify Everything</a></nav>
 
-<h1>Why NEMES<span>-X</span></h1>
-<p class="sub">A founder's letter — why we're building this, and why now.</p>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="/manifesto.html" data-i18n="shared.nav_manifesto">Manifesto</a></li>
+    <li><a href="/why.html" class="active" data-i18n="shared.nav_why">Why</a></li>
+    <li><a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></li>
+    <li><a href="/faq.html" data-i18n="shared.nav_faq">FAQ</a></li>
+    <li><a href="/rakamlar.html" data-i18n="shared.nav_rakamlar">Rakamlar</a></li>
+    <li><a href="/press.html" data-i18n="shared.nav_press">Press</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="langwrap">
+      <button class="lang-btn" id="langBtn" aria-label="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+        <span class="lang-label">English</span>
+      </button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M1 12h3M20 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+    </button>
+  </div>
+</div></nav>
 
-<h2>The Problem</h2>
-<p>Three problems. One solution.</p>
+<article class="serif"><div class="wrap-narrow">
+  <h1>Why NEMES<span>-X</span></h1>
+  <p class="sub" data-i18n="why.sub">A founder's letter — why we're building this, and why now.</p>
 
-<p><b>Information access is gated.</b> Google decides what you find. OpenAI decides what you read. A handful of companies control the gateway to humanity's collective knowledge. When they change their terms, censor results, or shut down — you have no alternative. You accept it, because there is nothing else.</p>
+  <div class="prose">
+    <h2 data-i18n="why.h_prob">The Problem</h2>
+    <p data-i18n="why.p_prob0">Three problems. One solution.</p>
+    <p><b data-i18n="why.b1">Information access is gated.</b> <span data-i18n="why.p1">Google decides what you find. OpenAI decides what you read. A handful of companies control the gateway to humanity's collective knowledge. When they change their terms, censor results, or shut down — you have no alternative. You accept it, because there is nothing else.</span></p>
+    <p><b data-i18n="why.b2">GPUs burn electricity for nothing.</b> <span data-i18n="why.p2">Millions of GPUs around the world sit idle 90% of the time. When they do run, they run proof-of-work hash puzzles — burning electricity to produce a number that secures a ledger and produces nothing else. The energy is spent. The output evaporates. Nothing permanent is created.</span></p>
+    <p><b data-i18n="why.b3">"Is AI safe?" has no answer.</b> <span data-i18n="why.p3">Closed AI models are black boxes. You don't know what they learned, what they store, who controls them, or what happens when their terms change. You trust a company logo. That is not safety — that is hope.</span></p>
 
-<p><b>GPUs burn electricity for nothing.</b> Millions of GPUs around the world sit idle 90% of the time. When they do run, they run proof-of-work hash puzzles — burning electricity to produce a number that secures a ledger and produces nothing else. The energy is spent. The output evaporates. Nothing permanent is created.</p>
+    <h2 data-i18n="why.h_sol">The Solution</h2>
+    <p><em data-i18n="why.em1">One network. Three answers.</em></p>
+    <p><b data-i18n="why.b4">A distributed knowledge index.</b> <span data-i18n="why.p4">Public corpora — Wikipedia, arXiv, Common Crawl, Gutenberg, legal records — are processed by volunteer computers into verified vector embeddings. These embeddings form a single, searchable intelligence index that lives across thousands of machines. No central server. No single point of failure. No gatekeeper.</span></p>
+    <p><b data-i18n="why.b5">Useful mining.</b> <span data-i18n="why.p5">The same GPU that would burn electricity on hash puzzles instead performs embedding work — converting public text into permanent, searchable mathematical form. The energy is spent. The output</span> <em data-i18n="why.em2">lasts forever</em><span data-i18n="why.p5b">. And it earns.</span></p>
+    <p><b data-i18n="why.b6">Open by design.</b> <span data-i18n="why.p6">The entire pipeline — parsing, embedding, quantization, indexing, verification — is inspectable code. Every corpus, every license, every data source is publicly listed. You can fork the brain. Build your own. Change the rules. That is the point.</span></p>
 
-<p><b>"Is AI safe?" has no answer.</b> Closed AI models are black boxes. You don't know what they learned, what they store, who controls them, or what happens when their terms change. You trust a company logo. That is not safety — that is hope.</p>
+    <h2 data-i18n="why.h_not">What It Is Not</h2>
+    <p data-i18n="why.p7">NEMES-X is not a chatbot. It is not a language model. It is not a replacement for ChatGPT.</p>
+    <p><span data-i18n="why.p8">It is a</span> <b data-i18n="why.p8b">search engine for human knowledge</b> <span data-i18n="why.p8c">— built by the people, hosted by the people, owned by no one. When a language model is integrated (planned), NEMES-X provides the context. The LLM writes the answer. But the knowledge — the verified, searchable, permanent index — belongs to the network.</span></p>
 
-<h2>The Solution</h2>
-<p><em>One network. Three answers.</em></p>
+    <h2 data-i18n="why.h_sov">The Sovereign Model</h2>
+    <p data-i18n="why.p9">We will not pretend this is fully decentralized when it is not. The data layer is peer-to-peer. The governance layer is controlled by the founding authority — signed epochs, capped at 24 hours, with the power to pause or throttle the network.</p>
+    <p data-i18n="why.p10">This is not a bug. It is a design choice. Fully permissionless networks are open to spam, sybil attacks, and abuse. An anonymous but cryptographically signed authority provides discipline without identity. If the authority key disappears, the network halts by design — a dead god cannot silently rule.</p>
+    <blockquote style="border-left:3px solid var(--gold);padding:6px 0 6px 18px;margin:18px 0;color:var(--gold2);font-style:italic" data-i18n="why.q1">"We call this the Sovereign Network model: P2P at the data layer, constitutional monarchy at the governance layer. The code is open to fork — the network, the data, the constitution. If you want a different ruler, build one."</blockquote>
 
-<p><b>A distributed knowledge index.</b> Public corpora — Wikipedia, arXiv, Common Crawl, Gutenberg, legal records — are processed by volunteer computers into verified vector embeddings. These embeddings form a single, searchable intelligence index that lives across thousands of machines. No central server. No single point of failure. No gatekeeper.</p>
+    <h2 data-i18n="why.h_built">What We Have Built</h2>
+    <p data-i18n="why.p11">This is not a whitepaper. This is not a promise. This is running code.</p>
+    <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+      <li style="margin:6px 0"><b data-i18n="why.l1">109,279,716 documents</b> <span data-i18n="why.l1d">— parsed, chunked, and stored in the core corpus (cc100-tr)</span></li>
+      <li style="margin:6px 0"><b data-i18n="why.l2">40M+ vector embeddings</b> <span data-i18n="why.l2d">— across 22+ corpora, int8 quantized, searchable</span></li>
+      <li style="margin:6px 0"><b data-i18n="why.l3">13 FAISS indices</b> <span data-i18n="why.l3d">— IVF-PQ, nprobe 128, full-vector rerank</span></li>
+      <li style="margin:6px 0"><b data-i18n="why.l4">12 corpora embedded and searchable</b> <span data-i18n="why.l4d">— Wikipedia (11 languages), arXiv, WikiHow, Tatoeba, sibling projects</span></li>
+      <li style="margin:6px 0"><b data-i18n="why.l5">5 more corpora queued</b> <span data-i18n="why.l5d">— newscrawl, Gutenberg, Common Crawl WET, ParaCrawl, Caselaw</span></li>
+      <li style="margin:6px 0"><b data-i18n="why.l6">3 legal documents</b> <span data-i18n="why.l6d">— Terms, Privacy Policy, DMCA — live on this site</span></li>
+      <li style="margin:6px 0"><b data-i18n="why.l7">1 constitution</b> <span data-i18n="why.l7d">— 12 articles, versioned, public</span></li>
+    </ul>
 
-<p><b>Useful mining.</b> The same GPU that would burn electricity on hash puzzles instead performs embedding work — converting public text into permanent, searchable mathematical form. The energy is spent. The output <em>lasts forever</em>. And it earns.</p>
+    <h2 data-i18n="why.h_next">What Comes Next</h2>
+    <p data-i18n="why.p12">The core pipeline is live and running. The cc100-tr mega corpus (109.3M documents) has been embedded. Next: newscrawl, books, and web corpora — then the FAISS index layer is finalized and the unified search interface goes live.</p>
+    <p data-i18n="why.p13">Then: the miner client. One-click install. Your GPU joins the network. Your verified contributions earn shares. Weekly settlements in USDT. Premium hosted search for those who prefer not to run their own infrastructure.</p>
+    <p data-i18n="why.p14">Then: the sovereign ledger. Signed epoch chain. Anonymous authority. P2P gossip. The full decentralization stack.</p>
 
-<p><b>Open by design.</b> The entire pipeline — parsing, embedding, quantization, indexing, verification — is inspectable code. Every corpus, every license, every data source is publicly listed. You can fork the brain. Build your own. Change the rules. That is the point.</p>
+    <h2 data-i18n="why.h_now">Why Now</h2>
+    <p data-i18n="why.p15">Because the window is closing. AI companies are consolidating. Access is being gated. Prices are rising. Open alternatives are being squeezed out of the conversation.</p>
+    <p data-i18n="why.p16">If we don't build a distributed, transparent, censorship-resistant knowledge infrastructure now — we may not get another chance.</p>
+    <p data-i18n="why.p17">This is not a get-rich-quick scheme. This is not a token sale. This is infrastructure.</p>
+    <blockquote style="border-left:3px solid var(--gold);padding:6px 0 6px 18px;margin:18px 0;color:var(--gold2);font-style:italic" data-i18n="why.q2">"Information is the oxygen of the modern age. It seeps through walls topped by barbed wire. It courses through wires. It slips through the ether."</blockquote>
+    <p style="color:var(--dim);font-size:.85rem" data-i18n="why.q2src">— Ronald Reagan, 1989 (still true)</p>
 
-<h2>What It Is Not</h2>
-<p>NEMES-X is not a chatbot. It is not a language model. It is not a replacement for ChatGPT.</p>
-
-<p>It is a <b>search engine for human knowledge</b> — built by the people, hosted by the people, owned by no one. When a language model is integrated (planned), NEMES-X provides the context. The LLM writes the answer. But the knowledge — the verified, searchable, permanent index — belongs to the network.</p>
-
-<h2>The Sovereign Model</h2>
-<p>We will not pretend this is fully decentralized when it is not. The data layer is peer-to-peer. The governance layer is controlled by the founding authority — signed epochs, capped at 24 hours, with the power to pause or throttle the network.</p>
-
-<p>This is not a bug. It is a design choice. Fully permissionless networks are open to spam, sybil attacks, and abuse. An anonymous but cryptographically signed authority provides discipline without identity. If the authority key disappears, the network halts by design — a dead god cannot silently rule.</p>
-
-<blockquote>"We call this the Sovereign Network model: P2P at the data layer, constitutional monarchy at the governance layer. The code is open to fork — the network, the data, the constitution. If you want a different ruler, build one."</blockquote>
-
-<h2>What We Have Built</h2>
-<p>This is not a whitepaper. This is not a promise. This is running code.</p>
-
-<ul>
-<li><b>109,279,716 documents</b> — parsed, chunked, and stored in the core corpus (cc100-tr)</li>
-<li><b>40M+ vector embeddings</b> — across 22+ corpora, int8 quantized, searchable</li>
-<li><b>13 FAISS indices</b> — IVF-PQ, nprobe 128, full-vector rerank</li>
-<li><b>12 corpora embedded and searchable</b> — Wikipedia (11 languages), arXiv, WikiHow, Tatoeba, sibling projects</li>
-<li><b>5 more corpora queued</b> — newscrawl, Gutenberg, Common Crawl WET, ParaCrawl, Caselaw</li>
-<li><b>3 legal documents</b> — Terms, Privacy Policy, DMCA — live on this site</li>
-<li><b>1 constitution</b> — 12 articles, versioned, public</li>
-</ul>
-
-<h2>What Comes Next</h2>
-<p>The core pipeline is live and running. The cc100-tr mega corpus (109.3M documents) is being embedded right now by 12 worker nodes. When it completes, the FAISS index layer will be finalized, and the unified search interface will go live.</p>
-
-<p>Then: the miner client. One-click install. Your GPU joins the network. Your verified contributions earn shares. Weekly settlements in USDT. Premium hosted search for those who prefer not to run their own infrastructure.</p>
-
-<p>Then: the sovereign ledger. Signed epoch chain. Anonymous authority. P2P gossip. The full decentralization stack.</p>
-
-<h2>Why Now</h2>
-<p>Because the window is closing. AI companies are consolidating. Access is being gated. Prices are rising. Open alternatives are being squeezed out of the conversation.</p>
-
-<p>If we don't build a distributed, transparent, censorship-resistant knowledge infrastructure now — we may not get another chance.</p>
-
-<p>This is not a get-rich-quick scheme. This is not a token sale. This is infrastructure.</p>
-
-<blockquote>"Information is the oxygen of the modern age. It seeps through walls topped by barbed wire. It courses through wires. It slips through the ether."</blockquote>
-<p style="color:var(--dim);font-size:.85rem">— Ronald Reagan, 1989 (still true)</p>
-
-<h2>Join</h2>
-<p>If you have a GPU and idle hours — <a href="/#download">run a miner</a>.</p>
-<p>If you believe knowledge should be free — <a href="/#donate">support the network</a>.</p>
-<p>If you're a developer — <a href="https://github.com/nemes-xspace">fork the brain</a>.</p>
-<p>If you just want to follow along — <a href="https://x.com/NemesXSpace">follow on X</a>.</p>
+    <h2 data-i18n="why.h_join">Join</h2>
+    <p><span data-i18n="why.j1">If you have a GPU and idle hours —</span> <a href="/#download" data-i18n="why.j1b">run a miner</a>.</p>
+    <p><span data-i18n="why.j2">If you believe knowledge should be free —</span> <a href="/#donate" data-i18n="why.j2b">support the network</a>.</p>
+    <p><span data-i18n="why.j3">If you're a developer —</span> <a href="https://github.com/nemes-xspace" data-i18n="why.j3b">fork the brain</a>.</p>
+    <p><span data-i18n="why.j4">If you just want to follow along —</span> <a href="https://x.com/NemesXSpace" data-i18n="why.j4b">follow on X</a>.</p>
+  </div>
+  <div class="gframe"><b data-i18n="why.sign">— The Founder, NEMES-X</b></div>
+</div></article>
 
 <footer>
-  <p>— The Founder, NEMES-X</p>
-  <p style="margin-top:8px"><a href="/">← Back to NEMES-X</a> · <a href="/verify.html">Verify Everything</a> · <a href="/terms.html">Terms</a></p>
+  <div class="bottom">
+    <div>© 2026 NEMES-X · <a href="/verify.html" data-i18n="shared.nav_verify">Verify</a> · <a href="/terms.html" data-i18n="shared.nav_terms">Terms</a></div>
+  </div>
 </footer>
+
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
+<script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
+<script>window.NX_PAGE='why'</script>
+<script src="/assets/i18n.js"></script>
 </body>
 </html>

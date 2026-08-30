@@ -3,74 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — NEMES-X</title>
-<meta name="description" content="NEMES-X Privacy Policy">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
-body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.75;max-width:760px;margin:0 auto;padding:40px 24px}
-a{color:var(--gold2)}
-h1{font-size:2rem;color:var(--gold);margin-bottom:4px}
-.meta{color:var(--mut);font-size:.85rem;margin-bottom:36px}
-h2{font-size:1.2rem;color:var(--gold2);margin:32px 0 12px}
-p, li{color:var(--mut);font-size:.95rem}
-ul{margin:8px 0 0 20px}
-li{margin:6px 0}
-nav{margin-bottom:36px;font-size:.9rem}
-nav a{margin-right:16px}
-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.82rem}
-</style>
+<title>Privacy — NEMES-X</title>
+<meta name="description" content="NEMES-X privacy policy — what we never collect, what we collect minimally, GDPR/KVKK rights.">
+<link rel="canonical" href="https://nemes-x.space/privacy.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/theme.js"></script>
 </head>
 <body>
-<nav><a href="/">← Back to NEMES-X</a></nav>
-<h1>NEMES-X Privacy Policy</h1>
-<p class="meta">Last updated: 24 August 2026</p>
 
-<h2>1. Data Controller</h2>
-<p>The NEMES-X network is maintained by an anonymous founding authority. For privacy-related inquiries, contact: <a href="mailto:nemes-x.space@zohomail.eu?subject=[PRIVACY]">nemes-x.space@zohomail.eu (subject: [PRIVACY])</a> (once email is live) or open an issue in the official GitHub repository.</p>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="/manifesto.html" data-i18n="shared.nav_manifesto">Manifesto</a></li>
+    <li><a href="/why.html" data-i18n="shared.nav_why">Why</a></li>
+    <li><a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></li>
+    <li><a href="/faq.html" data-i18n="shared.nav_faq">FAQ</a></li>
+    <li><a href="/rakamlar.html" data-i18n="shared.nav_rakamlar">Rakamlar</a></li>
+    <li><a href="/press.html" data-i18n="shared.nav_press">Press</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="langwrap">
+      <button class="lang-btn" id="langBtn" aria-label="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+        <span class="lang-label">English</span>
+      </button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M1 12h3M20 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+    </button>
+  </div>
+</div></nav>
 
-<h2>2. What We NEVER Collect</h2>
-<ul>
-<li><strong>Your personal files</strong> — never scanned, processed, uploaded, or stored.</li>
-<li><strong>Your local search queries</strong> — local-mode search runs entirely on your machine; nothing leaves.</li>
-<li><strong>Raw corpus text from your node</strong> — miners exchange verified vectors, not source documents.</li>
-<li><strong>Your real identity</strong> — mining does not require a name, email, or KYC. You are a node ID only.</li>
-</ul>
+<article><div class="wrap-narrow">
+  <h1 data-i18n="prv.title">Privacy Policy</h1>
+  <p class="sub" data-i18n="prv.sub">Last updated: 30 Aug 2026</p>
 
-<h2>3. What We DO Collect (Minimal)</h2>
-<ul>
-<li><strong>Website server logs</strong> — standard technical logs (IP address, user agent, timestamp) necessary for security, debugging, and DDoS mitigation. Retained for a maximum of 30 days.</li>
-<li><strong>Beta waitlist email</strong> — if you sign up for the beta, we store your email address solely to notify you when the client is ready. We do not sell, rent, or share this list. You can unsubscribe at any time.</li>
-<li><strong>Wallet addresses</strong> — when USDT settlements begin, we will record TRC20 wallet addresses to process payouts. This is necessary for the service to function.</li>
-</ul>
+  <h2 data-i18n="prv.h1">1. Data Controller</h2>
+  <p data-i18n="prv.p1">The NEMES-X network is maintained by an anonymous founding authority. For privacy-related inquiries, contact: <a href="mailto:nemes-x.space@zohomail.eu?subject=[PRIVACY]">nemes-x.space@zohomail.eu (subject: [PRIVACY])</a> (once email is live) or open an issue in the official GitHub repository.</p>
 
-<h2>4. Legal Basis (GDPR / KVKK)</h2>
-<ul>
-<li><strong>Legitimate Interest</strong> — processing server logs for security and service stability.</li>
-<li><strong>Consent</strong> — processing your email for the beta waitlist (you provide it voluntarily).</li>
-<li><strong>Contractual Necessity</strong> — processing wallet addresses to fulfill settlement obligations.</li>
-</ul>
+  <h2 data-i18n="prv.h2">2. What We NEVER Collect</h2>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0"><strong data-i18n="prv.n1">Your personal files</strong> <span data-i18n="prv.n1d">— never scanned, processed, uploaded, or stored.</span></li>
+    <li style="margin:6px 0"><strong data-i18n="prv.n2">Your local search queries</strong> <span data-i18n="prv.n2d">— local-mode search runs entirely on your machine; nothing leaves.</span></li>
+    <li style="margin:6px 0"><strong data-i18n="prv.n3">Raw corpus text from your node</strong> <span data-i18n="prv.n3d">— miners exchange verified vectors, not source documents.</span></li>
+    <li style="margin:6px 0"><strong data-i18n="prv.n4">Your real identity</strong> <span data-i18n="prv.n4d">— mining does not require a name, email, or KYC. You are a node ID only.</span></li>
+  </ul>
 
-<h2>5. Cookies &amp; Tracking</h2>
-<p>The NEMES-X website does not use third-party advertising cookies. Any analytics used (e.g., Plausible) will be privacy-friendly and not collect personal identifiers. You can block all cookies without breaking the core site.</p>
+  <h2 data-i18n="prv.h3">3. What We DO Collect (Minimal)</h2>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0"><strong data-i18n="prv.c1">Website server logs</strong> <span data-i18n="prv.c1d">— standard technical logs (IP address, user agent, timestamp) necessary for security, debugging, and DDoS mitigation. Retained for a maximum of 30 days.</span></li>
+    <li style="margin:6px 0"><strong data-i18n="prv.c2">Beta waitlist email</strong> <span data-i18n="prv.c2d">— if you sign up for the beta, we store your email address solely to notify you when the client is ready. We do not sell, rent, or share this list. You can unsubscribe at any time.</span></li>
+    <li style="margin:6px 0"><strong data-i18n="prv.c3">Wallet addresses</strong> <span data-i18n="prv.c3d">— when USDT settlements begin, we will record TRC20 wallet addresses to process payouts. This is necessary for the service to function.</span></li>
+  </ul>
 
-<h2>6. Data Retention</h2>
-<ul>
-<li>Server logs: deleted after 30 days.</li>
-<li>Beta waitlist emails: kept until you unsubscribe or the beta program ends.</li>
-<li>Wallet addresses: retained for as long as required by applicable tax or financial regulations.</li>
-</ul>
+  <h2 data-i18n="prv.h4">4. Legal Basis (GDPR / KVKK)</h2>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0"><strong data-i18n="prv.l1">Legitimate Interest</strong> <span data-i18n="prv.l1d">— processing server logs for security and service stability.</span></li>
+    <li style="margin:6px 0"><strong data-i18n="prv.l2">Consent</strong> <span data-i18n="prv.l2d">— processing your email for the beta waitlist (you provide it voluntarily).</span></li>
+    <li style="margin:6px 0"><strong data-i18n="prv.l3">Contractual Necessity</strong> <span data-i18n="prv.l3d">— processing wallet addresses to fulfill settlement obligations.</span></li>
+  </ul>
 
-<h2>7. Your Rights (GDPR / KVKK)</h2>
-<p>You have the right to access, correct, delete, or port your personal data (if any is held). You also have the right to object to processing and to lodge a complaint with your local supervisory authority. To exercise these rights, contact us via GitHub or the privacy email above.</p>
+  <h2 data-i18n="prv.h5">5. Cookies &amp; Tracking</h2>
+  <p data-i18n="prv.p5">The NEMES-X website does not use third-party advertising cookies. Any analytics used (e.g., Plausible) will be privacy-friendly and not collect personal identifiers. You can block all cookies without breaking the core site.</p>
 
-<h2>8. Children's Privacy</h2>
-<p>The Network is intended for users aged 18 and above. We do not knowingly collect data from children under 18.</p>
+  <h2 data-i18n="prv.h6">6. Data Retention</h2>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0" data-i18n="prv.r1">Server logs: deleted after 30 days.</li>
+    <li style="margin:6px 0" data-i18n="prv.r2">Beta waitlist emails: kept until you unsubscribe or the beta program ends.</li>
+    <li style="margin:6px 0" data-i18n="prv.r3">Wallet addresses: retained for as long as required by applicable tax or financial regulations.</li>
+  </ul>
 
-<h2>9. Changes to this Policy</h2>
-<p>We will announce any material changes to this policy on the official website and GitHub repository.</p>
+  <h2 data-i18n="prv.h7">7. Your Rights (GDPR / KVKK)</h2>
+  <p data-i18n="prv.p7">You have the right to access, correct, delete, or port your personal data (if any is held). You also have the right to object to processing and to lodge a complaint with your local supervisory authority. To exercise these rights, contact us via GitHub or the privacy email above.</p>
 
-<footer><a href="/">← Back to NEMES-X</a> · <a href="/terms.html">Terms</a> · <a href="/dmca.html">DMCA</a></footer>
+  <h2 data-i18n="prv.h8">8. Children's Privacy</h2>
+  <p data-i18n="prv.p8">The Network is intended for users aged 18 and above. We do not knowingly collect data from children under 18.</p>
+
+  <h2 data-i18n="prv.h9">9. Changes to this Policy</h2>
+  <p data-i18n="prv.p9">We will announce any material changes to this policy on the official website and GitHub repository.</p>
+</div></article>
+
+<footer>
+  <div class="bottom">
+    <div>© 2026 NEMES-X · <a href="/terms.html" data-i18n="shared.nav_terms">Terms</a> · <a href="/dmca.html" data-i18n="shared.nav_dmca">DMCA</a></div>
+  </div>
+</footer>
+
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
+<script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
+<script>window.NX_PAGE='privacy'</script>
+<script src="/assets/i18n.js"></script>
 </body>
 </html>

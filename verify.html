@@ -5,78 +5,96 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Verify — NEMES-X</title>
 <meta name="description" content="Verify every claim NEMES-X makes — corpus counts, licenses, code, and governance.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
-body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.75;max-width:760px;margin:0 auto;padding:40px 24px}
-a{color:var(--gold2)}
-h1{font-size:1.9rem;color:var(--gold);margin-bottom:6px}
-.meta{color:var(--mut);font-size:.85rem;margin-bottom:32px}
-h2{font-size:1.2rem;color:var(--gold2);margin:32px 0 12px}
-p,li{color:var(--mut);font-size:.93rem}
-ul{margin:8px 0 0 20px}
-li{margin:6px 0}
-code{background:var(--card);border:1px solid var(--line);padding:2px 6px;border-radius:6px;font-size:.85rem;color:var(--txt)}
-.tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px;overflow-x:auto;margin:12px 0}
-.tbl{width:100%;border-collapse:collapse;font-size:.85rem}
-.tbl th{text-align:left;color:var(--mut);font-weight:600;padding:8px 12px;border-bottom:1px solid var(--line);font-size:.72rem;text-transform:uppercase;letter-spacing:1px}
-.tbl td{padding:8px 12px;border-bottom:1px solid var(--line)}
-nav{margin-bottom:32px;font-size:.9rem}
-nav a{margin-right:14px}
-footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.82rem}
-.proof{font-size:.78rem;color:#5f5d68;margin-top:6px}
-</style>
+<link rel="canonical" href="https://nemes-x.space/verify.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/theme.js"></script>
 </head>
 <body>
-<nav><a href="/">← Back to NEMES-X</a></nav>
-<h1>Verify Everything</h1>
-<p class="meta">Every number, every license, every claim. Source included. Last updated: 24 Aug 2026 · Next settlement: at network launch (see Roadmap).</p>
 
-<h2>1. Corpus Proof — 109,279,716 documents</h2>
-<p>Core corpus size is taken from the parser log on the build machine. Verify the source line:</p>
-<p><code>grep &quot;DB var&quot; parser.log → [adapter] cc100_tr: DB var (109279716 madde) - ATLANDI</code></p>
-<p>Comparable proof commands for sister corpora are documented in <a href="https://github.com/nemes-xspace">the pipeline repo</a> (README → corpus manifest).</p>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="/manifesto.html" data-i18n="shared.nav_manifesto">Manifesto</a></li>
+    <li><a href="/why.html" data-i18n="shared.nav_why">Why</a></li>
+    <li><a href="/verify.html" class="active" data-i18n="shared.nav_verify">Verify</a></li>
+    <li><a href="/faq.html" data-i18n="shared.nav_faq">FAQ</a></li>
+    <li><a href="/rakamlar.html" data-i18n="shared.nav_rakamlar">Rakamlar</a></li>
+    <li><a href="/press.html" data-i18n="shared.nav_press">Press</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="langwrap">
+      <button class="lang-btn" id="langBtn" aria-label="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+        <span class="lang-label">English</span>
+      </button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M1 12h3M20 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+    </button>
+  </div>
+</div></nav>
 
-<h2>2. Built Indices — 13/22 FAISS</h2>
-<div class="tblwrap"><table class="tbl">
-<tr><th>Status</th><th>Corpus</th><th>Proof</th></tr>
-<tr><td>🟢 built</td><td>wikipedia (EN + 10 langs), wiktionary/wikiquote/wikisource (TR+EN), arxiv, tatoeba TR/EN</td><td><code>ls corpus-indexes/*.faiss</code></td></tr>
-<tr><td>🟡 running</td><td>cc100-tr (109.3M docs, embedding in progress)</td><td>live embed log</td></tr>
-<tr><td>🔵 queued</td><td>faiss indices for newscrawl, gutenberg, wet, paracrawl, caselaw</td><td>roadmap table</td></tr>
-</table></div>
-<p>Index build config: IVF-PQ (PQ32), nprobe 128, k*64 candidates → full-vector rerank. Config lives in <code>faiss_kur.py</code> in the repo.</p>
+<article><div class="wrap-narrow">
+  <h1 data-i18n="ver.title">Verify Everything</h1>
+  <p class="sub" data-i18n="ver.meta">Every number, every license, every claim. Source included. Last updated: 30 Aug 2026 · Next settlement: at network launch (see Roadmap).</p>
 
-<h2>3. Licenses</h2>
-<p>Full license texts ship with the corpus manifest repository. Commercial use excludes non-commercial corpora (WikiHow) at the product layer — physically separate indexes. See <a href="/#transparency">Corpus Manifest table</a> for per-corpus positions.</p>
+  <h2 data-i18n="ver.h1">1. Corpus Proof — 109,279,716 documents</h2>
+  <p data-i18n="ver.p1">Core corpus size is taken from the parser log on the build machine. Verify the source line:</p>
+  <p style="font-family:ui-monospace,Menlo,monospace;font-size:.85rem;background:var(--mock-bg);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--gold-text)"><code>grep "DB var" parser.log → [adapter] cc100_tr: DB var (109279716 madde) - ATLANDI</code></p>
+  <p data-i18n="ver.p2">Comparable proof commands for sister corpora are documented in <a href="https://github.com/nemes-xspace">the pipeline repo</a> (README → corpus manifest).</p>
 
-<h2>4. Bitcoin Donation Address</h2>
-<p>On-chain verifiable. Address and QR on the <a href="/#donate">Donate section</a> are identical. Verify on any block explorer:</p>
-<p><code><a href="https://mempool.space/address/bc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g">mempool.space/address/bc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g</a></code></p>
+  <h2 data-i18n="ver.h2">2. Built Indices — 13/22 FAISS</h2>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th data-i18n="ver.t_status">Status</th><th data-i18n="ver.t_corpus">Corpus</th><th data-i18n="ver.t_proof">Proof</th></tr>
+    <tr><td><span class="dot g"></span><span data-i18n="ver.built">built</span></td><td data-i18n="ver.built_c">wikipedia (EN + 10 langs), wiktionary/wikiquote/wikisource (TR+EN), arxiv, tatoeba TR/EN</td><td style="font-family:ui-monospace,Menlo,monospace;font-size:.8rem"><code>ls corpus-indexes/*.faiss</code></td></tr>
+    <tr><td><span class="dot y"></span><span data-i18n="ver.running">running</span></td><td data-i18n="ver.run_c">newscrawl-tr (56.5M docs, embedding in progress)</td><td data-i18n="ver.run_p">live embed log</td></tr>
+    <tr><td><span class="dot b"></span><span data-i18n="ver.queued">queued</span></td><td data-i18n="ver.q_c">faiss indices for gutenberg, wet, paracrawl, caselaw</td><td data-i18n="ver.q_p">roadmap table</td></tr>
+  </table></div>
+  <p><span data-i18n="ver.p3">Index build config: IVF-PQ (PQ32), nprobe 128, k*64 candidates → full-vector rerank. Config lives in</span> <code>faiss_kur.py</code> <span data-i18n="ver.p3b">in the repo.</span></p>
 
-<h2>5. Code &amp; Governance</h2>
-<ul>
-<li>Pipeline source: <a href="https://github.com/nemes-xspace">github.com/nemes-xspace</a> (public, commit history visible)</li>
-<li>Brain Constitution: versioned and held by the operator; its public summary is on this site.</li>
-<li>License of the software itself: MIT/Apache-compatible — <code>LICENSE</code> in repo (fork allowed)</li>
-</ul>
+  <h2 data-i18n="ver.h3">3. Licenses</h2>
+  <p data-i18n="ver.p4">Full license texts ship with the corpus manifest repository. Commercial use excludes non-commercial corpora (WikiHow) at the product layer — physically separate indexes. See <a href="/#transparency">Corpus Manifest table</a> for per-corpus positions.</p>
 
-<h2>6. Settlement History</h2>
-<p>No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. <span style="color:#8a8894">⚪ at network launch</span></p>
+  <h2 data-i18n="ver.h4">4. Bitcoin Donation Address</h2>
+  <p><span data-i18n="ver.p5">On-chain verifiable. Address and QR on the</span> <a href="/#donate" data-i18n="ver.p5b">Donate section</a> <span data-i18n="ver.p5c">are identical. Verify on any block explorer:</span></p>
+  <p style="font-family:ui-monospace,Menlo,monospace;font-size:.85rem;background:var(--mock-bg);border:1px solid var(--line);padding:10px 14px;border-radius:8px"><a href="https://mempool.space/address/bc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g">bc1qelnjsg2m7nzedlwc49wcc2ugpsh9mpul9pj34g</a></p>
 
-<h2>7. Status &amp; Incident History</h2>
-<p>Status page is planned at <code>status.nemes-x.space</code>. Until then, component health is visible in the <a href="/#status">Network Status table</a> (updated as we ship) and in <a href="https://github.com/nemes-xspace">GitHub commit activity</a>.</p>
+  <h2 data-i18n="ver.h5">5. Code &amp; Governance</h2>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0"><span data-i18n="ver.g1">Pipeline source:</span> <a href="https://github.com/nemes-xspace">github.com/nemes-xspace</a> <span data-i18n="ver.g1b">(public, commit history visible)</span></li>
+    <li style="margin:6px 0" data-i18n="ver.g2">Brain Constitution: versioned and held by the operator; its public summary is on this site.</li>
+    <li style="margin:6px 0"><span data-i18n="ver.g3">License of the software itself: MIT/Apache-compatible —</span> <code>LICENSE</code> <span data-i18n="ver.g3b">in repo (fork allowed)</span></li>
+  </ul>
 
-<h2>8. Contact &amp; Reports</h2>
-<ul>
-<li>General: <a href="mailto:nemes-x.space@zohomail.eu">nemes-x.space@zohomail.eu</a></li>
-<li>Security reports: <a href="mailto:nemes-x.space@zohomail.eu?subject=[SECURITY]">nemes-x.space@zohomail.eu (subject: [SECURITY])</a> — also see <a href="/.well-known/security.txt">security.txt</a></li>
-<li>Copyright: <a href="mailto:nemes-x.space@zohomail.eu?subject=[DMCA]">nemes-x.space@zohomail.eu (subject: [DMCA])</a></li>
-<li>GitHub Issues: <a href="https://github.com/nemes-xspace/nemes-xspace.github.io/issues">issue tracker</a> (also handles bug reports — item 138)</li>
-</ul>
+  <h2 data-i18n="ver.h6">6. Settlement History</h2>
+  <p data-i18n="ver.p6">No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. <span style="color:var(--dim)">⚪ at network launch</span></p>
 
-<p class="proof">Found a discrepancy between what we say and what the code does? Open an issue. The burden of proof is on us.</p>
+  <h2 data-i18n="ver.h7">7. Status &amp; Incident History</h2>
+  <p><span data-i18n="ver.p7">Status page is planned at</span> <code>status.nemes-x.space</code><span data-i18n="ver.p7b">. Until then, component health is visible in the</span> <a href="/#status" data-i18n="ver.p7c">Network Status table</a> <span data-i18n="ver.p7d">and in</span> <a href="https://github.com/nemes-xspace" data-i18n="ver.p7e">GitHub commit activity</a>.</p>
 
-<footer><a href="/">← Back to NEMES-X</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a> · <a href="/press.html">Press Kit</a></footer>
+  <h2 data-i18n="ver.h8">8. Contact &amp; Reports</h2>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0"><span data-i18n="ver.c1">General:</span> <a href="mailto:nemes-x.space@zohomail.eu">nemes-x.space@zohomail.eu</a></li>
+    <li style="margin:6px 0"><span data-i18n="ver.c2">Security reports:</span> <a href="mailto:nemes-x.space@zohomail.eu?subject=[SECURITY]">nemes-x.space@zohomail.eu (subject: [SECURITY])</a></li>
+    <li style="margin:6px 0"><span data-i18n="ver.c3">Copyright:</span> <a href="mailto:nemes-x.space@zohomail.eu?subject=[DMCA]">nemes-x.space@zohomail.eu (subject: [DMCA])</a></li>
+    <li style="margin:6px 0"><span data-i18n="ver.c4">GitHub Issues:</span> <a href="https://github.com/nemes-xspace/nemes-xspace.github.io/issues" data-i18n="ver.c4b">issue tracker</a></li>
+  </ul>
+
+  <div class="gframe"><b data-i18n="ver.proof">Found a discrepancy between what we say and what the code does? Open an issue. The burden of proof is on us.</b></div>
+</div></article>
+
+<footer>
+  <div class="bottom">
+    <div>© 2026 NEMES-X · <a href="/terms.html" data-i18n="shared.nav_terms">Terms</a> · <a href="/privacy.html" data-i18n="shared.nav_privacy">Privacy</a> · <a href="/press.html" data-i18n="shared.nav_press">Press</a></div>
+  </div>
+</footer>
+
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
+<script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
+<script>window.NX_PAGE='verify'</script>
+<script src="/assets/i18n.js"></script>
 </body>
 </html>

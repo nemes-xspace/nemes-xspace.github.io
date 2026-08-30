@@ -3,63 +3,88 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DMCA / Copyright — NEMES-X</title>
-<meta name="description" content="NEMES-X DMCA / Copyright Policy">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
-body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.75;max-width:760px;margin:0 auto;padding:40px 24px}
-a{color:var(--gold2)}
-h1{font-size:2rem;color:var(--gold);margin-bottom:4px}
-.meta{color:var(--mut);font-size:.85rem;margin-bottom:36px}
-h2{font-size:1.2rem;color:var(--gold2);margin:32px 0 12px}
-p, li{color:var(--mut);font-size:.95rem}
-ul{margin:8px 0 0 20px}
-li{margin:6px 0}
-nav{margin-bottom:36px;font-size:.9rem}
-nav a{margin-right:16px}
-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.82rem}
-</style>
+<title>DMCA — NEMES-X</title>
+<meta name="description" content="NEMES-X DMCA policy — copyright reporting, takedown process, counter-notifications.">
+<link rel="canonical" href="https://nemes-x.space/dmca.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/theme.js"></script>
 </head>
 <body>
-<nav><a href="/">← Back to NEMES-X</a></nav>
-<h1>NEMES-X DMCA / Copyright Policy</h1>
 
-<h2>1. Our Position on Copyright</h2>
-<p>NEMES-X processes publicly available corpora (e.g., Wikipedia, arXiv, Common Crawl derivatives). We respect the intellectual property rights of creators and comply with applicable copyright laws. The knowledge index stores mathematical vector embeddings and short search snippets — not full original documents.</p>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="/manifesto.html" data-i18n="shared.nav_manifesto">Manifesto</a></li>
+    <li><a href="/why.html" data-i18n="shared.nav_why">Why</a></li>
+    <li><a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></li>
+    <li><a href="/faq.html" data-i18n="shared.nav_faq">FAQ</a></li>
+    <li><a href="/rakamlar.html" data-i18n="shared.nav_rakamlar">Rakamlar</a></li>
+    <li><a href="/press.html" data-i18n="shared.nav_press">Press</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="langwrap">
+      <button class="lang-btn" id="langBtn" aria-label="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+        <span class="lang-label">English</span>
+      </button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M1 12h3M20 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+    </button>
+  </div>
+</div></nav>
 
-<h2>2. Reporting Infringement</h2>
-<p>If you believe that material available through the NEMES-X network or its hosted search features infringes your copyright, please send a written notice to <a href="mailto:nemes-x.space@zohomail.eu?subject=[DMCA]">nemes-x.space@zohomail.eu (subject: [DMCA])</a> (once email is live) or via the official GitHub repository with the following information:</p>
-<ul>
-<li>A physical or electronic signature of the copyright owner or their authorized agent.</li>
-<li>Identification of the copyrighted work claimed to be infringed.</li>
-<li>Identification of the material claimed to be infringing, with sufficient detail to locate it (e.g., corpus name, document ID, search snippet).</li>
-<li>Your contact information (name, address, email, phone).</li>
-<li>A statement that you have a good faith belief that the use is not authorized by the copyright owner, its agent, or the law.</li>
-<li>A statement, under penalty of perjury, that the information in the notification is accurate and that you are the copyright owner or authorized to act on their behalf.</li>
-</ul>
+<article><div class="wrap-narrow">
+  <h1 data-i18n="dmca.title">DMCA Policy</h1>
+  <p class="sub" data-i18n="dmca.sub">Last updated: 30 Aug 2026</p>
 
-<h2>3. Action We Will Take</h2>
-<p>Upon receiving a valid DMCA notice, we will promptly investigate and, where appropriate:</p>
-<ul>
-<li>Remove or disable access to the identified vector snippets or search results from the hosted index.</li>
-<li>Notify the affected miner nodes to exclude the disputed content from future premium/hosted services.</li>
-<li>Add the content to a public blocklist to prevent re-embedding.</li>
-</ul>
+  <h2 data-i18n="dmca.h1">1. Copyright</h2>
+  <p data-i18n="dmca.p1">NEMES-X processes publicly available corpora (e.g., Wikipedia, arXiv, Common Crawl derivatives). We respect the intellectual property rights of creators and comply with applicable copyright laws. The knowledge index stores mathematical vector embeddings and short search snippets — not full original documents.</p>
 
-<h2>4. Counter-Notification</h2>
-<p>If you believe material was removed in error, you may file a counter-notification with the same contact channel, including:</p>
-<ul>
-<li>Your contact information and signature.</li>
-<li>Identification of the removed material and its prior location.</li>
-<li>A statement under penalty of perjury that you have a good faith belief the material was removed due to mistake or misidentification.</li>
-<li>A statement consenting to the jurisdiction of your local district court.</li>
-</ul>
+  <h2 data-i18n="dmca.h2">2. Reporting Infringement</h2>
+  <p data-i18n="dmca.p2">If you believe that material available through the NEMES-X network or its hosted search features infringes your copyright, please send a written notice to <a href="mailto:nemes-x.space@zohomail.eu?subject=[DMCA]">nemes-x.space@zohomail.eu (subject: [DMCA])</a> (once email is live) or via the official GitHub repository with the following information:</p>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0" data-i18n="dmca.i1">A physical or electronic signature of the copyright owner or their authorized agent.</li>
+    <li style="margin:6px 0" data-i18n="dmca.i2">Identification of the copyrighted work claimed to be infringed.</li>
+    <li style="margin:6px 0" data-i18n="dmca.i3">Identification of the material claimed to be infringing, with sufficient detail to locate it (e.g., corpus name, document ID, search snippet).</li>
+    <li style="margin:6px 0" data-i18n="dmca.i4">Your contact information (name, address, email, phone).</li>
+    <li style="margin:6px 0" data-i18n="dmca.i5">A statement that you have a good faith belief that the use is not authorized by the copyright owner, its agent, or the law.</li>
+    <li style="margin:6px 0" data-i18n="dmca.i6">A statement, under penalty of perjury, that the information in the notification is accurate and that you are the copyright owner or authorized to act on their behalf.</li>
+  </ul>
 
-<h2>5. Repeat Infringers</h2>
-<p>We reserve the right to terminate or restrict premium/hosted access for users or miner nodes that repeatedly submit infringing content.</p>
+  <h2 data-i18n="dmca.h3">3. Action We Will Take</h2>
+  <p data-i18n="dmca.p3">Upon receiving a valid DMCA notice, we will promptly investigate and, where appropriate:</p>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0" data-i18n="dmca.a1">Remove or disable access to the identified vector snippets or search results from the hosted index.</li>
+    <li style="margin:6px 0" data-i18n="dmca.a2">Notify the affected miner nodes to exclude the disputed content from future premium/hosted services.</li>
+    <li style="margin:6px 0" data-i18n="dmca.a3">Add the content to a public blocklist to prevent re-embedding.</li>
+  </ul>
 
-<footer><a href="/">← Back to NEMES-X</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></footer>
+  <h2 data-i18n="dmca.h4">4. Counter-Notification</h2>
+  <p data-i18n="dmca.p4">If you believe material was removed in error, you may file a counter-notification with the same contact channel, including:</p>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0" data-i18n="dmca.c1">Your contact information and signature.</li>
+    <li style="margin:6px 0" data-i18n="dmca.c2">Identification of the removed material and its prior location.</li>
+    <li style="margin:6px 0" data-i18n="dmca.c3">A statement under penalty of perjury that you have a good faith belief the material was removed due to mistake or misidentification.</li>
+    <li style="margin:6px 0" data-i18n="dmca.c4">A statement consenting to the jurisdiction of your local district court.</li>
+  </ul>
+
+  <h2 data-i18n="dmca.h5">5. Repeat Infringers</h2>
+  <p data-i18n="dmca.p5">We reserve the right to terminate or restrict premium/hosted access for users or miner nodes that repeatedly submit infringing content.</p>
+</div></article>
+
+<footer>
+  <div class="bottom">
+    <div>© 2026 NEMES-X · <a href="/terms.html" data-i18n="shared.nav_terms">Terms</a> · <a href="/privacy.html" data-i18n="shared.nav_privacy">Privacy</a></div>
+  </div>
+</footer>
+
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
+<script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
+<script>window.NX_PAGE='dmca'</script>
+<script src="/assets/i18n.js"></script>
 </body>
 </html>

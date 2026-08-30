@@ -3,63 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service — NEMES-X</title>
-<meta name="description" content="NEMES-X Terms of Service">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
-body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.75;max-width:760px;margin:0 auto;padding:40px 24px}
-a{color:var(--gold2)}
-h1{font-size:2rem;color:var(--gold);margin-bottom:4px}
-.meta{color:var(--mut);font-size:.85rem;margin-bottom:36px}
-h2{font-size:1.2rem;color:var(--gold2);margin:32px 0 12px}
-p, li{color:var(--mut);font-size:.95rem}
-ul{margin:8px 0 0 20px}
-li{margin:6px 0}
-nav{margin-bottom:36px;font-size:.9rem}
-nav a{margin-right:16px}
-strong{color:var(--txt)}
-footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.82rem}
-</style>
+<title>Terms — NEMES-X</title>
+<meta name="description" content="NEMES-X Terms of Service — network nature, mining rewards, premium tiers, and disclaimers.">
+<link rel="canonical" href="https://nemes-x.space/terms.html">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/theme.js"></script>
 </head>
 <body>
-<nav><a href="/">← Back to NEMES-X</a></nav>
-<h1>NEMES-X Terms of Service</h1>
-<p class="meta">Last updated: 24 August 2026</p>
 
-<h2>1. The Nature of the Network</h2>
-<p>NEMES-X is a peer-to-peer protocol and open-source software project ("the Network"), operating under a Sovereign Network model. It is maintained by an anonymous founding authority ("the Founder"). There is no legal entity, company, or central operator behind the Network.</p>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="/manifesto.html" data-i18n="shared.nav_manifesto">Manifesto</a></li>
+    <li><a href="/why.html" data-i18n="shared.nav_why">Why</a></li>
+    <li><a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></li>
+    <li><a href="/faq.html" data-i18n="shared.nav_faq">FAQ</a></li>
+    <li><a href="/rakamlar.html" data-i18n="shared.nav_rakamlar">Rakamlar</a></li>
+    <li><a href="/press.html" data-i18n="shared.nav_press">Press</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="langwrap">
+      <button class="lang-btn" id="langBtn" aria-label="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+        <span class="lang-label">English</span>
+      </button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M1 12h3M20 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+    </button>
+  </div>
+</div></nav>
 
-<h2>2. Eligibility</h2>
-<p>You must be at least 18 years old to run a miner node, purchase premium tiers, or receive USDT settlements. By using the software, you confirm that you meet this age requirement.</p>
+<article><div class="wrap-narrow">
+  <h1 data-i18n="terms.title">Terms of Service</h1>
+  <p class="sub" data-i18n="terms.sub">Last updated: 30 Aug 2026</p>
 
-<h2>3. Mining &amp; Rewards</h2>
-<p>Running a miner node means performing verifiable embedding work. Mining rewards are not investments, securities, or guaranteed income. They are calculated based on verifiable workload, network revenue, and total participation. Actual payouts may be zero if these conditions are not met. USDT settlements are processed on the TRC20 network with a 2% operational fee. There is no minimum payout — you earn per verified vector, dust simply accumulates until economical to send.</p>
+  <h2 data-i18n="terms.h1">1. The Nature of the Network</h2>
+  <p data-i18n="terms.p1">NEMES-X is a peer-to-peer protocol and open-source software project ("the Network"), operating under a Sovereign Network model. It is maintained by an anonymous founding authority ("the Founder"). There is no legal entity, company, or central operator behind the Network.</p>
 
-<h2>4. Premium Tiers (Planned)</h2>
-<p>Premium tiers (DISCOVER, CREATOR, SOUL) are expected to launch at mainnet. Features, prices, and availability are subject to change without notice. Subscriptions can be cancelled at any time; unused portions of the billing cycle are not refunded unless required by applicable law.</p>
+  <h2 data-i18n="terms.h2">2. Eligibility</h2>
+  <p data-i18n="terms.p2">You must be at least 18 years old to run a miner node, purchase premium tiers, or receive USDT settlements. By using the software, you confirm that you meet this age requirement.</p>
 
-<h2>5. User Responsibilities</h2>
-<ul>
-<li>You are solely responsible for your electricity costs, hardware, and local tax obligations.</li>
-<li>You must not run modified clients, bots, or sybil nodes that attempt to game the verification system.</li>
-<li>You must not attempt to extract or redistribute raw corpus text in violation of the respective corpus licenses.</li>
-<li>You accept that the network may be paused, throttled, or halted by the Founder for governance or security reasons.</li>
-</ul>
+  <h2 data-i18n="terms.h3">3. Mining &amp; Rewards</h2>
+  <p data-i18n="terms.p3">Running a miner node means performing verifiable embedding work. Mining rewards are not investments, securities, or guaranteed income. They are calculated based on verifiable workload, network revenue, and total participation. Actual payouts may be zero if these conditions are not met. USDT settlements are processed on the TRC20 network with a 2% operational fee. There is no minimum payout — you earn per verified vector, dust simply accumulates until economical to send.</p>
 
-<h2>6. Intellectual Property</h2>
-<p>The NEMES-X software is open-source. The knowledge index (vectors) are mathematical derivatives of publicly available corpora and are subject to the license restrictions of their original sources (e.g., CC BY-SA, arXiv, WikiHow non-commercial).</p>
+  <h2 data-i18n="terms.h4">4. Premium Tiers (Planned)</h2>
+  <p data-i18n="terms.p4">Premium tiers (DISCOVER, CREATOR, SOUL) are expected to launch at mainnet. Features, prices, and availability are subject to change without notice. Subscriptions can be cancelled at any time; unused portions of the billing cycle are not refunded unless required by applicable law.</p>
 
-<h2>7. Disclaimer of Warranties</h2>
-<p><strong>THE SOFTWARE AND NETWORK ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE FOUNDER DOES NOT GUARANTEE UPTIME, REWARD VALUE, OR CONTINUOUS OPERATION OF THE NETWORK.</strong></p>
+  <h2 data-i18n="terms.h5">5. User Responsibilities</h2>
+  <ul style="margin:8px 0 0 20px;color:var(--mut);font-size:.93rem">
+    <li style="margin:6px 0" data-i18n="terms.p5_1">You are solely responsible for your electricity costs, hardware, and local tax obligations.</li>
+    <li style="margin:6px 0" data-i18n="terms.p5_2">You must not run modified clients, bots, or sybil nodes that attempt to game the verification system.</li>
+    <li style="margin:6px 0" data-i18n="terms.p5_3">You must not attempt to extract or redistribute raw corpus text in violation of the respective corpus licenses.</li>
+    <li style="margin:6px 0" data-i18n="terms.p5_4">You accept that the network may be paused, throttled, or halted by the Founder for governance or security reasons.</li>
+  </ul>
 
-<h2>8. Limitation of Liability</h2>
-<p><strong>TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE FOUNDER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, OR GOODWILL, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE NETWORK.</strong></p>
+  <h2 data-i18n="terms.h6">6. Intellectual Property</h2>
+  <p data-i18n="terms.p6">The NEMES-X software is open-source. The knowledge index (vectors) are mathematical derivatives of publicly available corpora and are subject to the license restrictions of their original sources (e.g., CC BY-SA, arXiv, WikiHow non-commercial).</p>
 
-<h2>9. Changes to these Terms</h2>
-<p>These Terms may be updated from time to time. Material changes will be announced on the website or via the official GitHub repository.</p>
+  <h2 data-i18n="terms.h7">7. Disclaimer of Warranties</h2>
+  <p style="font-weight:700" data-i18n="terms.p7">THE SOFTWARE AND NETWORK ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE FOUNDER DOES NOT GUARANTEE UPTIME, REWARD VALUE, OR CONTINUOUS OPERATION OF THE NETWORK.</p>
 
-<footer><a href="/">← Back to NEMES-X</a> · <a href="/privacy.html">Privacy Policy</a> · <a href="/dmca.html">DMCA</a></footer>
+  <h2 data-i18n="terms.h8">8. Limitation of Liability</h2>
+  <p style="font-weight:700" data-i18n="terms.p8">TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE FOUNDER SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, USE, OR GOODWILL, ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF THE NETWORK.</p>
+
+  <h2 data-i18n="terms.h9">9. Changes to these Terms</h2>
+  <p data-i18n="terms.p9">These Terms may be updated from time to time. Material changes will be announced on the website or via the official GitHub repository.</p>
+</div></article>
+
+<footer>
+  <div class="bottom">
+    <div>© 2026 NEMES-X · <a href="/privacy.html" data-i18n="shared.nav_privacy">Privacy</a> · <a href="/dmca.html" data-i18n="shared.nav_dmca">DMCA</a></div>
+  </div>
+</footer>
+
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
+<script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
+<script>window.NX_PAGE='terms'</script>
+<script src="/assets/i18n.js"></script>
 </body>
 </html>

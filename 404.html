@@ -1,6 +1,37 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 — NEMES-X</title>
-<style>body{background:#0a0a0f;color:#e8e6e3;font-family:-apple-system,'Segoe UI',sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;text-align:center}
-h1{font-size:5rem;color:#d4af37;margin:0}p{color:#8a8894}a{color:#f0c75e}</style></head>
-<body><div><h1>404</h1><p>This page drifted out of the network.</p><p><a href="/">← Back to NEMES-X</a></p></div></body></html>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/theme.js"></script>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <div class="nav-controls">
+    <div class="langwrap">
+      <button class="lang-btn" id="langBtn" aria-label="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+        <span class="lang-label">English</span>
+      </button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M1 12h3M20 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+    </button>
+  </div>
+</div></nav>
+<div style="min-height:70vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 60px">
+  <div>
+    <h1 style="font-size:5rem;color:var(--gold);letter-spacing:4px">404</h1>
+    <p style="color:var(--mut);margin:12px 0 24px" data-i18n="nf.text">This page drifted out of the network.</p>
+    <a class="btn gold" href="/" data-i18n="nf.back">← Back to NEMES-X</a>
+  </div>
+</div>
+<script>window.NX_PAGE='nf'</script>
+<script src="/assets/i18n.js"></script>
+</body>
+</html>

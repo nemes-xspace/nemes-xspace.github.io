@@ -5,52 +5,75 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ — NEMES-X</title>
 <meta name="description" content="NEMES-X FAQ — mining, payments, privacy, setup.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0f'/><text y='68' x='50' text-anchor='middle' font-size='52' fill='%23d4af37' font-family='serif'>N</text></svg>">
 <link rel="canonical" href="https://nemes-x.space/faq.html">
-<link rel="alternate" hreflang="en" href="https://nemes-x.space/faq.html">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#0a0a0f;--card:#14141f;--gold:#d4af37;--gold2:#f0c75e;--txt:#e8e6e3;--mut:#8a8894;--line:#23232f}
-body{background:var(--bg);color:var(--txt);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.75;max-width:760px;margin:0 auto;padding:40px 24px}
-a{color:var(--gold2)}
-h1{font-size:1.9rem;color:var(--gold);margin-bottom:6px}
-.meta{color:var(--mut);font-size:.85rem;margin-bottom:32px}
-h2{font-size:1.15rem;color:var(--gold2);margin:32px 0 12px}
-details{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 20px;margin:10px 0}
-summary{cursor:pointer;color:var(--txt);font-weight:600;font-size:.95rem}
-details p{color:var(--mut);font-size:.9rem;margin-top:10px}
-nav{margin-bottom:32px;font-size:.9rem}
-footer{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:.82rem}
-</style>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
+<link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/theme.js"></script>
 </head>
 <body>
-<nav><a href="/">← Back to NEMES-X</a></nav>
-<h1>Frequently Asked Questions</h1>
-<p class="meta">Last updated: 24 Aug 2026 · For unanswered questions: <a href="mailto:nemes-x.space@zohomail.eu">nemes-x.space@zohomail.eu</a> or <a href="https://x.com/NemesXSpace">X @NemesXSpace</a></p>
 
-<h2>Mining</h2>
-<details open><summary>What exactly does my computer do when mining?</summary><p>Your GPU converts public-domain text corpora into mathematical vectors (embeddings) that make the text searchable. You are not doing proof-of-work hashing — you are performing int8-quantized embedding work that becomes part of the permanent knowledge index. The pipeline is: public data → chunking → GPU embedding (nomic-embed-text 1.5) → int8 quantization → verification → index.</p></details>
-<details><summary>What hardware do I need?</summary><p>Any modern GPU with ≥8GB VRAM (e.g., GTX 1080 Ti, RTX 3060/4070/4090) is ideal. An 8-core CPU can mine but at ~1× baseline speed versus ~20× on a 4090. RAM ≥16GB, free disk ≥50GB for corpus chunks. No specific OS — Windows, Linux, macOS will all be supported. Installation is one-click and detects your hardware automatically.</p></details>
-<details><summary>How long does setup take?</summary><p>Under 5 minutes: download the client, run the installer, and it auto-detects your hardware. No manual configuration. Uninstall is a single command and leaves no residue.</p></details>
-<details><summary>Do I need to keep my computer on 24/7?</summary><p>No. Mine when you want. Pending jobs are released if your node goes offline, and your verified work remains in the index.</p></details>
+<nav><div class="wrap">
+  <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="/manifesto.html" data-i18n="shared.nav_manifesto">Manifesto</a></li>
+    <li><a href="/why.html" data-i18n="shared.nav_why">Why</a></li>
+    <li><a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></li>
+    <li><a href="/faq.html" class="active" data-i18n="shared.nav_faq">FAQ</a></li>
+    <li><a href="/rakamlar.html" data-i18n="shared.nav_rakamlar">Rakamlar</a></li>
+    <li><a href="/press.html" data-i18n="shared.nav_press">Press</a></li>
+  </ul>
+  <div class="nav-controls">
+    <div class="langwrap">
+      <button class="lang-btn" id="langBtn" aria-label="Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20z"/></svg>
+        <span class="lang-label">English</span>
+      </button>
+      <div class="lang-menu" id="langMenu"></div>
+    </div>
+    <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle theme">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v3M12 20v3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M1 12h3M20 12h3M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2"/></svg>
+    </button>
+  </div>
+</div></nav>
 
-<h2>Payments</h2>
-<details><summary>How much will I earn?</summary><p>Earnings depend on verified workload, total network participation, and premium subscription revenue that week. The formula is: shares = verified vectors × hardware multiplier; pool = 50% of premium revenue; unit price = pool / total shares. See the <a href="/#economics">Mining Economics section</a> for the full breakdown including a break-even example. All figures on the site are estimates.</p></details>
-<details><summary>When and how am I paid?</summary><p>Weekly, in USDT on the TRC20 network. Minimum payout is $5.00, with a 2% operational fee covering verification and gas. Settlement history will be published at network launch with transaction IDs.</p></details>
-<details><summary>What about electricity costs?</summary><p>Electricity is your responsibility. A 300W rig at $0.10/kWh costs ~$0.72/day. Use your share multiplier to estimate accumulation rate and decide if projected growth justifies the cost for you. Nothing on this site is financial advice.</p></details>
-<details><summary>Is mining income guaranteed?</summary><p>No. There is no guaranteed income. Payouts may be zero in weeks with low premium revenue or low participation. Mining rewards are not investments or securities.</p></details>
+<article><div class="wrap-narrow">
+  <h1 data-i18n="faq.title">Frequently Asked Questions</h1>
+  <p class="sub"><span data-i18n="faq.updated">Last updated:</span> 30 Aug 2026 · <span data-i18n="faq.more">For unanswered questions:</span> <a href="mailto:nemes-x.space@zohomail.eu">nemes-x.space@zohomail.eu</a> · <a href="https://x.com/NemesXSpace">X @NemesXSpace</a></p>
 
-<h2>Privacy &amp; Security</h2>
-<details><summary>Do you access my personal files?</summary><p>Never. Your personal files are never scanned, processed, uploaded, or stored. Miners process only public corpora downloaded from public sources. See <a href="/#privacy">Privacy Architecture</a>.</p></details>
-<details><summary>Do my local searches leave my computer?</summary><p>In local mode, no — search runs entirely on your machine. Hosted API queries (premium, opt-in) are processed on our infrastructure.</p></details>
-<details><summary>Does the software need admin/root?</summary><p>No. The client runs as a normal user process with hard memory (16GB) and CPU (4 threads) caps. Sandboxed execution ships with client v1.</p></details>
-<details><summary>Can I verify the binaries?</summary><p>Yes. Every release will be cryptographically signed by the founding authority key, and we will publish reproducible builds so you can verify byte-for-byte from source. Unsigned clients refuse to run.</p></details>
+  <h2 data-i18n="faq.s_mining">Mining</h2>
+  <details class="faq-item" open><summary data-i18n="faq.q1">What exactly does my computer do when mining?</summary><div class="a" data-i18n="faq.a1">Your GPU converts public-domain text corpora into mathematical vectors (embeddings) that make the text searchable. You are not doing proof-of-work hashing — you are performing int8-quantized embedding work that becomes part of the permanent knowledge index. The pipeline is: public data → chunking → GPU embedding (nomic-embed-text 1.5) → int8 quantization → verification → index.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q2">What hardware do I need?</summary><div class="a" data-i18n="faq.a2">Any modern GPU with ≥8GB VRAM (e.g., GTX 1080 Ti, RTX 3060/4070/4090) is ideal. An 8-core CPU can mine but at ~1× baseline speed versus ~20× on a 4090. RAM ≥16GB, free disk ≥50GB for corpus chunks. No specific OS — Windows, Linux, macOS will all be supported. Installation is one-click and detects your hardware automatically.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q3">How long does setup take?</summary><div class="a" data-i18n="faq.a3">Under 5 minutes: download the client, run the installer, and it auto-detects your hardware. No manual configuration. Uninstall is a single command and leaves no residue.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q4">Do I need to keep my computer on 24/7?</summary><div class="a" data-i18n="faq.a4">No. Mine when you want. Pending jobs are released if your node goes offline, and your verified work remains in the index.</div></details>
 
-<h2>Network &amp; Governance</h2>
-<details><summary>Is the network fully decentralized?</summary><p>The data layer is peer-to-peer (libp2p DHT, no central server hosts the index). Governance is by the founding authority: task manifests are signed, epochs are signed, and the network can be scheduled, throttled or paused via signed epochs (max 24h validity). This is the Sovereign Network model.</p></details>
-<details><summary>What happens if I fork the network?</summary><p>The pipeline code is open-source. You can fork the brain — the network, the data, and the constitution. If you want a different ruler, build one. We carry the burden of proof in public.</p></details>
-<details><summary>Is there an age limit?</summary><p>Yes — you must be 18 years or older to run a miner, purchase premium, or receive settlements.</p></details>
+  <h2 data-i18n="faq.s_pay">Payments</h2>
+  <details class="faq-item"><summary data-i18n="faq.q5">How much will I earn?</summary><div class="a" data-i18n="faq.a5">Earnings depend on verified workload, total network participation, and premium subscription revenue that week. The formula is: shares = verified vectors × hardware multiplier; pool = 50% of premium revenue; unit price = pool / total shares. See the Mining Economics section for the full breakdown including a break-even example. All figures on the site are estimates.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q6">When and how am I paid?</summary><div class="a" data-i18n="faq.a6">Weekly, in USDT on the TRC20 network. Minimum payout is $5.00, with a 2% operational fee covering verification and gas. Settlement history will be published at network launch with transaction IDs.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q7">What about electricity costs?</summary><div class="a" data-i18n="faq.a7">Electricity is your responsibility. A 300W rig at $0.10/kWh costs ~$0.72/day. Use your share multiplier to estimate accumulation rate and decide if projected growth justifies the cost for you. Nothing on this site is financial advice.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q8">Is mining income guaranteed?</summary><div class="a" data-i18n="faq.a8">No. There is no guaranteed income. Payouts may be zero in weeks with low premium revenue or low participation. Mining rewards are not investments or securities.</div></details>
 
-<footer><a href="/">← Back to NEMES-X</a> · <a href="/verify.html">Verify</a> · <a href="/terms.html">Terms</a></footer>
+  <h2 data-i18n="faq.s_priv">Privacy &amp; Security</h2>
+  <details class="faq-item"><summary data-i18n="faq.q9">Do you access my personal files?</summary><div class="a" data-i18n="faq.a9">Never. Your personal files are never scanned, processed, uploaded, or stored. Miners process only public corpora downloaded from public sources. See Privacy Architecture on the home page.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q10">Do my local searches leave my computer?</summary><div class="a" data-i18n="faq.a10">In local mode, no — search runs entirely on your machine. Hosted API queries (premium, opt-in) are processed on our infrastructure.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q11">Does the software need admin/root?</summary><div class="a" data-i18n="faq.a11">No. The client runs as a normal user process with hard memory (16GB) and CPU (4 threads) caps. Sandboxed execution ships with client v1.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q12">Can I verify the binaries?</summary><div class="a" data-i18n="faq.a12">Yes. Every release will be cryptographically signed by the founding authority key, and we will publish reproducible builds so you can verify byte-for-byte from source. Unsigned clients refuse to run.</div></details>
+
+  <h2 data-i18n="faq.s_gov">Network &amp; Governance</h2>
+  <details class="faq-item"><summary data-i18n="faq.q13">Is the network fully decentralized?</summary><div class="a" data-i18n="faq.a13">The data layer is peer-to-peer (libp2p DHT, no central server hosts the index). Governance is by the founding authority: task manifests are signed, epochs are signed, and the network can be scheduled, throttled or paused via signed epochs (max 24h validity). This is the Sovereign Network model.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q14">What happens if I fork the network?</summary><div class="a" data-i18n="faq.a14">The pipeline code is open-source. You can fork the brain — the network, the data, and the constitution. If you want a different ruler, build one. We carry the burden of proof in public.</div></details>
+  <details class="faq-item"><summary data-i18n="faq.q15">Is there an age limit?</summary><div class="a" data-i18n="faq.a15">Yes — you must be 18 years or older to run a miner, purchase premium, or receive settlements.</div></details>
+</div></article>
+
+<footer>
+  <div class="bottom">
+    <div>© 2026 NEMES-X · <a href="/terms.html" data-i18n="shared.nav_terms">Terms</a> · <a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></div>
+  </div>
+</footer>
+
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
+<script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
+<script>window.NX_PAGE='faq'</script>
+<script src="/assets/i18n.js"></script>
 </body>
 </html>
