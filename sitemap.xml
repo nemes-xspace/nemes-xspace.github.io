@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://nemes-x.space/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://nemes-x.space/manifesto.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://nemes-x.space/why.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nemes-x.space/verify.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://nemes-x.space/faq.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nemes-x.space/rakamlar.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://nemes-x.space/press.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://nemes-x.space/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://nemes-x.space/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://nemes-x.space/dmca.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>404 — NEMES-X</title>
+<meta name="description" content="Page not found — NEMES-X">
+<link rel="canonical" href="https://nemes-x.space/404.html">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='70' x='50' text-anchor='middle' font-size='58' fill='%23d4af37' font-family='Georgia,serif' font-weight='bold'>N</text></svg>">
 <link rel="stylesheet" href="/assets/style.css">
 <script src="/assets/theme.js"></script>
@@ -11,6 +13,15 @@
 <body>
 <nav><div class="wrap">
   <a class="brand" href="/"><img src="/logo-128.png" alt="NEMES-X"><span>NEMES</span>-X</a>
+  <button class="menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="/manifesto.html" data-i18n="shared.nav_manifesto">Manifesto</a></li>
+    <li><a href="/why.html" data-i18n="shared.nav_why">Why</a></li>
+    <li><a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></li>
+    <li><a href="/faq.html" data-i18n="shared.nav_faq">FAQ</a></li>
+    <li><a href="/rakamlar.html" data-i18n="shared.nav_rakamlar">Rakamlar</a></li>
+    <li><a href="/press.html" data-i18n="shared.nav_press">Press</a></li>
+  </ul>
   <div class="nav-controls">
     <div class="langwrap">
       <button class="lang-btn" id="langBtn" aria-label="Language">
@@ -31,6 +42,13 @@
     <a class="btn gold" href="/" data-i18n="nf.back">← Back to NEMES-X</a>
   </div>
 </div>
+<footer>
+  <div class="bottom">
+    <div>© 2026 NEMES-X · <a href="/terms.html" data-i18n="shared.nav_terms">Terms</a> · <a href="/verify.html" data-i18n="shared.nav_verify">Verify</a></div>
+  </div>
+</footer>
+<button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
+<script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
 <script>window.NX_PAGE='nf'</script>
 <script src="/assets/i18n.js"></script>
 </body>
