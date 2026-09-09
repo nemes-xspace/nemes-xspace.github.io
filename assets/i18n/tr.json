@@ -837,6 +837,8 @@
     "st2": "2. Anahtar üret (nemes-miner keygen), istersen depolama taahhüdü ver (nemes-miner keygen --storage). Root gerekmez.",
     "st3": "3. Çalıştır: nemes-miner mine --simple --komuta https://komuta.nemes-x.space --corpus tr. Ctrl+C zarif durdurur — payların defterde kalır.",
     "s_sec": "Verin senin kalır",
-    "sec": "Madenciler yalnızca kör mikro-batch'ler görür (tuzlanmış ID, corpus adı yok). Kanarya tuzak metinler sızdıranı yakalar: kanıtlı sızıntı = ban + pay sıfırlama. Fiş çekmek her zaman serbest — yalnızca kanıtlı hile imha edilir. Tam şartname: Güvenlik Mimarisi."
+    "sec": "Madenciler yalnızca kör mikro-batch'ler görür (tuzlanmış ID, corpus adı yok). Kanarya tuzak metinler sızdıranı yakalar: kanıtlı sızıntı = ban + pay sıfırlama. Fiş çekmek her zaman serbest — yalnızca kanıtlı hile imha edilir. Tam şartname: Güvenlik Mimarisi.",
+    "s_plain": "Sade dille ekonomi",
+    "plain": "Toplam arz 210M coin ile sabit — daha fazlası asla basılamaz. Bilgisayarın doğrulanmış bilgi karşılığında pay kazanır (güçlü makine = daha çok pay). Her 20 kanıt 8 coinlik bir kutu yapar (başta), zamanla yarıya iner — erken madenci daha çok alır. Şirketler abonelik öder; yarısı her hafta madencilere paylarına göre dağıtılır. Örnek: 1.000$ havuz, 100.000 payda 1.000 payın = 10$. Dürüst not: coin'in bugün borsa fiyatı yok. Kimse zenginlik vaat etmiyor — elektriğin Antminer'ın 1/13'ü ve payların ağ büyüdükçe birikiyor."
   }
 }

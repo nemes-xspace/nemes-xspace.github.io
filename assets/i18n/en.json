@@ -837,6 +837,8 @@
     "st2": "2. Create a key (nemes-miner keygen), optionally pledge storage (nemes-miner keygen --storage). No root needed.",
     "st3": "3. Run: nemes-miner mine --simple --komuta https://komuta.nemes-x.space --corpus tr. Ctrl+C stops gracefully — your shares stay on the ledger.",
     "s_sec": "Your data stays yours",
-    "sec": "Miners see only blind micro-batches (salted IDs, no corpus names). Canary trap texts catch leakers: proven leaks mean ban + forfeited shares. Unplugging is always free — only proven cheating is destroyed. Full spec: Security Architecture."
+    "sec": "Miners see only blind micro-batches (salted IDs, no corpus names). Canary trap texts catch leakers: proven leaks mean ban + forfeited shares. Unplugging is always free — only proven cheating is destroyed. Full spec: Security Architecture.",
+    "s_plain": "Plain-language economics",
+    "plain": "Total supply is fixed at 210M coins — no more can ever be printed. Your computer earns shares for verified knowledge (stronger machine = more shares). Every 20 proofs make one box worth 8 coins at first, halving over time — early miners earn more. Companies pay subscriptions; half goes to miners weekly, split by shares. Example: $1,000 pool, your 1,000 of 100,000 shares = $10. Honest note: the coin has no exchange price today. Nobody promises riches — your electricity is 1/13th of an Antminer and your shares accumulate as the network grows."
   }
 }
