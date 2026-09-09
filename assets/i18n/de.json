@@ -70,7 +70,8 @@
     "footer_legal": "Rechtliches",
     "footer_gov": "Regiert durch die Gehirn-Verfassung v1.0",
     "footer_verify": "Alles verifizieren",
-    "footer_disc": "Offenlegung: Das NEMES-X-Netzwerk ist Peer-to-Peer; die Teilnahme ist freiwillig. Mining-Belohnungen sind Schätzungen basierend auf verifizierter Arbeitslast und Netzwerkeinnahmen. Belohnungen sind proportional zu verifizierten Vektoren — kein Minimum; Staub sammelt sich an, bis der Versand über TRC20 wirtschaftlich ist (2% Gebühr). Stromkosten und lokale Steuerpflichten liegen allein beim Nutzer. Nichts auf dieser Seite stellt Finanzberatung dar. WikiHow-Inhalte sind wegen ihrer nicht-kommerziellen Lizenz von kostenpflichtigen Stufen ausgeschlossen. Premium-Preise enthalten keine MwSt. Nutzer müssen 18+ sein. Alle Statusangaben werden mit dem Versand aktualisiert."
+    "footer_disc": "Offenlegung: Das NEMES-X-Netzwerk ist Peer-to-Peer; die Teilnahme ist freiwillig. Mining-Belohnungen sind Schätzungen basierend auf verifizierter Arbeitslast und Netzwerkeinnahmen. Belohnungen sind proportional zu verifizierten Vektoren — kein Minimum; Staub sammelt sich an, bis der Versand über TRC20 wirtschaftlich ist (2% Gebühr). Stromkosten und lokale Steuerpflichten liegen allein beim Nutzer. Nichts auf dieser Seite stellt Finanzberatung dar. WikiHow-Inhalte sind wegen ihrer nicht-kommerziellen Lizenz von kostenpflichtigen Stufen ausgeschlossen. Premium-Preise enthalten keine MwSt. Nutzer müssen 18+ sein. Alle Statusangaben werden mit dem Versand aktualisiert.",
+    "nav_miner": "Mining"
   },
   "index": {
     "kicker": "Das souveräne Gehirn",

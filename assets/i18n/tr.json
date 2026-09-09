@@ -44,6 +44,10 @@
     "nf": {
       "title": "404 — NEMES-X",
       "desc": "Sayfa bulunamadı."
+    },
+    "miner": {
+      "title": "Madencilik — NEMES-X",
+      "desc": "NEMES-X ile bilgi madenciliği — donanım katmanları, kazanç, 5 dakikalık kurulum."
     }
   },
   "shared": {
@@ -70,7 +74,8 @@
     "footer_legal": "Yasal",
     "footer_gov": "Beyin Anayasası v1.0 ile yönetilir",
     "footer_verify": "Her Şeyi Doğrula",
-    "footer_disc": "Açıklama: NEMES-X ağı eşler arasıdır; katılım gönüllüdür. Madencilik ödülleri, doğrulanmış iş yüküne ve ağ gelirine dayalı tahminlerdir. Ödüller doğrulanmış vektörlerle orantılıdır — alt sınır yok; toz, TRC20 üzerinde gönderilmesi ekonomik olana kadar birikir (%2 ücret). Elektrik maliyetleri ve yerel vergi yükümlülükleri tamamen kullanıcının sorumluluğundadır. Bu sitedeki hiçbir şey finansal tavsiye değildir. WikiHow içeriği ticari olmayan lisansı nedeniyle ücretli katmanlardan hariç tutulmuştur. Premium fiyatlarına KDV dahil değildir. Kullanıcılar 18+ olmalıdır. Tüm durumlar güncellendikçe yayınlanır."
+    "footer_disc": "Açıklama: NEMES-X ağı eşler arasıdır; katılım gönüllüdür. Madencilik ödülleri, doğrulanmış iş yüküne ve ağ gelirine dayalı tahminlerdir. Ödüller doğrulanmış vektörlerle orantılıdır — alt sınır yok; toz, TRC20 üzerinde gönderilmesi ekonomik olana kadar birikir (%2 ücret). Elektrik maliyetleri ve yerel vergi yükümlülükleri tamamen kullanıcının sorumluluğundadır. Bu sitedeki hiçbir şey finansal tavsiye değildir. WikiHow içeriği ticari olmayan lisansı nedeniyle ücretli katmanlardan hariç tutulmuştur. Premium fiyatlarına KDV dahil değildir. Kullanıcılar 18+ olmalıdır. Tüm durumlar güncellendikçe yayınlanır.",
+    "nav_miner": "Madencilik"
   },
   "index": {
     "kicker": "Egemen Beyin",
@@ -805,5 +810,32 @@
     "ek_title": "EK — RAKAMLARLA İDDİANAME",
     "ek_desc": "İsimler, fiyat tablosu ve 3 gerçek fatura örneği — manifestonun ispatlı eki",
     "ek_btn": "→ Rakamlarla: İsimler, Faturalar, Kaynaklar"
+  },
+  "miner": {
+    "title": "Bilgi Madenciliği. Hash Değil.",
+    "updated": "Son güncelleme:",
+    "dl": "Madenciyi İndir",
+    "faq_link": "Soru mu var? SSS'ye bak",
+    "s_eco": "Neden Antminer değil?",
+    "eco": "Antminer S19 Pro 3.250W yakar, 75dB gürültü yapar ve Ağustos 2026'da günde ~$3,47 zarar etti — odanı ısıtır, cüzdanını boşaltır. NEMES madencisi 60–240W ile sessiz çalışır ve aynı prizi pay biriktiren doğrulanmış bilgi vektörlerine çevirir. Elektrik ısıya değil bilgiye dönüşür.",
+    "s_tiers": "Katmanını seç",
+    "t1n": "Katman 1 — Normal PC (CPU)",
+    "t1d": "Parse + hafif embed + denetim oyları. ~65–100W. Katsayı K=0,5. Model indirmeye gerek yok.",
+    "t2n": "Katman 2 — Oyuncu GPU'su 7B (8–12GB VRAM)",
+    "t2d": "Embed + 7B sohbet düğümü. Modeller: Qwen2.5-7B, Llama-3.1-8B, Gemma-2-9B (HuggingFace'den Q4_K_M GGUF). ~170–200W. Katsayı K=1,0.",
+    "t3n": "Katman 3 — Workstation 30B (24GB VRAM)",
+    "t3d": "Embed + 30B RAG düğümü. Modeller: Qwen2.5-32B GGUF. ~350–450W. Katsayı K=2,0.",
+    "t4n": "Katman 4 — DGX Spark 70B (128GB birleşik, 140–240W)",
+    "t4d": "70B fine-tune + 200B parametreye kadar inference. Modeller: Llama-3.1-70B, Qwen2.5-72B. Sıfır Antminer'dan ucuz, 1/13 güç. Katsayı K=5,0.",
+    "t5n": "Katman 5 — Sunucu (çok GPU, pro)",
+    "t5d": "Amiral açık modeller: H100 sınıfı donanımda vLLM/SGLang ile DeepSeek-V3 (671B MoE) ve Kimi-K2 (1T MoE). Damıtma için öğretmen düğümler. Katsayı K=10. Pratik kestirme: Katman 3–4'te R1-Distill-32B/70B.",
+    "s_earn": "Kazanç",
+    "earn": "Pay = doğrulanmış vektör × katman katsayısı. 20 kanıt = 1 batch (taban 0,002 NEMES, her 5M batch'te halving). Havuz = ağ gelirinin %50'si, paylara bölünür. Minimum yok, toz birikir. Faz 1: paylar defterde birikir. Faz 2: hazine + enterprise geliriyle nakit. Buradaki hiçbir şey yatırım tavsiyesi değildir.",
+    "s_setup": "5 dakikada kurulum",
+    "st1": "1. Yukarıdaki imzalı istemciyi indir, SHA256'sını doğrula.",
+    "st2": "2. Anahtar üret (nemes-miner keygen), istersen depolama taahhüdü ver (nemes-miner keygen --storage). Root gerekmez.",
+    "st3": "3. Çalıştır: nemes-miner mine --simple --komuta https://komuta.nemes-x.space --corpus tr. Ctrl+C zarif durdurur — payların defterde kalır.",
+    "s_sec": "Verin senin kalır",
+    "sec": "Madenciler yalnızca kör mikro-batch'ler görür (tuzlanmış ID, corpus adı yok). Kanarya tuzak metinler sızdıranı yakalar: kanıtlı sızıntı = ban + pay sıfırlama. Fiş çekmek her zaman serbest — yalnızca kanıtlı hile imha edilir. Tam şartname: Güvenlik Mimarisi."
   }
 }

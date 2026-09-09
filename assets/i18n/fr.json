@@ -70,7 +70,8 @@
     "footer_legal": "Légal",
     "footer_gov": "Gouverné par la Constitution du Cerveau v1.0",
     "footer_verify": "Tout vérifier",
-    "footer_disc": "Avertissement : le réseau NEMES-X est pair-à-pair ; la participation est volontaire. Les récompenses de minage sont des estimations basées sur la charge de travail vérifiée et les revenus du réseau. Les récompenses sont proportionnelles aux vecteurs vérifiés — pas de minimum ; la poussière s'accumule jusqu'à ce que l'envoi en TRC20 soit économique (frais de 2 %). Les coûts d'électricité et les obligations fiscales locales relèvent de la seule responsabilité de l'utilisateur. Rien sur ce site ne constitue un conseil financier. Le contenu WikiHow est exclu des niveaux payants en raison de sa licence non commerciale. Les prix des niveaux premium n'incluent pas la TVA. Les utilisateurs doivent avoir 18 ans ou plus. Tous les statuts sont mis à jour au fur et à mesure."
+    "footer_disc": "Avertissement : le réseau NEMES-X est pair-à-pair ; la participation est volontaire. Les récompenses de minage sont des estimations basées sur la charge de travail vérifiée et les revenus du réseau. Les récompenses sont proportionnelles aux vecteurs vérifiés — pas de minimum ; la poussière s'accumule jusqu'à ce que l'envoi en TRC20 soit économique (frais de 2 %). Les coûts d'électricité et les obligations fiscales locales relèvent de la seule responsabilité de l'utilisateur. Rien sur ce site ne constitue un conseil financier. Le contenu WikiHow est exclu des niveaux payants en raison de sa licence non commerciale. Les prix des niveaux premium n'incluent pas la TVA. Les utilisateurs doivent avoir 18 ans ou plus. Tous les statuts sont mis à jour au fur et à mesure.",
+    "nav_miner": "Minage"
   },
   "index": {
     "kicker": "Le Cerveau Souverain",
