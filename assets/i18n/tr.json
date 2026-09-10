@@ -398,7 +398,12 @@
     "pre_ent_3": "Büyük şirketleri halka açık ücretsiz hattan uzak tutar",
     "pre_ent_4": "Özel destek ve SLA — teklif için satışla iletişime geç",
     "pre_ent_cta": "Satışla Görüş →",
-    "intro_mission": "Misyonumuz: dünyanın uykudaki işlem gücünü uyandırmak — onlar güç inşa eder, biz var olanı birleştiririz."
+    "intro_mission": "Misyonumuz: dünyanın uykudaki işlem gücünü uyandırmak — onlar güç inşa eder, biz var olanı birleştiririz.",
+    "lv_kanit": "doğrulanmış kanıt",
+    "lv_coin": "basılan NEMES",
+    "lv_faiss": "FAISS indexi",
+    "lv_madenci": "madenci",
+    "lv_guncel": "canlı defter, güncelleme:"
   },
   "nf": {
     "text": "Bu sayfa ağdan sürüklendi.",

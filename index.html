@@ -92,6 +92,14 @@
 <section id="status"><div class="wrap">
   <h2 data-i18n="index.status_title">Network Status — Live, Building, and Planned</h2>
   <p class="lead" data-i18n="index.status_sub">Real components, real status. No vague promises — this page is the contract, updated as we ship.</p>
+  <div class="liveband" id="liveband">
+    <div><b id="lv-kanit">…</b><small data-i18n="index.lv_kanit">verified proofs</small></div>
+    <div><b id="lv-coin">…</b><small data-i18n="index.lv_coin">NEMES minted</small></div>
+    <div><b id="lv-faiss">…</b><small data-i18n="index.lv_faiss">FAISS indices</small></div>
+    <div><b id="lv-madenci">…</b><small data-i18n="index.lv_madenci">miners</small></div>
+  </div>
+  <p class="asof"><span data-i18n="index.lv_guncel">live ledger, updated:</span> <span id="lv-zaman">…</span></p>
+  <script>fetch('/stats.json').then(function(r){return r.json()}).then(function(s){document.getElementById('lv-kanit').textContent=Number(s.kanit).toLocaleString('en-US');document.getElementById('lv-coin').textContent=s.coin;document.getElementById('lv-faiss').textContent=s.faiss_index+' ('+s.faiss_gb+'GB)';document.getElementById('lv-madenci').textContent=s.madenci;document.getElementById('lv-zaman').textContent=s.guncelleme;}).catch(function(){});</script>
   <div class="tblwrap"><table class="tbl">
     <tr><th data-i18n="index.tbl_component">Component</th><th data-i18n="index.tbl_what">What it does</th><th data-i18n="index.tbl_status">Status</th></tr>
     <tr><td data-i18n="index.st_pipeline_n">Core pipeline</td><td data-i18n="index.st_pipeline_d">Turns raw text into searchable knowledge — parses, embeds, compresses, and stores it.</td><td><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></td></tr>
