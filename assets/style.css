@@ -136,7 +136,11 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 .hero h1{font-size:clamp(2.3rem,6vw,4rem); letter-spacing:4px; font-weight:800}
 .hero h1 em{color:var(--gold); font-style:normal}
 .hero .tag{color:var(--mut); font-size:1.1rem; margin:20px auto 36px; max-width:720px}
-/* (kicker: dosya sonundaki tek tanim gecerli) */
+.kicker{
+  display:inline-block; padding:6px 16px; border:1px solid var(--gold);
+  border-radius:999px; color:var(--gold); font-size:.78rem; font-weight:700;
+  letter-spacing:2px; text-transform:uppercase; margin-bottom:26px;
+}
 
 /* ---------- BUTONLAR ---------- */
 .btn{
@@ -207,7 +211,13 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 .flow .fstep.hot b{color:var(--gold-text)}
 .flow .arr{color:var(--dim); padding:4px 0}
 
-/* (rozetler: dosya sonundaki tek .st blogu gecerli) */
+/* ---------- DURUM ROZETLERİ ---------- */
+.st{font-size:.72rem; font-weight:700; padding:3px 10px; border-radius:20px; letter-spacing:.5px; white-space:nowrap; display:inline-block}
+.st.live{background:rgba(63,174,90,.15); color:var(--green-text)}
+.st.beta{background:rgba(212,160,23,.15); color:var(--amber-text)}
+.st.soon{background:rgba(42,74,127,.3); color:#7fa3d7}
+[data-theme="light"] .st.soon{color:#3a5f9e}
+.st.plan{background:rgba(138,136,148,.12); color:var(--dim)}
 .disc{
   background:var(--gold-fade); border:1px solid var(--gold); border-radius:10px;
   padding:14px 18px; color:var(--amber-text); font-size:.82rem; margin-top:18px;
@@ -379,24 +389,3 @@ article .prose p{font-family:var(--serif); line-height:1.95}
   .lang-btn span{display:none}
   .lang-btn{padding:0 10px}
 }
-
-/* durum bolumu: tam-genis koyu sahne + perde'li fayanslar */
-.status-dark{background:var(--bg);color:var(--txt)}
-.status-dark .mega{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;letter-spacing:-2px;line-height:1.05;margin:6px 0 10px;color:var(--txt)}
-.status-dark .lead{color:var(--mut);max-width:640px}
-.kicker{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#0a0a0c;background:var(--gold,#c9a227);border-radius:4px;padding:5px 12px;margin-bottom:6px}
-.stat-hero{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:30px 0 8px;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
-.stat-hero>div{padding:30px 12px;text-align:center;border-left:1px solid var(--line)}
-.stat-hero>div:first-child{border-left:none}
-.stat-hero b{display:block;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;letter-spacing:-1px;color:var(--txt);line-height:1.05}
-.stat-hero small{display:block;margin-top:10px;font-size:.7rem;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold,#c9a227)}
-.status-dark .asof{color:var(--dim)}
-.act{font-size:1.6rem;font-weight:800;letter-spacing:-.5px;margin:44px 0 4px;color:var(--txt)}
-.act span{border-bottom:3px solid var(--gold,#c9a227);padding-bottom:4px}
-.rows{margin:6px 0 8px;border-top:1px solid var(--line)}
-.row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 4px;border-bottom:1px solid var(--line)}
-.row h3{margin:0 0 4px;font-size:1.02rem;font-weight:700;color:var(--txt)}
-.row p{margin:0;font-size:.86rem;line-height:1.55;color:var(--mut);max-width:640px}
-.row .st{flex:none}
-
-@media(max-width:800px){.rows .st{align-self:flex-start}.stat-hero{grid-template-columns:repeat(2,1fr)}.stat-hero>div:nth-child(3){border-left:none}.status-dark .mega{letter-spacing:-1px}}
