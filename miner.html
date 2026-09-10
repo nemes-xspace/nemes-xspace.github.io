@@ -85,6 +85,9 @@
   <p data-i18n="miner.st2">2. Create a key (nemes-miner keygen), optionally pledge storage (nemes-miner keygen --storage). No root needed.</p>
   <p data-i18n="miner.st3">3. Run: nemes-miner mine --simple --komuta https://komuta.nemes-x.space --corpus tr. Ctrl+C stops gracefully — your shares stay on the ledger.</p>
 
+  <h2 data-i18n="miner.s_win">Windows users</h2>
+  <p data-i18n="miner.win">No native .exe yet — run it in WSL2 Ubuntu (5 minutes, one restart): 1) In PowerShell as admin: wsl --install -d Ubuntu, restart. 2) In Ubuntu: unzip the Linux package, chmod +x nemes-miner, ./nemes-miner keygen. 3) Mine with the same command above — your NVIDIA GPU passes through to WSL automatically (CUDA on WSL). A native signed Windows installer is on the roadmap; WSL miners earn exactly the same shares.</p>
+
   <h2 data-i18n="miner.s_sec">Your data stays yours</h2>
   <p data-i18n="miner.sec">Miners see only blind micro-batches (salted IDs, no corpus names). Canary trap texts catch leakers: proven leaks mean ban + forfeited shares. Unplugging is always free — only proven cheating is destroyed. Full spec: Security Architecture.</p>
 </div></article>
