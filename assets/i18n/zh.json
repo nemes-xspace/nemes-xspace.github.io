@@ -399,7 +399,11 @@
     "lv_coin": "已铸NEMES",
     "lv_faiss": "FAISS索引",
     "lv_madenci": "矿工",
-    "lv_guncel": "实时账本，更新于："
+    "lv_guncel": "实时账本，更新于：",
+    "st_kicker": "现在的网络",
+    "act_live": "第一幕——已上线",
+    "act_build": "第二幕——建设中",
+    "act_next": "第三幕——下一步"
   },
   "nf": {
     "text": "此页面已漂出网络。",

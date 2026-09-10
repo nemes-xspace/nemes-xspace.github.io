@@ -399,7 +399,11 @@
     "lv_coin": "NEMES geprägt",
     "lv_faiss": "FAISS-Indexe",
     "lv_madenci": "Miner",
-    "lv_guncel": "Live-Ledger, Stand:"
+    "lv_guncel": "Live-Ledger, Stand:",
+    "st_kicker": "Das Netz, jetzt",
+    "act_live": "Akt I — Jetzt live",
+    "act_build": "Akt II — Im Bau",
+    "act_next": "Akt III — Als Nächstes"
   },
   "nf": {
     "text": "Diese Seite ist aus dem Netzwerk gedriftet.",

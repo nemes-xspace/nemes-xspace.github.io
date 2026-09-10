@@ -399,7 +399,11 @@
     "lv_coin": "NEMES emitidos",
     "lv_faiss": "índices FAISS",
     "lv_madenci": "mineros",
-    "lv_guncel": "libro en vivo, actualizado:"
+    "lv_guncel": "libro en vivo, actualizado:",
+    "st_kicker": "La red, ahora",
+    "act_live": "Acto I — En vivo",
+    "act_build": "Acto II — En construcción",
+    "act_next": "Acto III — Siguiente"
   },
   "nf": {
     "text": "Esta página se ha salido de la red.",

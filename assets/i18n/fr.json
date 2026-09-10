@@ -399,7 +399,11 @@
     "lv_coin": "NEMES émis",
     "lv_faiss": "index FAISS",
     "lv_madenci": "mineurs",
-    "lv_guncel": "registre en direct, MAJ :"
+    "lv_guncel": "registre en direct, MAJ :",
+    "st_kicker": "Le réseau, maintenant",
+    "act_live": "Acte I — En ligne",
+    "act_build": "Acte II — En construction",
+    "act_next": "Acte III — Ensuite"
   },
   "nf": {
     "text": "Cette page a dérivé hors du réseau.",

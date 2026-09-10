@@ -403,7 +403,11 @@
     "lv_coin": "NEMES minted",
     "lv_faiss": "FAISS indices",
     "lv_madenci": "miners",
-    "lv_guncel": "live ledger, updated:"
+    "lv_guncel": "live ledger, updated:",
+    "st_kicker": "The network, right now",
+    "act_live": "Act I — Live now",
+    "act_build": "Act II — Being built",
+    "act_next": "Act III — Next"
   },
   "rak": {
     "title": "In Numbers",

@@ -403,7 +403,11 @@
     "lv_coin": "basılan NEMES",
     "lv_faiss": "FAISS indexi",
     "lv_madenci": "madenci",
-    "lv_guncel": "canlı defter, güncelleme:"
+    "lv_guncel": "canlı defter, güncelleme:",
+    "st_kicker": "Ağ, şu an",
+    "act_live": "Perde I — Şu an canlı",
+    "act_build": "Perde II — İnşa halinde",
+    "act_next": "Perde III — Sıradaki"
   },
   "nf": {
     "text": "Bu sayfa ağdan sürüklendi.",
