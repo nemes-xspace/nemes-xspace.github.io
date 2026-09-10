@@ -92,7 +92,7 @@
 <section id="status"><div class="wrap">
   <h2 data-i18n="index.status_title">Network Status — Live, Building, and Planned</h2>
   <p class="lead" data-i18n="index.status_sub">Real components, real status. No vague promises — this page is the contract, updated as we ship.</p>
-  <div class="liveband" id="liveband">
+  <div class="stat-hero">
     <div><b id="lv-kanit">…</b><small data-i18n="index.lv_kanit">verified proofs</small></div>
     <div><b id="lv-coin">…</b><small data-i18n="index.lv_coin">NEMES minted</small></div>
     <div><b id="lv-faiss">…</b><small data-i18n="index.lv_faiss">FAISS indices</small></div>
@@ -100,20 +100,19 @@
   </div>
   <p class="asof"><span data-i18n="index.lv_guncel">live ledger, updated:</span> <span id="lv-zaman">…</span></p>
   <script>fetch('/stats.json').then(function(r){return r.json()}).then(function(s){document.getElementById('lv-kanit').textContent=Number(s.kanit).toLocaleString('en-US');document.getElementById('lv-coin').textContent=s.coin;document.getElementById('lv-faiss').textContent=s.faiss_index+' ('+s.faiss_gb+'GB)';document.getElementById('lv-madenci').textContent=s.madenci;document.getElementById('lv-zaman').textContent=s.guncelleme;}).catch(function(){});</script>
-  <div class="tblwrap"><table class="tbl">
-    <tr><th data-i18n="index.tbl_component">Component</th><th data-i18n="index.tbl_what">What it does</th><th data-i18n="index.tbl_status">Status</th></tr>
-    <tr><td data-i18n="index.st_pipeline_n">Core pipeline</td><td data-i18n="index.st_pipeline_d">Turns raw text into searchable knowledge — parses, embeds, compresses, and stores it.</td><td><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></td></tr>
-    <tr><td data-i18n="index.st_wiki_n">Wikipedia network</td><td data-i18n="index.st_wiki_d">Wikipedia in 11 languages plus 6 sister projects, embedded and searchable as one.</td><td><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></td></tr>
-    <tr><td data-i18n="index.st_arxiv_n">arXiv corpus</td><td data-i18n="index.st_arxiv_d">3.1 million scientific abstracts embedded and ready for search.</td><td><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></td></tr>
-    <tr><td data-i18n="index.st_cc100_n">cc100-tr mega corpus</td><td data-i18n="index.st_cc100_d">109.3 million Turkish web documents — embedded and searchable.</td><td><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></td></tr>
-    <tr><td data-i18n="index.st_newscrawl_n">Newscrawl corpus</td><td data-i18n="index.st_newscrawl_d">56.5 million news articles — embedding in progress.</td><td><span class="st beta">🟡 <span data-i18n="shared.st_running">RUNNING</span></span></td></tr>
-    <tr><td data-i18n="index.st_faiss_n">FAISS index layer</td><td data-i18n="index.st_faiss_d">Fast similarity-search indexes — 23 built, cc100-tr vectors in progress.</td><td><span class="st beta">🟡 <span data-i18n="shared.st_partial">PARTIAL</span></span></td></tr>
-    <tr><td data-i18n="index.st_search_n">Unified search</td><td data-i18n="index.st_search_d">One query box that searches every corpus at once and reranks the best matches.</td><td><span class="st soon">🔵 <span data-i18n="shared.st_soon">SOON</span></span></td></tr>
-    <tr><td data-i18n="index.st_expand_n">Corpus expansion</td><td data-i18n="index.st_expand_d">Next datasets queued: books, web crawls, translations, case law.</td><td><span class="st soon">🔵 <span data-i18n="shared.st_queued">QUEUED</span></span></td></tr>
-    <tr><td data-i18n="index.st_ledger_n">Sovereign ledger</td><td data-i18n="index.st_ledger_d">Tamper-evident epoch chain with anonymous, verifiable authority.</td><td><span class="st plan">⚪ <span data-i18n="shared.st_planned">PLANNED</span></span></td></tr>
-    <tr><td data-i18n="index.st_client_n">Miner client v1</td><td data-i18n="index.st_client_d">One-click desktop miner that detects your hardware and starts you earning.</td><td><span class="st plan">⚪ <span data-i18n="shared.st_planned">PLANNED</span></span></td></tr>
-    <tr><td data-i18n="index.st_premium_n">Coin payouts</td><td data-i18n="index.st_premium_d">NEMES coin payouts for active miners at mainnet.</td><td><span class="st plan">⚪ <span data-i18n="shared.st_planned">PLANNED</span></span></td></tr>
-  </table></div>
+  <div class="cards">
+    <div class="card"><span class="num">01</span><h3 data-i18n="index.st_pipeline_n">Core pipeline</h3><p data-i18n="index.st_pipeline_d">Turns raw text into searchable knowledge — parses, embeds, compresses, and stores it.</p><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></div>
+    <div class="card"><span class="num">02</span><h3 data-i18n="index.st_wiki_n">Wikipedia network</h3><p data-i18n="index.st_wiki_d">Wikipedia in 11 languages plus 6 sister projects, embedded and searchable as one.</p><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></div>
+    <div class="card"><span class="num">03</span><h3 data-i18n="index.st_arxiv_n">arXiv corpus</h3><p data-i18n="index.st_arxiv_d">3.1 million scientific abstracts embedded and ready for search.</p><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></div>
+    <div class="card"><span class="num">04</span><h3 data-i18n="index.st_cc100_n">cc100-tr mega corpus</h3><p data-i18n="index.st_cc100_d">109.3 million Turkish web documents — vectors embedding now.</p><span class="st beta">🟡 <span data-i18n="shared.st_running">RUNNING</span></span></div>
+    <div class="card"><span class="num">05</span><h3 data-i18n="index.st_newscrawl_n">Newscrawl corpus</h3><p data-i18n="index.st_newscrawl_d">56.5 million news articles — embedded and indexed.</p><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></div>
+    <div class="card"><span class="num">06</span><h3 data-i18n="index.st_faiss_n">FAISS index layer</h3><p data-i18n="index.st_faiss_d">Fast similarity-search indexes — 23 built, cc100-tr vectors in progress.</p><span class="st beta">🟡 <span data-i18n="shared.st_partial">PARTIAL</span></span></div>
+    <div class="card"><span class="num">07</span><h3 data-i18n="index.st_search_n">Unified search</h3><p data-i18n="index.st_search_d">One query box that searches every corpus at once and reranks the best matches.</p><span class="st soon">🔵 <span data-i18n="shared.st_soon">SOON</span></span></div>
+    <div class="card"><span class="num">08</span><h3 data-i18n="index.st_expand_n">Corpus expansion</h3><p data-i18n="index.st_expand_d">Next datasets queued: books, web crawls, translations, case law.</p><span class="st soon">🔵 <span data-i18n="shared.st_queued">QUEUED</span></span></div>
+    <div class="card"><span class="num">09</span><h3 data-i18n="index.st_ledger_n">Sovereign ledger</h3><p data-i18n="index.st_ledger_d">Tamper-evident epoch chain with anonymous, verifiable authority.</p><span class="st plan">⚪ <span data-i18n="shared.st_planned">PLANNED</span></span></div>
+    <div class="card"><span class="num">10</span><h3 data-i18n="index.st_client_n">Miner client</h3><p data-i18n="index.st_client_d">Miner v0.2.0 CLI live — download and mine today.</p><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></div>
+    <div class="card"><span class="num">11</span><h3 data-i18n="index.st_premium_n">Coin payouts</h3><p data-i18n="index.st_premium_d">NEMES coin payouts for active miners at mainnet.</p><span class="st plan">⚪ <span data-i18n="shared.st_planned">PLANNED</span></span></div>
+  </div>
 </div></section>
 
 <section id="video" style="background:var(--bg2)"><div class="wrap">
