@@ -407,6 +407,16 @@ article .prose p{font-family:var(--serif); line-height:1.95}
 .tile{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#101014;border:1px solid #232329;border-left:5px solid #3a3a44;border-radius:12px;padding:20px 22px;transition:transform .18s ease,border-color .18s ease}
 .tile:hover{transform:translateY(-3px);border-color:#3f3f49}
 .tile.live{border-left-color:#22c55e}
+.st{display:inline-flex;align-items:center;gap:7px;font-size:.68rem;font-weight:800;letter-spacing:2px;padding:5px 12px;border-radius:999px;border:1px solid #33333c;background:#141419;color:#d7d7de;white-space:nowrap}
+.st i{width:7px;height:7px;border-radius:50%;background:#71717e;flex:none}
+.st.live{border-color:rgba(34,197,94,.45);color:#86efac}
+.st.live i{background:#22c55e;box-shadow:0 0 8px #22c55e}
+.st.beta{border-color:rgba(201,162,39,.5);color:#e8c95c}
+.st.beta i{background:#c9a227;box-shadow:0 0 8px #c9a227}
+.st.soon{border-color:rgba(59,130,246,.5);color:#93c5fd}
+.st.soon i{background:#3b82f6;box-shadow:0 0 8px #3b82f6}
+.st.plan{color:#8b8b96}
+.st.plan i{background:#52525c}
 .tile.build{border-left-color:var(--gold,#c9a227)}
 .tile.next{border-left-color:#3b82f6;opacity:.92}
 .tile h3{margin:0 0 6px;font-size:1.25rem;font-weight:800;letter-spacing:-.3px;color:#fff}
