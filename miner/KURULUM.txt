@@ -1,0 +1,7 @@
+NEMES Miner v0.2.0 (Linux, testnet) — Hizli kurulum
+1) Kayit: curl -s -X POST https://komuta.nemes-x.space/api/kayit -H 'Content-Type: application/json' -d '{"cuzdan":"TRC20_ADRESIN","makine_id":"ev-pc-1"}'
+   -> token'i kaydet.
+2) Calistir: ./nemes-miner mine --simple --komuta https://komuta.nemes-x.space --token TOKEN --embed-api http://127.0.0.1:1241
+   (embed-api: yerel llama-server, nomic-embed-text-v1.5)
+3) Durum: ./nemes-miner status --watch
+Not: CF korumasi Miner UA ile gecilir. Sorun: nemes-x.space@zohomail.eu
