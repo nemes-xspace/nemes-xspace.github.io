@@ -79,7 +79,7 @@
 
 <div class="strip"><div class="wrap" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:28px">
   <div><b>109,279,716</b><small data-i18n="index.stat_docs">documents · core corpus</small></div>
-  <div><b>40M+</b><small data-i18n="index.stat_vec">vectors embedded to date</small></div>
+  <div><b>109M+</b><small data-i18n="index.stat_vec">vectors embedded to date</small></div>
   <div><b>13</b><small data-i18n="index.stat_faiss">faiss indices built</small></div>
   <div><b>22+</b><small data-i18n="index.stat_corpora">corpora · growing — live, open, and verifiable</small></div>
 </div></div>
@@ -94,7 +94,7 @@
     <tr><td data-i18n="index.st_arxiv_n">arXiv corpus</td><td data-i18n="index.st_arxiv_d">3.1 million scientific abstracts embedded and ready for search.</td><td><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></td></tr>
     <tr><td data-i18n="index.st_cc100_n">cc100-tr mega corpus</td><td data-i18n="index.st_cc100_d">109.3 million Turkish web documents — embedded and searchable.</td><td><span class="st live">🟢 <span data-i18n="shared.st_live">LIVE</span></span></td></tr>
     <tr><td data-i18n="index.st_newscrawl_n">Newscrawl corpus</td><td data-i18n="index.st_newscrawl_d">56.5 million news articles — embedding in progress.</td><td><span class="st beta">🟡 <span data-i18n="shared.st_running">RUNNING</span></span></td></tr>
-    <tr><td data-i18n="index.st_faiss_n">FAISS index layer</td><td data-i18n="index.st_faiss_d">Fast similarity-search indexes — 13 of 22 built, with ranking refinement.</td><td><span class="st beta">🟡 <span data-i18n="shared.st_partial">PARTIAL</span></span></td></tr>
+    <tr><td data-i18n="index.st_faiss_n">FAISS index layer</td><td data-i18n="index.st_faiss_d">25 similarity-search indexes live, incl. the 109M-vector cc100 index (4.1G).</td><td><span class="st beta">🟡 <span data-i18n="shared.st_partial">PARTIAL</span></span></td></tr>
     <tr><td data-i18n="index.st_search_n">Unified search</td><td data-i18n="index.st_search_d">One query box that searches every corpus at once and reranks the best matches.</td><td><span class="st soon">🔵 <span data-i18n="shared.st_soon">SOON</span></span></td></tr>
     <tr><td data-i18n="index.st_expand_n">Corpus expansion</td><td data-i18n="index.st_expand_d">Next datasets queued: books, web crawls, translations, case law.</td><td><span class="st soon">🔵 <span data-i18n="shared.st_queued">QUEUED</span></span></td></tr>
     <tr><td data-i18n="index.st_ledger_n">Sovereign ledger</td><td data-i18n="index.st_ledger_d">Tamper-evident epoch chain with anonymous, verifiable authority.</td><td><span class="st plan">⚪ <span data-i18n="shared.st_planned">PLANNED</span></span></td></tr>
@@ -223,7 +223,7 @@
       <h3 data-i18n="index.poc_design">Verification Design</h3>
       <ul>
         <li><b data-i18n="index.poc_1b">1 · Random re-check</b> — <span data-i18n="index.poc_1">10% of all submitted work is independently re-embedded by a random verifier node. If your work is selected, it gets checked.</span></li>
-        <li><b data-i18n="index.poc_2b">2 · Match requirement</b> — <span data-i18n="index.poc_2">The verifier's output must match yours almost exactly (≥ 99% vector similarity). Same input, same output, same result — no matter the hardware.</span></li>
+        <li><b data-i18n="index.poc_2b">2 · Match requirement</b> — <span data-i18n="index.poc_2">The verifier's output must match yours almost exactly (≥ 98% vector similarity). Same input, same output, same result — no matter the hardware.</span></li>
         <li><b data-i18n="index.poc_3b">3 · Tamper-evident assignments</b> — <span data-i18n="index.poc_3">Every job is locked with a digital fingerprint (content hash). You can't alter the task or forge the result.</span></li>
         <li><b data-i18n="index.poc_4b">4 · Failed verification</b> — <span data-i18n="index.poc_4">A rejected job burns the worker's shares and the work is re-assigned to another node. Repeated failures lower future job priority.</span></li>
         <li><b data-i18n="index.poc_5b">5 · Verifiers are peers</b> — <span data-i18n="index.poc_5">Verifier nodes are ordinary network participants, not privileged insiders. They earn a small fee for verification, and they lose if they lie.</span></li>
@@ -416,7 +416,7 @@
     <div class="step done"><span><b data-i18n="index.road_2">✅ Wikipedia + arXiv + Tatoeba</b><small data-i18n="index.road_2d">embedded and searchable · Live now</small></span></div>
     <div class="step done"><span><b data-i18n="index.road_3">✅ cc100-tr mega corpus</b><small data-i18n="index.road_3d">109.3M documents · Embedded</small></span></div>
     <div class="step now"><span><b data-i18n="index.road_4">🟡 Corpus expansion</b><small data-i18n="index.road_4d">newscrawl, books, web crawls · Embedding in progress</small></span></div>
-    <div class="step"><span><b data-i18n="index.road_5">🔵 FAISS index completion</b><small data-i18n="index.road_5d">13/22 built, remaining indices in queue</small></span></div>
+    <div class="step"><span><b data-i18n="index.road_5">🔵 FAISS index completion</b><small data-i18n="index.road_5d">25 built, incl. cc100 (4.1G); remaining languages in queue</small></span></div>
     <div class="step"><span><b data-i18n="index.road_6">⚪ Sovereign ledger</b><small data-i18n="index.road_6d">signed epoch chain, hash-linked · Q4 2026</small></span></div>
     <div class="step"><span><b data-i18n="index.road_7">⚪ Miner client v1</b><small data-i18n="index.road_7d">one-click install, auto role detection · Q1 2027</small></span></div>
     <div class="step"><span><b data-i18n="index.road_8">⚪ Closed beta</b><small data-i18n="index.road_8d">public beta with real rewards · Q2 2027</small></span></div>
