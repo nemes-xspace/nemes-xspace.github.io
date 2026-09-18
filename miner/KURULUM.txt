@@ -9,16 +9,19 @@ calisir ama yavastir. Ayrica bir embed-api gerekir (adim 2).
      -d '{"cuzdan":"TRC20_ADRESIN","makine_id":"ev-pc-1"}'
    -> donen "token" alanini kaydet (bir daha gosterilmez).
 
-2) Gomme ucu (SART - madenci metni sayiya ceviremezse uretemez):
-   LM Studio'yu kur, nomic-embed-text-v1.5 modelini indirip sunucuyu baslat
-   (ornek port 1234), ardindan --embed-api http://127.0.0.1:1234 olarak ver.
-   (NEMES gomuntu paketi yakinda bu sayfadan dagitilacak; simdilik LM Studio.)
+2) Gomme ucu (IKISINDEN BIRI SART - madenci metni sayiya ceviremezse
+   uretemez):
+   A) Yerel llama-server (onerilen): NEMES gomuntu paketini
+      (nemes-bundle, nomic-embed-text-v1.5) indirip calistir:
+        ./start-embed-server.sh 1251
+      Ardindan --embed-api http://127.0.0.1:1251 kullan.
+   B) LM Studio: nomic-embed-text-v1.5 modelini acip --embed-api olarak ver.
 
 3) Calistir (ornek - token ve embed-api kendine gore):
    ./nemes-miner mine --simple \
      --komuta https://komuta.nemes-x.space \
      --token TOKEN \
-     --embed-api http://127.0.0.1:1234 \
+     --embed-api http://127.0.0.1:1251 \
      --kira --kira-adet 2000
    (--kira: gorevleri toplu kiralar, baglantiyi rahatlatir. Ilk surumde sart degil.)
 

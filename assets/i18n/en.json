@@ -43,7 +43,6 @@
     }
   },
   "shared": {
-    "nav_manifesto": "Manifesto",
     "nav_why": "Why",
     "nav_verify": "Verify",
     "nav_faq": "FAQ",
@@ -106,7 +105,7 @@
     "st_premium_n": "Premium tiers & USDT settlements",
     "st_premium_d": "Hosted API access and weekly USDT payouts for active miners.",
     "video_title": "Watch — What is NEMES-X?",
-    "video_sub": "135 seconds. Everything you need to know.",
+    "video_sub": "180 seconds. Everything you need to know.",
     "video_fallback": "Your browser doesn't support video.",
     "video_download": "Download video",
     "dl_title": "Download the Miner",
@@ -414,7 +413,6 @@
     "p4": "In the lab: 70B, MMLU 86.7. What you get: 7-8B, MMLU 62-65. Dosage-based sale: $20 → 7B, $200 → near 70B, $20k → full power.",
     "note": "Note: this annex is the verifiable supplement that completes the epic text of the main manifesto. The main text remains nameless and timeless; the numbers are updated here.",
     "cta": "Mine knowledge, not hashes.",
-    "cta1": "Back to the Manifesto →",
     "cta2": "Start Mining →",
     "home": "nemes-x.space",
     "rev_openai": "$3.4 Billion",
@@ -453,7 +451,7 @@
     "q5": "How much will I earn?",
     "a5": "Earnings depend on verified workload, total network participation, and premium subscription revenue that week. The formula is: shares = verified vectors × hardware multiplier; pool = 50% of premium revenue; unit price = pool / total shares. See the Mining Economics section for the full breakdown including a break-even example. All figures on the site are estimates.",
     "q6": "When and how am I paid?",
-    "a6": "Weekly, in USDT on the TRC20 network. Minimum payout is $5.00, with a 2% operational fee covering verification and gas. Settlement history will be published at network launch with transaction IDs.",
+    "a6": "There is no minimum payout. A 2% operational fee covering verification and gas. Settlement history will be published at network launch with transaction IDs.",
     "q7": "What about electricity costs?",
     "a7": "Electricity is your responsibility. A 300W rig at $0.10/kWh costs ~$0.72/day. Use your share multiplier to estimate accumulation rate and decide if projected growth justifies the cost for you. Nothing on this site is financial advice.",
     "q8": "Is mining income guaranteed?",
@@ -523,8 +521,7 @@
     "proof": "Found a discrepancy between what we say and what the code does? Open an issue. The burden of proof is on us.",
     "p2": "Comparable proof commands for sister corpora are documented in the pipeline repo",
     "p4": "Full license texts ship with the corpus manifest repository. Commercial use excludes non-commercial corpora (WikiHow) at the product layer — physically separate indexes. See Corpus Manifest table",
-    "p6": "No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. ⚪ at network launch",
-    "p7f": "görünür."
+    "p6": "No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. ⚪ at network launch"
   },
   "why": {
     "sub": "A founder's letter — why we're building this, and why now.",
@@ -564,9 +561,7 @@
     "l3": "25 FAISS indices",
     "l3d": "— IVF-PQ, nprobe 128, full-vector rerank",
     "l4": "25 corpora live and searchable",
-    "l4d": "— Wikipedia (11 languages), arXiv, WikiHow, Tatoeba, sibling projects",
-    "l5": "5 more corpora queued",
-    "l5d": "— newscrawl, Gutenberg, Common Crawl WET, ParaCrawl, Caselaw",
+    "l4d": "— Wikipedia (11 languages), arXiv, WikiHow, Tatoeba, newscrawl, Caselaw, sibling projects",
     "l6": "3 legal documents",
     "l6d": "— Terms, Privacy Policy, DMCA — live on this site",
     "l7": "1 constitution",

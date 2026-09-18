@@ -36,7 +36,7 @@ def ana():
         except Exception as e:
             print("BOZUK JSON %s: %s" % (dil, e))
             return 1
-    baz_dil = sorted(kumeler)[0]
+    baz_dil = "en" if "en" in kumeler else sorted(kumeler)[0]
     baz = kumeler[baz_dil]
     print("%s: %d anahtar (baz)" % (baz_dil, len(baz)))
     bozuk = False

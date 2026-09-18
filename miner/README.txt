@@ -3,7 +3,7 @@ NEMES-X Miner v0.2.0 — CLI Madenci (Linux, testnet)
 
 Paket: nemes-miner-v0.2.0-linux.zip
   - nemes-miner : komut satiri madenci (gercek istemci)
-  - KURULUM.txt : hizli kurulum (3 adim)
+  - KURULUM.txt : hizli kurulum (4 adim)
 Butunluk: SHA256SUMS dosyasindaki degerlerle karsilastir.
 
 Hizli baslangic (ayrinti KURULUM.txt'de):
