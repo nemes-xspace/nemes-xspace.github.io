@@ -1,7 +1,34 @@
-NEMES Miner v0.2.0 (Linux, testnet) — Hizli kurulum
-1) Kayit: curl -s -X POST https://komuta.nemes-x.space/api/kayit -H 'Content-Type: application/json' -d '{"cuzdan":"TRC20_ADRESIN","makine_id":"ev-pc-1"}'
-   -> token'i kaydet.
-2) Calistir: ./nemes-miner mine --simple --komuta https://komuta.nemes-x.space --token TOKEN --embed-api http://127.0.0.1:1241
-   (embed-api: yerel llama-server, nomic-embed-text-v1.5)
-3) Durum: ./nemes-miner status --watch
-Not: CF korumasi Miner UA ile gecilir. Sorun: nemes-x.space@zohomail.eu
+NEMES Miner v0.2.0 (Linux, testnet) — Hizli kurulum (18 Eyl 2026 guncel)
+
+GEREKSINIM: NVIDIA GPU + CUDA surucu (gomme icin). Islemci modunda da
+calisir ama yavastir. Ayrica bir embed-api gerekir (adim 2).
+
+1) Kayit:
+   curl -s -X POST https://komuta.nemes-x.space/api/kayit \
+     -H 'Content-Type: application/json' \
+     -d '{"cuzdan":"TRC20_ADRESIN","makine_id":"ev-pc-1"}'
+   -> donen "token" alanini kaydet (bir daha gosterilmez).
+
+2) Gomme ucu (IKISINDEN BIRI SART - madenci metni sayiya ceviremezse
+   uretemez):
+   A) Yerel llama-server (onerilen): NEMES gomuntu paketini
+      (nemes-bundle, nomic-embed-text-v1.5) indirip calistir:
+        ./start-embed-server.sh 1251
+      Ardindan --embed-api http://127.0.0.1:1251 kullan.
+   B) LM Studio: nomic-embed-text-v1.5 modelini acip --embed-api olarak ver.
+
+3) Calistir (ornek - token ve embed-api kendine gore):
+   ./nemes-miner mine --simple \
+     --komuta https://komuta.nemes-x.space \
+     --token TOKEN \
+     --embed-api http://127.0.0.1:1251 \
+     --kira --kira-adet 2000
+   (--kira: gorevleri toplu kiralar, baglantiyi rahatlatir. Ilk surumde sart degil.)
+
+4) Durum: ./nemes-miner status --watch
+   Bosluk onerisi (opsiyonel, stake'li): ./nemes-miner bosluklar
+
+Notlar:
+- CF korumasi Miner UA ile gecilir (istemci otomatik gonderir).
+- Bu paket CLI madencidir (arayuzsuz). Masaustu uygulamasi ayrica duyurulacak.
+- Sorun: nemes-x.space@zohomail.eu
