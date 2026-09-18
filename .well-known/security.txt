@@ -1,4 +1,4 @@
-Contact: mailto:security@nemes-x.space
+Contact: mailto:nemes-x.space@zohomail.eu
 Contact: https://github.com/nemes-xspace/nemes-xspace.github.io/issues
 Expires: 2027-08-24T00:00:00.000Z
 Acknowledgments: https://nemes-x.space/verify.html
