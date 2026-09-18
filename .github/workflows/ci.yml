@@ -1,0 +1,33 @@
+name: site-ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  i18n:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: JSON gecerlilik + anahtar denkligi
+        run: python3 scripts/check-i18n.py assets/i18n
+      - name: HTML baslik hiyerarsisi (h-seviye atlama yok)
+        run: |
+          python3 - <<'EOF'
+          import re, glob, sys
+          kotu = 0
+          for f in sorted(glob.glob('*.html')):
+              s = open(f, encoding='utf-8', errors='replace').read()
+              h = [int(x) for x in re.findall(r'<h([1-6])\b', s)]
+              for a, b in zip(h, h[1:]):
+                  if b > a + 1:
+                      print('ATLAMA %s: h%d->h%d' % (f, a, b)); kotu = 1; break
+              for m in re.findall(r'<img\b[^>]*>', s):
+                  if 'alt=' not in m:
+                      print('ALT-YOK %s' % f); kotu = 1; break
+          sys.exit(kotu)
+          EOF
