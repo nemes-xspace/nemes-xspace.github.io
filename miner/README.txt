@@ -1,18 +1,19 @@
-NEMES-X Miner v0.1.0 — Early Access Preview
-===========================================
+NEMES-X Miner v0.2.0 — CLI Madenci (Linux, testnet)
+====================================================
 
-This is a placeholder for the upcoming NEMES-X Miner Client v1.
+Paket: nemes-miner-v0.2.0-linux.zip
+  - nemes-miner : komut satiri madenci (gercek istemci)
+  - KURULUM.txt : hizli kurulum (3 adim)
+Butunluk: SHA256SUMS dosyasindaki degerlerle karsilastir.
 
-What you are downloading now:
-- This README + quick-start guide
-- The full client (one-click installer for Windows/Linux/macOS) ships at mainnet launch
+Hizli baslangic (ayrinti KURULUM.txt'de):
+  1. Kayit ol, token al.
+  2. Gomme ucunu hazirla (yerel llama-server + nomic-embed-text-v1.5).
+  3. ./nemes-miner mine --simple --komuta https://komuta.nemes-x.space \
+       --token TOKEN --embed-api http://127.0.0.1:1251 --kira
 
-What to do now:
-1. Keep this file — your download confirms you are early.
-2. Follow @NemesXSpace on X for the v1 launch announcement.
-3. At launch: run the installer, enter your TRC20 wallet address, and start earning.
+Gereksinim: 8GB RAM, GTX 1060 6GB+, 50GB bos SSD, 5 Mbps.
+Masaustu uygulamasi (tek-tik) ayrica duyurulacak.
 
-System requirements: 8GB RAM, GTX 1060 6GB+, 50GB free SSD, 5 Mbps.
-
-Questions? nemes-x.space@zohomail.eu
+Sorular? nemes-x.space@zohomail.eu
 https://nemes-x.space — The Sovereign Brain

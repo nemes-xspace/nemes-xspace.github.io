@@ -14,6 +14,13 @@ window.NX = (function(){
   var lang = 'en';
 
   function pick(){
+    try {
+      var q = new URLSearchParams(window.location.search).get('lang');
+      if(q && LANGS.some(function(l){return l.code===q})){
+        try{ localStorage.setItem('nx-lang', q); }catch(e){}
+        return q;
+      }
+    }catch(e){}
     var saved = null;
     try{ saved = localStorage.getItem('nx-lang'); }catch(e){}
     if(saved && LANGS.some(function(l){return l.code===saved})) return saved;
