@@ -4,7 +4,15 @@ NEMES-X Miner v0.2.0 — CLI Madenci (Linux, testnet)
 Paket: nemes-miner-v0.2.0-linux.zip
   - nemes-miner : komut satiri madenci (gercek istemci)
   - KURULUM.txt : hizli kurulum (4 adim)
-Butunluk: SHA256SUMS dosyasindaki degerlerle karsilastir.
+Butunluk: SHA256SUMS dosyasindaki degerlerle karsilastir
+(`sha256sum -c SHA256SUMS` hepsi OK demeli).
+Imza: SHA256SUMS.sig, asagidaki anahtarla `nemes-release` adina imzali.
+Dogrulama:
+  allowed_signers dosyasina su satiri yaz:
+    nemes-release namespaces="nemes-release" ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAII2ZSmAlX1jWRGU19ME4A8H+cI0LbfNye+tNUVT9tDVx
+  ssh-keygen -Y verify -f allowed_signers -I nemes-release \
+    -n nemes-release -s SHA256SUMS.sig < SHA256SUMS
+  ("Good signature" demeli; demiyorsa KURMA, e-postayla bildir.)
 
 Hizli baslangic (ayrinti KURULUM.txt'de):
   1. Kayit ol, token al.
