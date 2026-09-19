@@ -20,7 +20,10 @@ Hizli baslangic (ayrinti KURULUM.txt'de):
   3. ./nemes-miner mine --simple --komuta https://komuta.nemes-x.space \
        --token TOKEN --embed-api http://127.0.0.1:1251 --kira
 
-Gereksinim: 8GB RAM, GTX 1060 6GB+, 50GB bos SSD, 5 Mbps.
+Gereksinim (katmanli, 19 Eyl karari):
+  Compute (gomme+denetim): 8GB RAM, GTX 1060 6GB+, 50GB bos SSD, 5 Mbps.
+  Full (egitim+federasyon-haklari): 8GB+ VRAM, 16GB RAM, 100GB bos SSD.
+  Katman, beyanla degil dogrulanmis-ciktiyla belirlenir.
 Masaustu uygulamasi (tek-tik) ayrica duyurulacak.
 
 Sorular? nemes-x.space@zohomail.eu
