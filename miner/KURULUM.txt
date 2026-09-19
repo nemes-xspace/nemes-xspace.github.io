@@ -10,23 +10,30 @@ calisir ama yavastir. Ayrica bir embed-api gerekir (adim 2).
    -> donen "token" alanini kaydet (bir daha gosterilmez).
 
 2) Gomme ucu (IKISINDEN BIRI SART - madenci metni sayiya ceviremezse
-   uretemez):
-   A) Yerel llama-server (onerilen): NEMES gomuntu paketini
-      (nemes-bundle, nomic-embed-text-v1.5) indirip calistir:
+   uretemez). Miner adresin sonuna /v1/embeddings ekler; o yuzden TABAN
+   adresi ver (ornekler asagida).
+   A) LM Studio (bugun calisir): nomic-embed-text-v1.5 modelini indir,
+      Server sekmesinde baslat (varsayilan port 1234). Ardindan:
+        --embed-api http://127.0.0.1:1234
+      (Farkli port sectiysen onu yaz.)
+   B) NEMES gomuntu paketi (onerilen, tek-dosya): nemes-bundle (1.3GB,
+      llama-server + model icinde) indirme baglantisi cok yakinda bu
+      sayfada duyurulacak. Kurulum:
         ./start-embed-server.sh 1251
       Ardindan --embed-api http://127.0.0.1:1251 kullan.
-   B) LM Studio: nomic-embed-text-v1.5 modelini acip --embed-api olarak ver.
 
-3) Calistir (ornek - token ve embed-api kendine gore):
+3) Calistir (ornek - token ve embed-api kendine gore; asagida LM Studio
+   varsayilmis, gomuntu paketiyle 1251 yaz):
    ./nemes-miner mine --simple \
      --komuta https://komuta.nemes-x.space \
      --token TOKEN \
-     --embed-api http://127.0.0.1:1251 \
+     --embed-api http://127.0.0.1:1234 \
      --kira --kira-adet 2000
    (--kira: gorevleri toplu kiralar, baglantiyi rahatlatir. Ilk surumde sart degil.)
 
 4) Durum: ./nemes-miner status --watch
-   Bosluk onerisi (opsiyonel, stake'li): ./nemes-miner bosluklar
+   Bosluk onerisi (opsiyonel, stake'li; token gerekir):
+     ./nemes-miner bosluklar --komuta https://komuta.nemes-x.space --token TOKEN
 
 Notlar:
 - CF korumasi Miner UA ile gecilir (istemci otomatik gonderir).
