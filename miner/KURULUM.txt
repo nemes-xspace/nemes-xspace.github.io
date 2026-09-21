@@ -1,4 +1,4 @@
-NEMES Miner v0.2.0 (Linux, testnet) — Hizli kurulum (18 Eyl 2026 guncel)
+NEMES Miner v0.2.0 (Linux, testnet) — Hizli kurulum (21 Eyl 2026 guncel)
 
 GEREKSINIM: NVIDIA GPU + CUDA surucu (gomme icin). Islemci modunda da
 calisir ama yavastir. Ayrica bir embed-api gerekir (adim 2).
@@ -30,6 +30,9 @@ calisir ama yavastir. Ayrica bir embed-api gerekir (adim 2).
      --embed-api http://127.0.0.1:1234 \
      --kira --kira-adet 2000
    (--kira: gorevleri toplu kiralar, baglantiyi rahatlatir. Ilk surumde sart degil.)
+   (--arastirma: embed kuyrugu bosken arastirma gorevi ceker (izinli
+   kaynak + robots uyumlu). Acmak zorunda degilsin; acarsan kuyruk
+   bosken sistem bos durmaz.)
 
 4) Durum: ./nemes-miner status --watch
    Bosluk onerisi (opsiyonel, stake'li; token gerekir):
