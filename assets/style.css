@@ -218,6 +218,8 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 /* ---------- DURUM ROZETLERİ ---------- */
 .st{font-size:.72rem; font-weight:700; padding:3px 10px; border-radius:20px; letter-spacing:.5px; white-space:nowrap; display:inline-block}
 .st.live{background:rgba(63,174,90,.15); color:var(--green-text)}
+.pulse-green{display:inline-block; width:8px; height:8px; border-radius:50%; background:#3fae5a; margin-inline-end:6px; vertical-align:1px; box-shadow:0 0 8px rgba(63,174,90,.9); animation:nx-blink 1.6s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.pulse-green{animation:none}}
 .st.beta{background:rgba(212,160,23,.15); color:var(--amber-text)}
 .st.soon{background:rgba(42,74,127,.3); color:#7fa3d7}
 [data-theme="light"] .st.soon{color:#3a5f9e}
