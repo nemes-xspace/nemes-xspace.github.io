@@ -387,7 +387,14 @@
     "intro_p4": "The network's security architecture features sandboxed workers, signed binaries, and an open processing pipeline. The project's MIT license allows anyone to inspect, improve, and fork the system.",
     "intro_em": "A decentralized knowledge network based on verification rather than trust.",
     "intro_slogan": "NEMES-X — Mine knowledge, not hashes.",
-    "asof": "figures as of Aug 30 2026 · full corpus manifest below"
+    "asof": "figures as of Aug 30 2026 · full corpus manifest below",
+    "rep_1t": "📜 Mythology Report",
+    "rep_1d": "10 sources, provenance + archetype graph. One-time PDF.",
+    "rep_2t": "🔎 Custom Research",
+    "rep_2d": "Any allowlisted topic, cross-checked, cited. One-time PDF.",
+    "rep_3t": "🔌 API Access",
+    "rep_3d": "Search + research endpoints, metered. First 1,000 calls free.",
+    "rep_cta": "Order →"
   },
   "nf": {
     "text": "انجرفت هذه الصفحة خارج الشبكة.",
