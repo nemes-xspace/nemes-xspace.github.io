@@ -188,6 +188,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 .strip div{text-align:center}
 .strip b{display:block; font-size:1.6rem; color:var(--gold); font-variant-numeric:tabular-nums; font-weight:800}
 .strip small{color:var(--mut)}
+#nx-pulse b{color:var(--gold2); font-variant-numeric:tabular-nums}
 .asof{text-align:center; color:var(--dim); font-size:.72rem; padding:10px 0 0}
 
 /* ---------- GRID & PANEL ---------- */
