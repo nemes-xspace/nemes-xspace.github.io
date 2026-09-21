@@ -387,7 +387,14 @@
     "intro_p4": "Ağın güvenlik mimarisi korumalı işçiler, imzalı ikililer ve açık işlem hattı içerir. Projenin MIT lisansı herkesin sistemi incelemesine, iyileştirmesine ve çatallamasına izin verir.",
     "intro_em": "Güvene değil doğrulamaya dayalı merkeziyetsiz bilgi ağı.",
     "intro_slogan": "NEMES-X — Hash değil bilgi madenciliği.",
-    "asof": "rakamlar 30 Ağu 2026 itibarıyla · tam derlem bildirimi aşağıda"
+    "asof": "rakamlar 30 Ağu 2026 itibarıyla · tam derlem bildirimi aşağıda",
+    "rep_1t": "📜 Mitoloji Raporu",
+    "rep_1d": "10 kaynak, provenance + arketip grafı. Tek seferlik PDF.",
+    "rep_2t": "🔎 Özel Araştırma",
+    "rep_2d": "İzinli her konu, çapraz doğrulamalı, kaynakçalı. Tek seferlik PDF.",
+    "rep_3t": "🔌 API Erişimi",
+    "rep_3d": "Arama + araştırma uçları, ölçümlü. İlk 1.000 çağrı ücretsiz.",
+    "rep_cta": "Sipariş →"
   },
   "nf": {
     "text": "Bu sayfa ağdan sürüklendi.",
