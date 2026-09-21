@@ -136,6 +136,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 .hero h1{font-size:clamp(2.3rem,6vw,4rem); letter-spacing:4px; font-weight:800}
 .hero h1 em{color:var(--gold); font-style:normal}
 .hero .tag{color:var(--mut); font-size:1.1rem; margin:20px auto 36px; max-width:720px}
+.hero-logo{width:84px; height:84px; border-radius:22px; display:block; margin:6px auto 18px; border:1px solid var(--line); box-shadow:0 12px 40px rgba(212,175,55,.25)}
 .kicker{
   display:inline-block; padding:6px 16px; border:1px solid var(--gold);
   border-radius:999px; color:var(--gold); font-size:.78rem; font-weight:700;
@@ -144,15 +145,15 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 
 /* ---------- BUTONLAR ---------- */
 .btn{
-  display:inline-flex; align-items:center; justify-content:center; gap:8px;
-  padding:14px 30px; margin:5px; border-radius:10px; font-weight:700; font-size:.95rem;
-  border:1px solid transparent; cursor:pointer; transition:transform .15s, background-color .15s, border-color .15s;
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:15px 34px; margin:6px; border-radius:999px; font-weight:700; font-size:.95rem; letter-spacing:.2px;
+  border:1px solid transparent; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease, background-color .18s, border-color .18s;
   font-family:var(--font);
 }
-.btn.gold{background:var(--gold); color:var(--on-gold)}
-.btn.gold:hover{background:var(--gold2); transform:translateY(-2px)}
-.btn.ghost{border-color:var(--gold); color:var(--gold2); background:transparent}
-.btn.ghost:hover{background:var(--gold-fade); transform:translateY(-2px)}
+.btn.gold{background:linear-gradient(180deg,var(--gold2),var(--gold)); color:var(--on-gold); box-shadow:0 8px 24px rgba(212,175,55,.28)}
+.btn.gold:hover{background:linear-gradient(180deg,var(--gold2),var(--gold2)); transform:translateY(-2px); box-shadow:0 12px 32px rgba(212,175,55,.38)}
+.btn.ghost{border-color:rgba(212,175,55,.55); color:var(--gold2); background:rgba(212,175,55,.06)}
+.btn.ghost:hover{background:var(--gold-fade); border-color:var(--gold); transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,.35)}
 .btn.small{padding:9px 18px; font-size:.85rem}
 
 /* ---------- KARTLAR & TABLO ---------- */
