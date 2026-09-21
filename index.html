@@ -78,8 +78,8 @@
   <div><b>109M+</b><small data-i18n="index.stat_vec">vectors embedded to date</small></div>
   <div><b>25</b><small data-i18n="index.stat_faiss">faiss indices built</small></div>
   <div><b>25</b><small data-i18n="index.stat_corpora">corpora · growing — live, open, and verifiable</small></div>
+  <div><b id="nx-live-kanit">—</b><small><span class="live-dot"></span>LIVE · <span id="nx-live-nemes">—</span> NEMES</small></div>
 </div></div>
-<div style="text-align:center;padding:10px 24px 16px;border-bottom:1px solid var(--line);background:var(--bg2)"><small id="nx-pulse" style="color:var(--mut)">● ağ nabzı kontrol ediliyor…</small></div>
 
 <section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap-narrow" style="text-align:center;padding:36px 0 28px">
   <p style="color:var(--mut);font-size:1.05rem;line-height:1.85">
@@ -510,7 +510,8 @@
 <script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
 <script>
 // Ağ nabzı: komuta arzı çek, yoksa sessizce statik rakamda kal.
-(function(){var el=document.getElementById('nx-pulse');if(!el)return;fetch('https://komuta.nemes-x.space/api/arz',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){var k=j.toplam_kanit||j.vektor_sayisi||0;var c=Number(j.toplam_coin||0);el.innerHTML='🟢 <b>'+Number(k).toLocaleString('en-US')+'</b> kanıt · <b>'+c.toLocaleString('en-US',{maximumFractionDigits:2})+'</b> NEMES — canlı';el.style.color='var(--gold2)'}).catch(function(){el.textContent='● statik rakamlar — tam corpus manifestosu aşağıda'})})();
+// Canlı hane: komuta arzı çek, şeridin 5. hanesini doldur. Yoksa tirede kal.
+(function(){var k=document.getElementById('nx-live-kanit'),n=document.getElementById('nx-live-nemes');if(!k||!n)return;fetch('https://komuta.nemes-x.space/api/arz',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){k.textContent=Number(j.toplam_kanit||j.vektor_sayisi||0).toLocaleString('en-US');n.textContent=Number(j.toplam_coin||0).toLocaleString('en-US',{maximumFractionDigits:2})}).catch(function(){k.textContent='—';n.textContent='—'})})();
 (function(){var el=document.querySelector('[data-countup]');if(!el)return;var hedef=parseInt(el.getAttribute('data-countup'),10)||0;var bas=hedef-1200000;var t0=null;function fmt(n){return n.toLocaleString('en-US')}function adim(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/2000);var v=Math.round(bas+(hedef-bas)*(1-Math.pow(1-k,3)));el.textContent=fmt(v);if(k<1)requestAnimationFrame(adim)}var go=false;new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!go){go=true;requestAnimationFrame(adim)}})},{threshold:.4}).observe(el);})();
 </script>
 <script>window.NX_PAGE='index'</script>
