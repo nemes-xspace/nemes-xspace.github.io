@@ -380,7 +380,14 @@
     "pre_ent_or": "ou",
     "pre_ent_3": "Garde les grandes entreprises hors du palier gratuit public",
     "pre_ent_4": "Support dédié & SLA — contacter les ventes",
-    "pre_ent_cta": "Contacter les ventes →"
+    "pre_ent_cta": "Contacter les ventes →",
+    "intro_p1": "NEMES-X — described as \"The Sovereign Brain\" — is a decentralized knowledge network that processes public data by utilizing idle GPU power.",
+    "intro_p2": "The project aims to use GPUs for a genuine purpose rather than hash mining: transforming public data into a permanent, searchable, and censorship-resistant knowledge index.",
+    "intro_p3": "The system comprises stages such as parsing public corpora, chunking documents, generating vector embeddings on GPUs using nomic-embed-text, random verification, and preparing FAISS indices. According to its own data, NEMES-X has processed over 109 million documents and more than 40 million embeddings to date.",
+    "intro_p4": "The network's security architecture features sandboxed workers, signed binaries, and an open processing pipeline. The project's MIT license allows anyone to inspect, improve, and fork the system.",
+    "intro_em": "A decentralized knowledge network based on verification rather than trust.",
+    "intro_slogan": "NEMES-X — Mine knowledge, not hashes.",
+    "asof": "figures as of Aug 30 2026 · full corpus manifest below"
   },
   "nf": {
     "text": "Cette page a dérivé hors du réseau.",

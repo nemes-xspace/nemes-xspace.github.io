@@ -62,6 +62,7 @@
 </div></nav>
 
 <header class="hero"><div class="wrap">
+  <img src="/logo.png" alt="NEMES-X" class="hero-logo">
   <span class="kicker" data-i18n="index.kicker">The Sovereign Brain</span>
   <h1>NEMES<em>-X</em></h1>
   <p class="tag" data-i18n="index.tagline">Put your compute to work building the world's open collective intelligence — every contribution is measured, verifiable, and earns.</p>
@@ -73,11 +74,23 @@
 </div></header>
 
 <div class="strip"><div class="wrap" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:28px">
-  <div><b>109,279,716</b><small data-i18n="index.stat_docs">documents · core corpus</small></div>
+  <div><b data-countup="109279716">109,279,716</b><small data-i18n="index.stat_docs">documents · core corpus</small></div>
   <div><b>109M+</b><small data-i18n="index.stat_vec">vectors embedded to date</small></div>
   <div><b>25</b><small data-i18n="index.stat_faiss">faiss indices built</small></div>
   <div><b>25</b><small data-i18n="index.stat_corpora">corpora · growing — live, open, and verifiable</small></div>
 </div></div>
+
+<section style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap-narrow" style="text-align:center;padding:36px 0 28px">
+  <p style="color:var(--mut);font-size:1.05rem;line-height:1.85">
+    <span data-i18n="index.intro_p1">NEMES-X — described as "The Sovereign Brain" — is a decentralized knowledge network that processes public data by utilizing idle GPU power.</span><br><br>
+    <span data-i18n="index.intro_p2">The project aims to use GPUs for a genuine purpose rather than hash mining: transforming public data into a permanent, searchable, and censorship-resistant knowledge index.</span><br><br>
+    <span data-i18n="index.intro_p3">The system comprises stages such as parsing public corpora, chunking documents, generating vector embeddings on GPUs using nomic-embed-text, random verification, and preparing FAISS indices. According to its own data, NEMES-X has processed over 109 million documents and more than 40 million embeddings to date.</span><br><br>
+    <span data-i18n="index.intro_p4">The network's security architecture features sandboxed workers, signed binaries, and an open processing pipeline. The project's MIT license allows anyone to inspect, improve, and fork the system.</span><br><br>
+    <em style="color:var(--gold2);font-size:1.1rem" data-i18n="index.intro_em">A decentralized knowledge network based on verification rather than trust.</em><br><br>
+    <span style="color:var(--gold);font-weight:700;letter-spacing:2px" data-i18n="index.intro_slogan">NEMES-X — Mine knowledge, not hashes.</span>
+  </p>
+  <p class="asof" style="margin-top:18px" data-i18n="index.asof">figures as of Aug 30 2026 · full corpus manifest below</p>
+</div></section>
 
 <section id="status"><div class="wrap">
   <h2 data-i18n="index.status_title">Network Status — Live, Building, and Planned</h2>
@@ -494,6 +507,10 @@
 
 <button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
 <script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
+<script>
+// Canlı sayaç: ilk istatistik görünür alana girince 108M'den hedefe sayar (2sn).
+(function(){var el=document.querySelector('[data-countup]');if(!el)return;var hedef=parseInt(el.getAttribute('data-countup'),10)||0;var bas=hedef-1200000;var t0=null;function fmt(n){return n.toLocaleString('en-US')}function adim(t){if(!t0)t0=t;var k=Math.min(1,(t-t0)/2000);var v=Math.round(bas+(hedef-bas)*(1-Math.pow(1-k,3)));el.textContent=fmt(v);if(k<1)requestAnimationFrame(adim)}var go=false;new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting&&!go){go=true;requestAnimationFrame(adim)}})},{threshold:.4}).observe(el);})();
+</script>
 <script>window.NX_PAGE='index'</script>
 <script src="/assets/i18n.js"></script>
 </body>

@@ -380,7 +380,14 @@
     "pre_ent_or": "veya",
     "pre_ent_3": "Büyük şirketleri halka açık ücretsiz hattan uzak tutar",
     "pre_ent_4": "Özel destek ve SLA — teklif için satışla iletişime geç",
-    "pre_ent_cta": "Satışla Görüş →"
+    "pre_ent_cta": "Satışla Görüş →",
+    "intro_p1": "NEMES-X — \"Egemen Beyin\" olarak tanımlanır — atıl GPU gücünü kullanarak kamuya açık veriyi işleyen merkeziyetsiz bir bilgi ağıdır.",
+    "intro_p2": "Proje, GPU'ları hash madenciliği yerine gerçek bir amaç için kullanmayı hedefler: kamuya açık veriyi kalıcı, aranabilir ve sansüre dayanıklı bir bilgi endeksine dönüştürmek.",
+    "intro_p3": "Sistem; kamuya açık derlemleri ayrıştırma, belgeleri parçalama, GPU'larda nomic-embed-text ile vektör gömme üretme, rastgele doğrulama ve FAISS endeksleri hazırlama aşamalarından oluşur. Projenin kendi verisine göre bugüne kadar 109 milyonun üzerinde belge ve 40 milyonun üzerinde gömme işlenmiştir.",
+    "intro_p4": "Ağın güvenlik mimarisi korumalı işçiler, imzalı ikililer ve açık işlem hattı içerir. Projenin MIT lisansı herkesin sistemi incelemesine, iyileştirmesine ve çatallamasına izin verir.",
+    "intro_em": "Güvene değil doğrulamaya dayalı merkeziyetsiz bilgi ağı.",
+    "intro_slogan": "NEMES-X — Hash değil bilgi madenciliği.",
+    "asof": "rakamlar 30 Ağu 2026 itibarıyla · tam derlem bildirimi aşağıda"
   },
   "nf": {
     "text": "Bu sayfa ağdan sürüklendi.",
