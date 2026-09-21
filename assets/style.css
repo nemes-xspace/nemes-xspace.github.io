@@ -312,7 +312,7 @@ input[type="email"],input[type="text"]{width:100%}
 /* ---------- FOOTER ---------- */
 footer{border-top:1px solid var(--line); background:var(--bg2); margin-top:40px}
 footer .wrap{display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:32px; padding:56px 24px 36px}
-footer h5, footer h2.footer-nav{font-size:.78rem; letter-spacing:1.6px; text-transform:uppercase; color:var(--gold); margin-bottom:14px}
+footer h5, footer h2.footer-nav{font-size:.78rem; letter-spacing:1.6px; text-transform:uppercase; color:var(--gold); margin-bottom:14px; text-align:start}
 footer ul{list-style:none}
 footer li{margin:8px 0}
 footer li a{color:var(--mut); font-size:.88rem}
