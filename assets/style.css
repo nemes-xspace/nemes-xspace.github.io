@@ -188,7 +188,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 .strip div{text-align:center}
 .strip b{display:block; font-size:1.6rem; color:var(--gold); font-variant-numeric:tabular-nums; font-weight:800}
 .strip small{color:var(--mut)}
-.live-dot{display:inline-block; width:8px; height:8px; border-radius:50%; background:#e5484d; margin-inline-end:6px; animation:nx-blink 1.6s ease-in-out infinite}
+.live-dot{display:inline-block; width:9px; height:9px; border-radius:50%; background:#ff3b30; margin-inline-end:7px; vertical-align:1px; box-shadow:0 0 8px rgba(255,59,48,.8); animation:nx-blink 1.6s ease-in-out infinite}
 @keyframes nx-blink{0%,100%{opacity:1}50%{opacity:.3}}
 @media (prefers-reduced-motion:reduce){.live-dot{animation:none}}
 .asof{text-align:center; color:var(--dim); font-size:.72rem; padding:10px 0 0}
