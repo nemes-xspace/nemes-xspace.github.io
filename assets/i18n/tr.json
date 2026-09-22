@@ -458,7 +458,7 @@
   },
   "ver": {
     "title": "Her Şeyi Doğrula",
-    "meta": "Her sayı, her lisans, her iddia. Kaynak dahil. Son güncelleme: 30 Ağu 2026 · Sonraki ödeme: ağ lansmanında (bkz. Yol Haritası).",
+    "meta": "Her sayı, her lisans, her iddia. Kaynak dahil. Son güncelleme: 22 Eyl 2026 · Sıradaki ödeme: ağ lansmanında (bkz. Yol Haritası).",
     "h1": "1. Korpus Kanıtı — 109.279.716 doküman",
     "p1": "Çekirdek korpus boyutu yapı makinesindeki ayrıştırıcı logundan alınır. Kaynak satırını doğrula:",
     "p2": "Kardeş korpuslar için karşılaştırılabilir kanıt komutları boru hattı reposunda belgelenmiştir (README → korpus manifesti).",
@@ -502,7 +502,19 @@
     "c3": "Telif:",
     "c4": "GitHub Issues:",
     "c4b": "sorun takibi",
-    "proof": "Söylediğimizle kodun yaptığı arasında tutarsızlık mı buldun? Sorun aç. Kanıt yükü bizdedir."
+    "proof": "Söylediğimizle kodun yaptığı arasında tutarsızlık mı buldun? Sorun aç. Kanıt yükü bizdedir.",
+    "h5b": "5b. Madenci İkilisi Doğrulama",
+    "p5d": "İndirilen madenci, çalıştırılmadan önce imzalı sağlama toplamıyla eşleşmeli:",
+    "p5e": "Sürüm anahtarı (nemes-release) madenci README'sinde yayınlanır. \"Good signature\" şart — yoksa çalıştırmayın, e-postayla bildirin.",
+    "t_date": "Tarih",
+    "t_inc": "Olay",
+    "t_fix": "Çözüm",
+    "i1": "Komuta ~4 dakikada bir OOM-kill yedi (sınırsız havuz tazeleme)",
+    "i1b": "Tazeleme tavana bağlandı; RSS 17G → 0,4G",
+    "i2": "Gömme API'si istek başına 25sn (19 Eyl'den beri llama çürümesi)",
+    "i2b": "Dönüşümlü restart; 0,05sn. 1247 için bekçi eklendi",
+    "i3": "Denetim birikimi 143k (yavaş sorgular ~21sn)",
+    "i3b": "Kapsayan endeks; 21sn → 0,01sn, birikim eriyor"
   },
   "why": {
     "sub": "Kurucunun mektubu — bunu neden inşa ediyoruz ve neden şimdi.",

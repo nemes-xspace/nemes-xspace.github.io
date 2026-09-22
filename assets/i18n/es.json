@@ -502,7 +502,19 @@
     "c3": "Derechos de autor:",
     "c4": "Issues de GitHub:",
     "c4b": "rastreador de problemas",
-    "proof": "¿Encontraste una discrepancia entre lo que decimos y lo que hace el código? Abre un issue. La carga de la prueba recae sobre nosotros."
+    "proof": "¿Encontraste una discrepancia entre lo que decimos y lo que hace el código? Abre un issue. La carga de la prueba recae sobre nosotros.",
+    "h5b": "5b. Miner Binary Verification",
+    "p5d": "Downloaded miner must match the signed checksum before running:",
+    "p5e": "Release key (nemes-release) is published in the miner README. \"Good signature\" required — otherwise do not run, report by email.",
+    "t_date": "Date",
+    "t_inc": "Incident",
+    "t_fix": "Fix",
+    "i1": "Komuta OOM-killed every ~4 min (unbounded pool refresh)",
+    "i1b": "Capped refresh at pool ceiling; RSS 17G → 0.4G",
+    "i2": "Embed API 25s per request (llama-server decay since 19 Sep)",
+    "i2b": "Rolling restart; 0.05s. Watchdog added for port 1247",
+    "i3": "Denetim backlog 143k (slow queries ~21s)",
+    "i3b": "Covering index; 21s → 0.01s, backlog draining"
   },
   "why": {
     "sub": "Una carta del fundador — por qué construimos esto, y por qué ahora.",

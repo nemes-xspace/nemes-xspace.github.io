@@ -502,7 +502,19 @@
     "c3": "版权：",
     "c4": "GitHub Issues：",
     "c4b": "问题跟踪器",
-    "proof": "发现我们所说的与代码所做的之间有出入？提交 issue。举证责任在我们。"
+    "proof": "发现我们所说的与代码所做的之间有出入？提交 issue。举证责任在我们。",
+    "h5b": "5b. Miner Binary Verification",
+    "p5d": "Downloaded miner must match the signed checksum before running:",
+    "p5e": "Release key (nemes-release) is published in the miner README. \"Good signature\" required — otherwise do not run, report by email.",
+    "t_date": "Date",
+    "t_inc": "Incident",
+    "t_fix": "Fix",
+    "i1": "Komuta OOM-killed every ~4 min (unbounded pool refresh)",
+    "i1b": "Capped refresh at pool ceiling; RSS 17G → 0.4G",
+    "i2": "Embed API 25s per request (llama-server decay since 19 Sep)",
+    "i2b": "Rolling restart; 0.05s. Watchdog added for port 1247",
+    "i3": "Denetim backlog 143k (slow queries ~21s)",
+    "i3b": "Covering index; 21s → 0.01s, backlog draining"
   },
   "why": {
     "sub": "一封创始人的信——我们为什么构建它，以及为什么是现在。",

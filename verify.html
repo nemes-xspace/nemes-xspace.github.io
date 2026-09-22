@@ -58,14 +58,15 @@
 
 <article><div class="wrap-narrow">
   <h1 data-i18n="ver.title">Verify Everything</h1>
-  <p class="sub" data-i18n="ver.meta">Every number, every license, every claim. Source included. Last updated: 30 Aug 2026 · Next settlement: at network launch (see Roadmap).</p>
+  <p class="sub" data-i18n="ver.meta">Every number, every license, every claim. Source included. Last updated: 22 Sep 2026 · Next settlement: at network launch (see Roadmap).</p>
+  <p class="sub" id="ver-live" style="font-size:.85rem">● live network data loading…</p>
 
   <h2 data-i18n="ver.h1">1. Corpus Proof — 109,279,716 documents</h2>
   <p data-i18n="ver.p1">Core corpus size is taken from the parser log on the build machine. Verify the source line:</p>
   <p style="font-family:ui-monospace,Menlo,monospace;font-size:.85rem;background:var(--mock-bg);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--gold-text)"><code>grep "DB var" parser.log → [adapter] cc100_tr: DB var (109279716 madde) - ATLANDI</code></p>
   <p data-i18n="ver.p2">Comparable proof commands for sister corpora are documented in <a href="https://github.com/nemes-xspace">the pipeline repo</a> (README → corpus manifest).</p>
 
-  <h2 data-i18n="ver.h2">2. Built Indices — 25 FAISS</h2>
+  <h2 data-i18n="ver.h2">2. Built Indices — 26 FAISS</h2>
   <div class="tblwrap"><table class="tbl">
     <tr><th data-i18n="ver.t_status">Status</th><th data-i18n="ver.t_corpus">Corpus</th><th data-i18n="ver.t_proof">Proof</th></tr>
     <tr><td><span class="dot g"></span><span data-i18n="ver.built">built</span></td><td data-i18n="ver.built_c">wikipedia (EN + 10 langs), wiktionary/wikiquote/wikisource (TR+EN), arxiv, tatoeba TR/EN</td><td style="font-family:ui-monospace,Menlo,monospace;font-size:.8rem"><code>ls corpus-indexes/*.faiss</code></td></tr>
@@ -88,10 +89,21 @@
     <li style="margin:6px 0"><span data-i18n="ver.g3">License of the software itself: Apache-2.0 —</span> <code>LICENSE</code> <span data-i18n="ver.g3b">in repo (fork allowed)</span></li>
   </ul>
 
+  <h2 data-i18n="ver.h5b">5b. Miner Binary Verification</h2>
+  <p data-i18n="ver.p5d">Downloaded miner must match the signed checksum before running:</p>
+  <p style="font-family:ui-monospace,Menlo,monospace;font-size:.85rem;background:var(--mock-bg);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:var(--gold-text)"><code>sha256sum -c SHA256SUMS<br>ssh-keygen -Y verify -f allowed_signers -I nemes-release -n nemes-release -s SHA256SUMS.sig &lt; SHA256SUMS</code></p>
+  <p data-i18n="ver.p5e">Release key (<code>nemes-release</code>) is published in the miner README. "Good signature" required — otherwise do not run, report by email.</p>
+
   <h2 data-i18n="ver.h6">6. Settlement History</h2>
   <p data-i18n="ver.p6">No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. <span style="color:var(--dim)">⚪ at network launch</span></p>
 
   <h2 data-i18n="ver.h7">7. Status &amp; Incident History</h2>
+  <div class="tblwrap"><table class="tbl">
+    <tr><th data-i18n="ver.t_date">Date</th><th data-i18n="ver.t_inc">Incident</th><th data-i18n="ver.t_fix">Fix</th></tr>
+    <tr><td>22 Sep 2026</td><td data-i18n="ver.i1">Komuta OOM-killed every ~4 min (unbounded pool refresh)</td><td data-i18n="ver.i1b">Capped refresh at pool ceiling; RSS 17G → 0.4G</td></tr>
+    <tr><td>21 Sep 2026</td><td data-i18n="ver.i2">Embed API 25s per request (llama-server decay since 19 Sep)</td><td data-i18n="ver.i2b">Rolling restart; 0.05s. Watchdog added for port 1247</td></tr>
+    <tr><td>20 Sep 2026</td><td data-i18n="ver.i3">Denetim backlog 143k (slow queries ~21s)</td><td data-i18n="ver.i3b">Covering index; 21s → 0.01s, backlog draining</td></tr>
+  </table></div>
   <p><span data-i18n="ver.p7">Status page is planned at</span> <code>status.nemes-x.space</code><span data-i18n="ver.p7b">. Until then, component health is visible in the</span> <a href="/#status" data-i18n="ver.p7c">Network Status table</a> <span data-i18n="ver.p7d">and in</span> <a href="https://github.com/nemes-xspace" data-i18n="ver.p7e">GitHub commit activity</a>.</p>
 
   <h2 data-i18n="ver.h8">8. Contact &amp; Reports</h2>
@@ -114,6 +126,10 @@
 <button id="backtop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="back to top">↑</button>
 <script>window.addEventListener('scroll',()=>{var b=document.getElementById('backtop');if(b)b.classList.toggle('show',scrollY>600)});</script>
 <script>window.NX_PAGE='verify'</script>
+<script>
+// Verify canlı satırı: arz + durum, yoksa statik metin kalır.
+(function(){var el=document.getElementById('ver-live');if(!el)return;fetch('https://komuta.nemes-x.space/api/arz',{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){el.textContent='● live: '+Number(j.toplam_kanit||0).toLocaleString('en-US')+' proofs · '+Number(j.toplam_coin||0).toLocaleString('en-US',{maximumFractionDigits:2})+' NEMES · batch '+Number(j.tamamlanan_batch||0).toLocaleString('en-US');el.style.color='var(--gold2)'}).catch(function(){el.textContent='● live data unreachable — figures below are the last verified snapshot'})})();
+</script>
 <script src="/assets/i18n.js"></script>
 </body>
 </html>

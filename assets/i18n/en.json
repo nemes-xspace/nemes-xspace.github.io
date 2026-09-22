@@ -491,7 +491,7 @@
   },
   "ver": {
     "title": "Verify Everything",
-    "meta": "Every number, every license, every claim. Source included. Last updated: 30 Aug 2026 · Next settlement: at network launch (see Roadmap).",
+    "meta": "Every number, every license, every claim. Source included. Last updated: 22 Sep 2026 · Next settlement: at network launch (see Roadmap).",
     "h1": "1. Corpus Proof — 109,279,716 documents",
     "p1": "Core corpus size is taken from the parser log on the build machine. Verify the source line:",
     "h2": "2. Built Indices — 25 FAISS",
@@ -535,7 +535,19 @@
     "proof": "Found a discrepancy between what we say and what the code does? Open an issue. The burden of proof is on us.",
     "p2": "Comparable proof commands for sister corpora are documented in the pipeline repo",
     "p4": "Full license texts ship with the corpus manifest repository. Commercial use excludes non-commercial corpora (WikiHow) at the product layer — physically separate indexes. See Corpus Manifest table",
-    "p6": "No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. ⚪ at network launch"
+    "p6": "No settlements have occurred yet. The first settlement will be published here with: epoch, amount, miner count, transaction ID, and explorer link. All future payouts will remain public and append-only. ⚪ at network launch",
+    "h5b": "5b. Miner Binary Verification",
+    "p5d": "Downloaded miner must match the signed checksum before running:",
+    "p5e": "Release key (nemes-release) is published in the miner README. \"Good signature\" required — otherwise do not run, report by email.",
+    "t_date": "Date",
+    "t_inc": "Incident",
+    "t_fix": "Fix",
+    "i1": "Komuta OOM-killed every ~4 min (unbounded pool refresh)",
+    "i1b": "Capped refresh at pool ceiling; RSS 17G → 0.4G",
+    "i2": "Embed API 25s per request (llama-server decay since 19 Sep)",
+    "i2b": "Rolling restart; 0.05s. Watchdog added for port 1247",
+    "i3": "Denetim backlog 143k (slow queries ~21s)",
+    "i3b": "Covering index; 21s → 0.01s, backlog draining"
   },
   "why": {
     "sub": "A founder's letter — why we're building this, and why now.",
